@@ -34,7 +34,7 @@
 
 수업 중 진행한 4차례의 과제 풀이를 통해, 위 개념들을 실제 문제에 적용하고 해결하는 연습을 꾸준히 진행했습니다.
 
-<img src="./discrete-math-assignment-1.png" alt="이산수학 1차 과제 풀이" width="600"/>
-<img src="./discrete-math-assignment-2.png" alt="이산수학 2차 과제 풀이" width="600"/>
-<img src="./discrete-math-assignment-3.png" alt="이산수학 3차 과제 풀이" width="600"/>
-<img src="./discrete-math-assignment-4.png" alt="이산수학 4차 과제 풀이" width="600"/>
+<img src="./discrete-math-assignment-1.jpg" alt="이산수학 1차 과제 풀이" width="600"/>
+<img src="./discrete-math-assignment-2.jpg" alt="이산수학 2차 과제 풀이" width="600"/>
+<img src="./discrete-math-assignment-3.jpg" alt="이산수학 3차 과제 풀이" width="600"/>
+<img src="./discrete-math-assignment-4.jpg" alt="이산수학 4차 과제 풀이" width="600"/>
