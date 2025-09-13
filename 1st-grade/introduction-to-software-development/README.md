@@ -40,7 +40,7 @@
 **[실행 화면]**
 
 <img src="./zoog-screenshot.png" alt="Zoog 캐릭터 애니메이션" width="400"/>
-<p align="center">변수, 조건문, 함수 등을 종합적으로 활용하여 만든 'Zoog' 캐릭터 애니메이션.</p>
+*<p align="center">변수, 조건문, 함수 등을 종합적으로 활용하여 만든 'Zoog' 캐릭터 애니메이션.</p>*
 
 ---
 
