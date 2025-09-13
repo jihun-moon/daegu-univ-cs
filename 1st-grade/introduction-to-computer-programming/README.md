@@ -23,8 +23,7 @@
 -   **배운 점:** **클래스와 객체**의 개념을 활용하여 플레이어의 상태와 동작을 관리하는 방법을 익혔습니다. 또한, **수학적 계산(삼각함수, 이차함수)**을 프로그래밍에 적용하여 실제와 유사한 움직임을 시뮬레이션하는 경험을 통해, 동일한 원리를 **다양한 환경(그래픽, 콘솔)에서 구현**할 수 있는 응용력을 길렀습니다.
 
 **[실행 화면]**
-![앵그리 터틀 실행 화면](<img width="1514" height="767" alt="과정(2)" src="https://github.com/user-attachments/assets/6144a3d9-eb63-452a-8c3d-4622a394a683" />
-)
+![앵그리 터틀 실행 화면](https://github.com/user-attachments/assets/6144a3d9-eb63-452a-8c3d-4622a394a683)
 *<p align="center">Turtle 라이브러리로 구현한 그래픽 버전</p>*
 
 ---
@@ -35,6 +34,5 @@
 -   **배운 점:** **클래스(Ball)**를 정의하여 공의 속성(색, 크기, 속도)과 기능(움직임, 충돌 처리)을 캡슐화하는 **객체 지향 프로그래밍(OOP)의 기초**를 다졌습니다. 이를 통해 여러 개의 객체를 효율적으로 관리하는 방법을 학습했습니다.
 
 **[실행 화면]**
-![Ball Project 실행 화면](<img width="806" height="428" alt="과정2" src="https://github.com/user-attachments/assets/5f7226a2-014f-433f-9211-9aefb9362e0a" />
-)
+![Ball Project 실행 화면](https://github.com/user-attachments/assets/5f7226a2-014f-433f-9211-9aefb9362e0a)
 *<p align="center">Tkinter로 구현한 공 시뮬레이션</p>*
