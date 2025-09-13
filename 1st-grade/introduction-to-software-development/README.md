@@ -26,7 +26,7 @@
 
 **[실행 화면]**
 
-<img src="./gugudan-app-screenshot.png" alt="구구단을 외자! 앱 실행 화면" width="400"/>
+<img src="./gugudan-app-screenshot.jpg" alt="구구단을 외자! 앱 실행 화면" width="400"/>
 
 ### 2. Processing을 활용한 인터랙티브 아트 (Processing)
 -   **프로젝트 설명:**
