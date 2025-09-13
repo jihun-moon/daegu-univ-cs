@@ -37,5 +37,5 @@
 -   **C#, C++, Java, Python 언어별 특징 요약 노트:**
     -   각 객체 지향 언어들의 핵심적인 특징과 장단점을 비교 분석하며 프로그래밍 언어에 대한 폭넓은 시야를 기르고자 노력했습니다.
 
-![언어 비교 노트 1](./language-comparison-note-1.jpg)
-![언어 비교 노트 2](./language-comparison-note-2.jpg)
+![언어 비교 노트 1]<img src="./language-comparison-note-1.jpg" alt="언어 비교 노트 1" width="500"/>
+![언어 비교 노트 2]<img src="./language-comparison-note-2.jpg" alt="언어 비교 노트 2" width="500"/>
