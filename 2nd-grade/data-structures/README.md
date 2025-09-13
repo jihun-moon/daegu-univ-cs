@@ -23,7 +23,9 @@
 -   **배운 점:** **스택(Stack)** 자료구조의 LIFO(Last-In, First-Out) 특징을 완벽하게 이해하고, 이를 **후위표기법 변환 알고리즘**에 적용하는 방법을 익혔습니다.
 
 **[실행 결과]**
+
 <img src="./postfix-calculator-result.png" alt="사칙 연산 계산기 실행 결과" width="700"/>
+*<p align="center">`100 / ( 6 - 1 ) * 2 - 3` 수식의 계산 결과</p>*
 
 ---
 
@@ -33,7 +35,9 @@
 -   **배운 점:** **트리(Tree)** 자료구조의 개념과 **우선순위 큐(Priority Queue)**로 사용되는 **힙(Heap)**의 동작 원리를 이해하고, 실제 압축 알고리즘의 핵심 원리를 직접 구현하는 경험을 했습니다.
 
 **[실행 결과]**
+
 <img src="./huffman-coding-result.png" alt="허프만 코딩 실행 결과" width="700"/>
+*<p align="center">'hello world' 텍스트(왼쪽)가 압축된 결과(오른쪽)</p>*
 
 ---
 
@@ -43,4 +47,6 @@
 -   **배운 점:** **재귀 호출(Recursive Call)**을 이용한 트리 순회 알고리즘의 원리를 깊이 있게 학습했으며, 큐(Queue)를 활용한 레벨 순회를 통해 너비 우선 탐색(BFS)의 기초를 다졌습니다.
 
 **[실행 결과]**
+
 <img src="./binary-tree-operations-result.png" alt="이진트리 연산 실행 결과" width="700"/>
+*<p align="center">두 개의 다른 이진트리에 대한 순회 및 연산 결과</p>*
