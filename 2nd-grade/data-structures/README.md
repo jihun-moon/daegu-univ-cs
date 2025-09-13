@@ -25,7 +25,8 @@
 **[실행 결과]**
 
 <img src="./postfix-calculator-result.png" alt="사칙 연산 계산기 실행 결과" width="700"/>
-<p align="center">`100 / ( 6 - 1 ) * 2 - 3` 수식의 계산 결과</p>
+
+*<p align="center">`100 / ( 6 - 1 ) * 2 - 3` 수식의 계산 결과</p>*
 
 ---
 
@@ -37,7 +38,8 @@
 **[실행 결과]**
 
 <img src="./huffman-coding-result.png" alt="허프만 코딩 실행 결과" width="700"/>
-<p align="center">'hello world' 텍스트(왼쪽)가 압축된 결과(오른쪽)</p>
+
+*<p align="center">'hello world' 텍스트(왼쪽)가 압축된 결과(오른쪽)</p>*
 
 ---
 
@@ -49,4 +51,5 @@
 **[실행 결과]**
 
 <img src="./binary-tree-operations-result.png" alt="이진트리 연산 실행 결과" width="700"/>
-<p align="center">두 개의 다른 이진트리에 대한 순회 및 연산 결과</p>
+
+*<p align="center">두 개의 다른 이진트리에 대한 순회 및 연산 결과</p>*
