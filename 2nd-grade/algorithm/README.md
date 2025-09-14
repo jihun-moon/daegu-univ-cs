@@ -23,7 +23,7 @@
 
 **[실행 결과]**
 
-<img src="./selection-sort-result.png" alt="선택 정렬 실행 결과" width="600"/>
+<img src="./assets/selection-sort-result.png" alt="선택 정렬 실행 결과" width="600"/>
 
 ---
 
@@ -37,6 +37,6 @@
 
 **[과제 풀이]**
 
-<img src="./dp-matrix-path-solution.jpg" alt="동적 프로그래밍 과제 풀이" width="600"/>
+<img src="./assets/dp-matrix-path-solution.jpg" alt="동적 프로그래밍 과제 풀이" width="600"/>
 
 *<p align="center">DP 테이블을 직접 계산하여 최대 합 '70'을 도출하는 과정</p>*

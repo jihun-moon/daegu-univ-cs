@@ -22,7 +22,7 @@
 
 **[실행 화면]**
 
-<img src="./simple-xor-cipher.png" alt="XOR 암호화 프로그램 실행 화면" width="600"/>
+<img src="./assets/simple-xor-cipher.png" alt="XOR 암호화 프로그램 실행 화면" width="600"/>
 
 ---
 
@@ -33,7 +33,7 @@
 
 **[실행 화면]**
 
-<img src="./find-max-min-pointer.png" alt="최대/최소값 탐색 프로그램 실행 화면" width="600"/>
+<img src="./assets/find-max-min-pointer.png" alt="최대/최소값 탐색 프로그램 실행 화면" width="600"/>
 
 ---
 
@@ -44,10 +44,10 @@
 
 **[실행 화면]**
 
-<img src="./multiplication-table.png" alt="구구단 출력 프로그램 실행 화면" width="600"/>
+<img src="./assets/multiplication-table.png" alt="구구단 출력 프로그램 실행 화면" width="600"/>
 
 *<p align="center">구구단 출력 프로그램 실행 결과</p>*
 
-<img src="./case-converter.png" alt="알파벳 변환 프로그램 실행 화면" width="600"/>
+<img src="./assets/case-converter.png" alt="알파벳 변환 프로그램 실행 화면" width="600"/>
 
 *<p align="center">소문자-대문자 변환 프로그램 실행 결과</p>*

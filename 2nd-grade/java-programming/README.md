@@ -42,6 +42,6 @@
 
 **[실행 화면]**
 
-<img src="./pacman-game-screenshot.png" alt="팩맨 게임 실행 화면" width="600"/>
+<img src="./assets/pacman-game-screenshot.png" alt="팩맨 게임 실행 화면" width="600"/>
 
 *<p align="center">Java Swing으로 구현한 팩맨 게임 플레이 화면</p>*
