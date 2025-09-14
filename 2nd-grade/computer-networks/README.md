@@ -27,7 +27,7 @@
 
 **[과제 결과물]**
 
-<img src="./ipv6-report.png" alt="IPv6 조사 보고서" width="700"/>
+<img src="./assets/ipv6-report.png" alt="IPv6 조사 보고서" width="700"/>
 
 ### 2. 와이어샤크(Wireshark)를 이용한 패킷 분석 실습
 -   **실습 내용:** Wireshark를 사용하여 실제 로컬 네트워크 트래픽을 캡처하고, ARP(주소 결정 프로토콜) 패킷을 필터링하여 이더넷 프레임의 상세 정보와 ARP 요청(request)의 구조를 직접 분석했습니다.
@@ -35,6 +35,6 @@
 
 **[실습 결과]**
 
-<img src="./wireshark-arp-analysis.png" alt="와이어샤크 ARP 패킷 분석" width="700"/>
+<img src="./assets/wireshark-arp-analysis.png" alt="와이어샤크 ARP 패킷 분석" width="700"/>
 
 *<p align="center">ARP request 패킷을 캡처하여 발신지/목적지 주소를 분석하는 화면</p>*
