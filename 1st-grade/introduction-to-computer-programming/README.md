@@ -23,7 +23,7 @@
 -   **배운 점:** **클래스와 객체**의 개념을 활용하여 플레이어의 상태와 동작을 관리하는 방법을 익혔습니다. 또한, 수학적 계산(삼각함수, 이차함수)을 프로그래밍에 적용하여 실제와 유사한 움직임을 시뮬레이션하는 경험을 통해, 동일한 원리를 **다양한 환경(그래픽, 콘솔)에서 구현**할 수 있는 응용력을 길렀습니다.
 
 **[실행 화면]**
-![앵그리 터틀 실행 화면](./angry-turtle-game-screenshot.png)
+![앵그리 터틀 실행 화면](./assets/angry-turtle-game-screenshot.png)
 *<p align="center">Turtle 라이브러리로 구현한 그래픽 버전</p>*
 
 ---
@@ -36,5 +36,5 @@
 
 **[실행 화면]**
 
-![Ball Project 실행 화면](./ball-simulation-tkinter-screenshot.png)
+![Ball Project 실행 화면](./assets/ball-simulation-tkinter-screenshot.png)
 *<p align="center">Tkinter로 구현한 공 시뮬레이션</p>*
