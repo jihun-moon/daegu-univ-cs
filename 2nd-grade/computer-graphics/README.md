@@ -37,17 +37,23 @@
 
 ### 📸 최종 결과물 (Screenshots)
 
-<img src="./assets/cg-project-earthquake-scene-01-classroom.jpg" alt="재난 안전 교육 애니메이션 실행 화면" width="400"/>
+<p align="center">
+  <img src="./assets/cg-project-earthquake-scene-01-classroom.jpg" alt="재난 안전 교육 애니메이션 실행 화면" width="600"/>
+  <br/>
+  <i>지진 발생 직후, OpenGL으로 구현된 교실에서 책상 밑으로 대피하는 초기 장면</i>
+</p>
 
-*<p align-center">지진 발생 직후, OpenGL으로 구현된 교실에서 책상 밑으로 대피하는 초기 장면</p>*
+<p align="center">
+  <img src="./assets/cg-project-earthquake-scene-02-hallway.png" alt="재난 안전 교육 애니메이션 실행 화면" width="600"/>
+  <br/>
+  <i>복도의 낙하물을 피해 안전 자세를 유지하며 이동하는 대피 과정 시뮬레이션</i>
+</p>
 
-<img src="./assets/cg-project-earthquake-scene-02-hallway.png" alt="재난 안전 교육 애니메이션 실행 화면" width="400"/>
-
-*<p align-center">복도의 낙하물을 피해 안전 자세를 유지하며 이동하는 대피 과정 시뮬레이션</p>*
-
-<img src="./assets/cg-project-earthquake-scene-03-schoolyard.png" alt="재난 안전 교육 애니메이션 실행 화면" width="400"/>
-
-*<p align-center">모든 대피 경로를 거쳐 최종 목적지인 운동장에 안전하게 집결한 모습</p>*
+<p align="center">
+  <img src="./assets/cg-project-earthquake-scene-03-schoolyard.png" alt="재난 안전 교육 애니메이션 실행 화면" width="600"/>
+  <br/>
+  <i>모든 대피 경로를 거쳐 최종 목적지인 운동장에 안전하게 집결한 모습</i>
+</p>
 
 ---
 > ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
