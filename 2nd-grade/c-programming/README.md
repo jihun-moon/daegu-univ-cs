@@ -49,11 +49,20 @@
 
 **[Demos]**
 
-![구구단 출력 프로그램 데모](./assets/multiplication-table.png)
-*<p align="center">구구단 출력 결과</p>*
-
-![알파벳 변환 프로그램 데모](./assets/case-converter.png)
-*<p align="center">소문자-대문자 변환 결과</p>*
+<table>
+  <tr>
+    <td align="center">
+      <img src="./assets/multiplication-table.png" alt="구구단 출력 프로그램 데모" width="400"/>
+      <br/>
+      <i>구구단 출력 결과</i>
+    </td>
+    <td align="center">
+      <img src="./assets/case-converter.png" alt="알파벳 변환 프로그램 데모" width="400"/>
+      <br/>
+      <i>소문자-대문자 변환 결과</i>
+    </td>
+  </tr>
+</table>
 
 ---
 > ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
