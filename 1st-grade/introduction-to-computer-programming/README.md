@@ -35,6 +35,7 @@ Python을 활용해 프로그래밍의 핵심 원리를 실제 코드로 구현�
     - 각 객체의 상태(위치, 속도)를 업데이트하는 게임 루프의 기본 구조를 이해했으며, 이는 향후 복잡한 시스템의 구성 요소를 모델링하는 데 중요한 기초가 되었습니다.
 
 **[Demo]**
+
 ![Ball Project 실행 화면](./assets/ball-simulation-tkinter-screenshot.png)
 *<p align="center">Tkinter로 구현한 공 시뮬레이션</p>*
 
