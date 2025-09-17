@@ -1,0 +1,59 @@
+# ────────────────────────────
+# IDE & 에디터 설정
+# ────────────────────────────
+*.iml
+.idea/
+.DS_Store
+
+# ────────────────────────────
+# Gradle 래퍼 & 캐시
+# ────────────────────────────
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+**/gradle-wrapper.properties
+
+# ────────────────────────────
+# Gradle 속성 파일 (프로젝트/모듈 공통)
+# ────────────────────────────
+gradle.properties
+app/gradle.properties
+local.properties
+
+# ────────────────────────────
+# 빌드 결과물
+# ────────────────────────────
+/build/
+/app/build/
+/captures/
+/.externalNativeBuild/
+/.cxx/
+
+# ────────────────────────────
+# Android 리소스 (환경별/민감)
+# ────────────────────────────
+/app/src/main/res/values/strings.xml
+
+# ────────────────────────────
+# 서명용 키스토어 (민감 정보)
+# ────────────────────────────
+*.jks
+*.keystore
+*.p12
+
+# ────────────────────────────
+# 추가로 무시할 민감/불필요 항목
+# ────────────────────────────
+google-services.json
+app/google-services.json
+*.env*
+secrets.properties
+fabric.properties
+app/fabric.properties
+**/keystore.properties
+**/mapping.txt
+/app/build/reports/
+/app/build/outputs/code_coverage/
+*.p8
+*.gpg
