@@ -28,7 +28,7 @@
 
 -   **핵심 Activity 개발**: 사용자의 주요 기능인 **`SymptomSearchActivity`** (증상 검색), **`InventoryActivity`** (복용 약 관리), **`HospitalHistoryActivity`** (진료 기록), 그리고 **`MapActivity`** (내 주변 병원/약국 찾기)의 UI와 핵심 로직을 모두 직접 설계하고 구현했습니다.
 -   **RecyclerView 기반 동적 UI 구현**: `RecyclerView`와 커스텀 `InventoryAdapter` 및 `MedicineAdapter`를 구현하여, 복용 약 목록이나 진료 기록처럼 동적으로 변하는 데이터를 효율적으로 표시하는 UI를 개발했습니다.
--   **UI/UX 디자인 및 구현**: 사용자가 쉽고 직관적으로 앱을 사용할 수 있도록, `ConstraintLayout`과 다양한 위젯을 활용하여 `activity_main.xml`, `activity_symptom_search.xml` 등 **모든 사용자용 화면의 레이アウト(XML)을 직접 설계**했습니다. 이 결과물은 **UI/UX 부문에서 공동 1위**라는 좋은 평가를 받았습니다.
+-   **UI/UX 디자인 및 구현**: 사용자가 쉽고 직관적으로 앱을 사용할 수 있도록, `ConstraintLayout`과 다양한 위젯을 활용하여 `activity_main.xml`, `activity_symptom_search.xml` 등 **모든 사용자용 화면의 레이아웃(XML)을 직접 설계**했습니다. 이 결과물은 **UI/UX 부문에서 공동 1위**라는 좋은 평가를 받았습니다.
 
 ### 🌱 성장 및 핵심 경험 (Growth & Takeaways)
 -   이 프로젝트를 통해 `Activity`, `Intent`, `RecyclerView`, `Adapter` 등 **안드로이드의 핵심 컴포넌트를 실제로 적용**하여, 기능적으로 풍부하고 사용자 중심적인 애플리케이션을 구축하는 실무 역량을 길렀습니다.
