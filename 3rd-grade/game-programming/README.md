@@ -54,7 +54,7 @@
 -   **시네마틱 연출**: `시네 카메라 액터`와 `시퀀서`를 활용하여 아파트 내부를 둘러보는 듯한 **부드러운 카메라 워크를 연출**하고 영상으로 렌더링했습니다.
 
 **[최종 결과물 (Cinematic Tour)]**
-<p align="center">
+<p align="left">
   <img src="./assets/apartment-cinematic-demo.gif" alt="아파트 모델링 시네마틱 영상" width="600"/>
   <br/>
   <i>과제로 제작한 아파트 모델링 시네마틱 영상</i>
