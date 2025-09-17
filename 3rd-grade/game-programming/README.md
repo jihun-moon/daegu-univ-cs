@@ -34,7 +34,7 @@
 <p align="center">
   <img src="./assets/fighting-game-demo.gif" alt="온라인 격투 게임 플레이 화면" width="600"/>
   <br/>
-  <i>온라인 1:1 격투 게임 실제 플레이 화면 (GIF로 만드시는 것을 추천!)</i>
+  <i>온라인 1:1 격투 게임 실제 플레이 화면</i>
 </p>
 
 ---
