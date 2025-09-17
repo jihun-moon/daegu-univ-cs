@@ -1,16 +1,5 @@
-# 💻 시스템 소프트웨어, 쉘 프로그래밍, 가상화 종합 학습 노트
 
-이 문서는 시스템 소프트웨어의 foundational concepts부터 리눅스 명령어, Bash 쉘 프로그래밍, 그리고 현대적인 가상화 기술과 Docker 컨테이너에 이르기까지의 종합적인 학습 내용을 담고 있습니다.
-
-## 목차
-
-1.  [시스템소프트웨어실무](https://www.google.com/search?q=%231-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%8B%A4%EB%AC%B4-systems-software-practice)
-2.  [리눅스 명령어 및 BASH 쉘 프로그래밍](https://www.google.com/search?q=%232-%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%B0%8F-bash-%EC%89%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
-3.  [가상화 기술 및 Docker](https://www.google.com/search?q=%233-%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0-%EB%B0%8F-docker)
-
------
-
-## 1\. 시스템소프트웨어실무 (Systems Software Practice)
+## 시스템소프트웨어실무 (Systems Software Practice)
 
 **[과목 정보]**
 
