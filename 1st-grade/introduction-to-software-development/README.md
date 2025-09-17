@@ -21,7 +21,7 @@
     - 이는 사용자의 입장에서 서비스를 고민하는 **제품 중심적 사고의 시작**이 되었습니다.
 
 **[Demo]**
-![구구단을 외자! 앱 실행 화면](./assets/gugudan-app-screenshot.jpg)
+![구구단을 외자! 앱 실행 화면]<img src="./assets/gugudan-app-screenshot.jpg" alt="구구단을 외자! 앱 실행 화면" width="500"/>
 
 ---
 
@@ -33,6 +33,7 @@
     - `translate()`와 `rotate()` 함수를 활용한 좌표계 변환 원리를 깊이 있게 이해했으며, 이는 향후 **복잡한 2D/3D 그래픽 렌더링의 수학적 기반**을 학습하는 데 큰 도움이 되었습니다.
 
 **[Demo]**
+
 ![Zoog 캐릭터 애니메이션](./assets/zoog-screenshot.png)
 
 ---
