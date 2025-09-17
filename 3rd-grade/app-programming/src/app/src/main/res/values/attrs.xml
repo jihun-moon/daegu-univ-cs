@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- res/values/attrs.xml -->
-<resources>
-    <!-- colorBackground 라는 이름의 attribute 선언 -->
-    <attr name="colorBackground" format="reference|color"/>
-</resources>
