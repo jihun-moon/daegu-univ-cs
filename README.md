@@ -28,4 +28,4 @@
 
 ---
 
-> **더 상세한 프로젝트 설명과 저의 성장 과정은 [노션 포트폴리오](https://www.notion.so/26d72d9f979f8097a1c1d6585ec7feec?source=copy_link))를 참고해주세요.**
+> **더 상세한 프로젝트 설명과 저의 성장 과정은 [노션 포트폴리오](https://www.notion.so/26d72d9f979f8097a1c1d6585ec7feec?source=copy_link)를 참고해주세요.**
