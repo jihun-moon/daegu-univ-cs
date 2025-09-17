@@ -54,7 +54,7 @@
 <p align="center">
   <img src="./assets/apartment-cinematic-demo.gif" alt="아파트 모델링 시네마틱 영상" width="600"/>
   <br/>
-  <i>과제로 제작한 아파트 모델링 시네마틱 투어 영상</i>
+  <i>과제로 제작한 아파트 모델링 시네마틱 영상</i>
 </p>
 
 ---
