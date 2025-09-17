@@ -43,8 +43,20 @@
 
 이 과목을 통해 프로그래밍 언어의 다양성에 흥미를 갖게 되어, 향후 배울 C++, Java, Python 등 **주요 객체 지향 언어들의 특징과 장단점을 비교 분석**하는 개인적인 학습을 진행했습니다. 이는 언어의 문법을 넘어 각 언어의 철학과 적합한 사용처를 고민하는 폭넓은 시야를 기르는 계기가 되었습니다.
 
-<img src="./assets/language-comparison-note-1.jpg" alt="언어 비교 노트 1" width="400"/>
-<img src="./assets/language-comparison-note-2.jpg" alt="언어 비교 노트 2" width="400"/>
+<table>
+  <tr>
+    <td align="center">
+      <img src="./assets/language-comparison-note-1.jpg" alt="언어 비교 노트 1" width="500"/>
+      <br/>
+      <i>언어 비교 노트 1</i>
+    </td>
+    <td align="center">
+      <img src="./assets/language-comparison-note-2.jpg" alt="언어 비교 노트 2" width="500"/>
+      <br/>
+      <i>언어 비교 노트 2</i>
+    </td>
+  </tr>
+</table>
 
 ---
 > ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
