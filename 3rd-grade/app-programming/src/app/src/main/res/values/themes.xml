@@ -1,0 +1,53 @@
+<!-- res/values/themes.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 1) 베이스 테마: DayNight.NoActionBar 기반 -->
+    <style name="Base.Theme.MobileDoctor" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary / OnPrimary -->
+        <item name="colorPrimary">@color/teal_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary / OnSecondary -->
+        <item name="colorSecondary">@color/amber_500</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Background: windowBackground 와 함께 attr 도 선언 -->
+        <item name="colorBackground">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+
+        <!-- StatusBar / NavigationBar 색상 (API21+) -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/teal_900</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/teal_700</item>
+
+        <!-- Shape theming: 앱 전반의 모서리 반경을 조절 -->
+        <item name="shapeAppearanceSmallComponent">@style/Shape.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/Shape.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/Shape.Large</item>
+
+        <!-- MaterialComponents 기본 스타일 지정 -->
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+    </style>
+
+    <!-- 2) 실제로 사용하는 앱 테마 -->
+    <style name="Theme.MobileDoctor" parent="Base.Theme.MobileDoctor">
+        <!-- 상태 표시줄 아이콘을 밝은 색으로 -->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- 3) ShapeAppearance 정의 -->
+    <style name="Shape.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="Shape.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="Shape.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
+</resources>
