@@ -25,7 +25,7 @@
 - **소스 코드:** `src/tiny-shell.c`
 
 **[Demo]**
-<p align="center">
+<p align="left">
   <img src="./assets/tiny-shell-demo.gif" alt="Tiny Shell 실행 화면" width="600"/>
   <br/>
   <i>구현된 쉘에서 파이프(|)와 리다이렉션(>)을 사용하는 모습</i>
