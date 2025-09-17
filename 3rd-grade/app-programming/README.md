@@ -38,7 +38,7 @@
 -   기획 단계부터 개발, 최종 발표까지 **팀원들과의 지속적인 소통과 협업**을 통해 하나의 완성된 애플리케이션을 만들어내며 소프트웨어 개발의 전체 생명주기를 경험했습니다.
 
 **[Demo]**
-<p align="center">
+<p align="left">
   <img src="./assets/mobile-doctor-demo.gif" alt="모바일 닥터 앱 시연 GIF" width="300"/>
   <br/>
   <i>'모바일 닥터' 앱 핵심 기능 시연 GIF</i>
