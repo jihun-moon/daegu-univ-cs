@@ -7,7 +7,7 @@
 ---
 
 ## 📖 과목 개요 (Overview)
-컴퓨터 과학의 문제를 수학적으로 모델링하고 논리적으로 해결하는 **'엔지니어의 수학적 사고력'**을 배양한 과목입니다. 이 과목을 통해 복잡한 알고리즘의 정당성을 증명하고, 데이터 관계를 구조화하며, 효율적인 연산을 설계하는 데 필수적인 **이론적 기반을 확립**했습니다.
+컴퓨터 과학의 문제를 수학적으로 모델링하고 논리적으로 해결하는 **'엔지니어의 수학적 사고력'** 을 배양한 과목입니다. 이 과목을 통해 복잡한 알고리즘의 정당성을 증명하고, 데이터 관계를 구조화하며, 효율적인 연산을 설계하는 데 필수적인 **이론적 기반을 확립**했습니다.
 
 ## 🛠️ 확보한 핵심 역량 (Acquired Skills)
 -   **논리적 추론 및 증명 능력**: 명제 논리와 술어 논리를 이용해 시스템의 동작 조건을 명확하게 정의하고, 주어진 명제가 참인지 거짓인지 **수학적으로 증명**할 수 있습니다.
@@ -19,17 +19,32 @@
 ## ✍️ 주요 학습 증명 (Proof of Study)
 수업 중 진행한 4차례의 과제 풀이를 통해, 위 개념들을 실제 문제에 적용하고 해결하는 연습을 꾸준히 진행했습니다. 논리적 추론, 포함-배제의 원리, 그래프 순회 등 주요 개념에 대한 문제 해결 과정을 모두 기록했습니다.
 
-![이산수학 과제 풀이 모음](./assets/discrete-math-assignment-1.jpg)
-*<p align="center">1차 과제: 논리 명제와 진리표 분석</p>*
-
-![이산수학 과제 풀이 모음](./assets/discrete-math-assignment-2.jpg)
-*<p align="center">2차 과제: 집합과 관계, 방향 그래프 표현</p>*
-
-![이산수 zomer 과제 풀이 모음](./assets/discrete-math-assignment-3.jpg)
-*<p align="center">3차 과제: 포함-배제의 원리 및 조합론</p>*
-
-![이산수학 과제 풀이 모음](./assets/discrete-math-assignment-4.jpg)
-*<p align="center">4차 과제: 트리 순회 및 그래프 이론</p>*
+<table>
+  <tr>
+    <td align="center">
+      <img src="./assets/discrete-math-assignment-1.jpg" alt="이산수학 1차 과제" width="500"/>
+      <br/>
+      <i>1차 과제: 논리 명제와 진리표 분석</i>
+    </td>
+    <td align="center">
+      <img src="./assets/discrete-math-assignment-2.jpg" alt="이산수학 2차 과제" width="500"/>
+      <br/>
+      <i>2차 과제: 집합과 관계, 방향 그래프 표현</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./assets/discrete-math-assignment-3.jpg" alt="이산수학 3차 과제" width="500"/>
+      <br/>
+      <i>3차 과제: 포함-배제의 원리 및 조합론</i>
+    </td>
+    <td align="center">
+      <img src="./assets/discrete-math-assignment-4.jpg" alt="이산수학 4차 과제" width="500"/>
+      <br/>
+      <i>4차 과제: 트리 순회 및 그래프 이론</i>
+    </td>
+  </tr>
+</table>
 
 ---
 > ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
