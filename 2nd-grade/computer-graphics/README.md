@@ -42,11 +42,17 @@
   <br/>
   <i>지진 발생 직후, OpenGL으로 구현된 교실에서 책상 밑으로 대피하는 초기 장면</i>
 </p>
+
+<hr>
+
 <p align="left">
   <img src="./assets/cg-project-earthquake-scene-02-hallway.png" alt="재난 안전 교육 애니메이션 실행 화면" width="600"/>
   <br/>
   <i>복도의 낙하물을 피해 안전 자세를 유지하며 이동하는 대피 과정 시뮬레이션</i>
 </p>
+
+<hr>
+
 <p align="left">
   <img src="./assets/cg-project-earthquake-scene-03-schoolyard.png" alt="재난 안전 교육 애니메이션 실행 화면" width="600"/>
   <br/>
