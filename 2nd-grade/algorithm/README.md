@@ -37,7 +37,8 @@
 
 **[Solution]**
 
-<img src="./assets/dp-matrix-path-solution.jpg" alt="동적 프로그래밍 과제 풀이" width="400"/>
+<img src="./assets/dp-matrix-path-solution.jpg" alt="동적 프로그래밍 과제 풀이" width="600"/>
+
 *<p align="center">DP 테이블을 직접 계산하여 최대 합 '70'을 도출하는 과정</p>*
 
 ---
