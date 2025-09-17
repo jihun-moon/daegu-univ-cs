@@ -1,5 +1,5 @@
 
-## 💻시스템소프트웨어실무 (Systems Software Practice)
+# 💻 시스템소프트웨어실무 (Systems Software Practice)
 
 **[과목 정보]**
 
