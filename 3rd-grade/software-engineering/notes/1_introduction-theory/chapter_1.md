@@ -30,4 +30,4 @@
 
 </details>
 
-> [↩️ 전체 목차로 돌아가기](../../README.md)
+> [↩️ 전체 목차로 돌아가기](../../software-engineering)
