@@ -21,7 +21,7 @@ Java와 Android Studio를 기반으로, 사용자 중심의 모바일 앱을 개
 - **성장 포인트:** 사용자와 애플리케이션의 첫 상호작용이 일어나는 UI 화면을 직접 구성하며, **XML 코드와 시각적 결과물 사이의 관계를 이해**하고 사용자 중심적 사고의 첫걸음을 내디뎠습니다.
 
 **[실습 결과물: 로그인 UI]**
-<p align="center">
+<p align="left">
   <img src="./assets/login-ui-design.png" alt="로그인 UI 디자인" width="700"/>
   <br/>
   <i>XML 레이아웃을 이용해 구현한 로그인 UI 디자인(왼쪽)과 블루프린트(오른쪽)</i>
