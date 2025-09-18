@@ -31,7 +31,7 @@
 - **성장 포인트:** 모든 그래픽 프로그래밍의 시작점인 **개발 환경 설정 및 라이브러리 링킹** 과정을 직접 수행하며, 프로젝트의 기반을 구축하는 역량을 확보했습니다.
 - **결과물:** [assignment-1_setup/](./assignment-1_setup/) 폴더에서 PDF 보고서 확인 가능
 
-<p align="center">
+<p align="left">
   <img src="./assets/setup-screenshot.png" alt="OpenGL 개발 환경 구축" width="600"/>
   <br/>
   <i>Visual Studio에서 OpenGL 개발 환경을 성공적으로 구축하고 테스트 코드를 실행한 화면</i>
@@ -67,7 +67,7 @@
 - **결과물:** [assignment-3_animation/](./assignment-3_animation/) 폴더에서 전체 소스 코드(`main.cpp`) 확인 가능
 
 **[Demo]**
-<p align="center">
+<p align="left">
   <img src="./assignment-3_animation/demo.gif" alt="인터랙티브 애니메이션 데모" width="600"/>
   <br/>
   <i>키보드와 마우스 입력에 반응하는 인터랙티브 애니메이션</i>
