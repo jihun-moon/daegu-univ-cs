@@ -1,4 +1,4 @@
-# 🧠 컴퓨터 그래픽스 (Computer Graphics) - 실습 아카이브
+# 🧠 컴퓨터 그래픽스 (Computer Graphics)
 
 **[과목 정보]**
 - **수강:** 2학년 2학기
@@ -17,7 +17,7 @@
 ## 🚀 주요 과제 및 실습 (Key Assignments & Labs)
 
 ### 1주차: OpenGL 개발 환경 구축
-- **과제:** Visual Studio에서 OpenGL 및 GLUT 라이브러리를 연동하여 그래픽 프로그래밍을 위한 기본 개발 환경을 설정하고, 결과 보고서를 제출했습니다.1주차-OpenGL설치_22124895_문지훈.pdf]
+- **과제:** Visual Studio에서 OpenGL 및 GLUT 라이브러리를 연동하여 그래픽 프로그래밍을 위한 기본 개발 환경을 설정하고, 결과 보고서를 제출했습니다.
 - **확보 역량:** `개발 환경 설정`, `라이브러리 링킹`
 - **결과물:** [assignment-1_setup/](./assignment-1_setup/) 폴더에서 PDF 보고서 확인 가능
 
