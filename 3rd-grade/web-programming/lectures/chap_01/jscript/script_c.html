@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 소스 보기</title>
+  <link rel="stylesheet" href="../../style_xmp.css">
+</head>
+<body>
+  <xmp>
+let box = document.getElementById("box");
+let position = 0;
+      
+function moveBox() {
+  if (position < 150) {
+    position += 1;
+    box.style.left = position + "px";
+    requestAnimationFrame(moveBox);
+  }
+}
+      
+moveBox();
+  </xmp>
+</body>
+</html>
