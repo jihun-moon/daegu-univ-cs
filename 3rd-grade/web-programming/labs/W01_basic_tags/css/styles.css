@@ -1,0 +1,30 @@
+/* 전체 페이지의 배경화면 색상 변경 */
+body {
+  background-color: #f2f2f2; /* 연한 회색 */
+  font-family: sans-serif; /* 기본 폰트 설정 */
+}
+
+/* h1부터 h6 태그까지 각각 다른 색상 지정 */
+h1 { color: #d9534f; } /* 빨간색 계열 */
+h2 { color: #f0ad4e; } /* 주황색 계열 */
+h3 { color: #5cb85c; } /* 녹색 계열 */
+h4 { color: #5bc0de; } /* 하늘색 계열 */
+h5 { color: #0275d8; } /* 파란색 계열 */
+h6 { color: #292b2c; } /* 어두운 회색 계열 */
+
+/* box 크기, 색상, 위치 기준 설정 */
+#box {
+  width: 400px;
+  height: 200px;
+  background-color: lightcoral; /* 산호색 */
+  margin-top: 20px; /* 위쪽 텍스트와의 간격 */
+  position: relative; /* JavaScript로 left 값을 변경하기 위한 기준점 설정. 필수! */
+}
+
+/* 이미지 스타일 - 여기를 수정합니다 */
+img {
+  margin-top: 20px;
+  max-width: 200px;  /* 👈 이미지의 최대 너비를 200px로 제한합니다. (원하는 크기로 조절) */
+  height: auto;     /* 👈 너비에 비례하여 높이를 자동으로 조절하여 비율을 유지합니다. */
+  display: block;   /* 이미지가 다른 요소와 겹치지 않고 별도의 줄에 표시되도록 합니다. */
+}

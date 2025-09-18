@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MIRACLE HTML5</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    table {
+      padding:7px;
+      font-size: 20px;
+    }
+    td:nth-child(1) { 
+      color: gray; 
+      width: 45px;
+    }
+    tr { 
+      height: 33px; 
+    }
+    td img { 
+      height: 30px 
+    }
+    #snowButton {
+      font-size: 12px;
+      color: white;
+      background-color: #99aed5;
+      margin-left: 30px;
+      padding: 3px 10px;
+      border: none;
+      cursor: progress;
+    }
+  </style>
+</head>
+<body>
+  <script src="image.js"></script>
+  <header>
+    <h1><img src="media/logo.png"> Web Programming
+     <img src="media/jack.png" class="head-image">
+    </h1>  
+  </header>
+  <nav>
+    <button id="snowButton">Falling Snow<script src="snow.js"></script></button>
+  </nav>
+  <section>
+    <article class="index">
+      <table> 
+        <tr><td>01장</td> 
+          <td><a href="chap_01/index_01.html" onmouseover="showImage('image1')" 
+            onmouseout="hideImage('image1')"><b>HTML5와 웹 프로그래밍</b></a></td>
+          <td id="image1" class="image-container"><img src="font/font_w.png"></td>
+        </tr>
+        <tr><td>02장</td>    
+          <td ><a href="chap_02/index_02.html" onmouseover="showImage('image2')" 
+            onmouseout="hideImage('image2')"><b>HTML5로 기본 문서 만들기</b></a></td>
+          <td id="image2" class="image-container"><img src="font/font_e.png"></td>
+        </tr>
+        <tr><td>03장</td>    
+          <td><a href="chap_03/index_03.html" onmouseover="showImage('image3')" 
+            onmouseout="hideImage('image3')"><b>문서 구조화와 웹 폼</b></a></td>
+          <td id="image3" class="image-container"><img src="font/font_b.png"></td>
+        </tr>
+        <tr><td>04장</td>    
+          <td><a href="chap_04/index_04.html" onmouseover="showImage('image4')" 
+            onmouseout="hideImage('image4')"><b>CSS3로 웹 페이지 꾸미기</b></a></td>
+          <td id="image4" class="image-container"><img src="font/font_p.png"></td>
+        </tr>
+        <tr><td>05장</td>    
+          <td><a href="chap_05/index_05.html" onmouseover="showImage('image5')" 
+            onmouseout="hideImage('image5')"><b>CSS3의 고급 기능</b></a></td>
+          <td id="image5" class="image-container"><img src="font/font_r.png"></td>
+        </tr>
+        <tr><td>06장</td>    
+          <td><a href="chap_06/index_06.html" onmouseover="showImage('image6')" 
+            onmouseout="hideImage('image6')"><b>자바스크립트와 ES6</b></a></td>
+          <td id="image6" class="image-container"><img src="font/font_o.png"></td>
+        </tr>
+        <tr><td>07장</td>    
+          <td><a href="chap_07/index_07.html" onmouseover="showImage('image7')" 
+            onmouseout="hideImage('image7')"><b>자바스크립트 객체 다루기</b></a></td>
+          <td id="image7" class="image-container"><img src="font/font_g.png"></td>
+        </tr>
+        <tr><td>08장</td>    
+          <td><a href="chap_08/index_08.html" onmouseover="showImage('image8')" 
+            onmouseout="hideImage('image8')"><b>문서 객체모델</b></a></td>
+          <td id="image8" class="image-container"><img src="font/font_r.png"></td>
+        </tr>
+        <tr><td>09장</td>    
+          <td><a href="chap_09/index_09.html" onmouseover="showImage('image9')" 
+            onmouseout="hideImage('image9')"><b>이벤트 처리하기</b></a></td>
+          <td id="image9" class="image-container"><img src="font/font_a.png"></td>
+        </tr>
+        <tr><td>10장</td>
+          <td><a href="chap_10/index_10.html" onmouseover="showImage('image10')" 
+            onmouseout="hideImage('image10')"><b>브라우저 객체모델과 반응형 웹</b></a></td>
+          <td id="image10" class="image-container"><img src="font/font_m.png"></td>
+        </tr>
+        <tr><td>11장</td>
+          <td><a href="chap_11/index_11.html" onmouseover="showImage('image11')" 
+            onmouseout="hideImage('image11')"><b>캔버스로 그림 그리기</b></a></td>
+          <td id="image11" class="image-container"><img src="font/font_!.png"></td>
+        </tr>
+        <tr><td>12장</td>    
+          <td><a href="chap_12/index_12.html" onmouseover="showImage('image12')" 
+            onmouseout="hideImage('image12')"><b>도전! 프로젝트</b></a></td>
+          <td id="image12" class="image-container"><img src="font/font_que.png"></td>
+        </tr>
+      </table>
+    </article>
+  <section>
+  <footer>
+    &copy; 2024 MIRACLE Web Programming by ChoSungHo.<br>
+    <sub>All rights reserved.</sub>
+  </footer>
+</body>
+</html>
