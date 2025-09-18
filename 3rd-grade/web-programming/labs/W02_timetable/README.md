@@ -1,4 +1,4 @@
-# HTML 시간표 제작 (W02 Assignment)
+# HTML 시간표 제작 실습(W02 Assignment)
 
 ## 📋 요구 사항 (Requirements)
 
