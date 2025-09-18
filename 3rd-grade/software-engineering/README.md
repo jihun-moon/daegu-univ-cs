@@ -1,3 +1,33 @@
+# 📖 소프트웨어 공학 (Software Engineering)
+
+**[과목 정보]**
+- **수강:** 3학년 2학기
+- **핵심:** `소프트웨어 개발 생명주기`, `UML`, `요구공학`
+
+---
+
+## 📚 학습 노트 목차 (Table of Contents)
+
+이 페이지는 소프트웨어 공학 과목의 학습 내용을 주제별로 정리한 아카이브입니다.
+
+### Part 1: 소프트웨어 공학 개론 (이론)
+> 소프트웨어 개발의 전체적인 그림과 생명주기, 프로세스 모델 등 이론적 기반을 다룹니다.
+
+-   **[Chapter 1: 소프트웨어 공학의 개요](./notes/1_introduction-theory/chapter_1.md)**
+-   **[Chapter 2: 소프트웨어 프로세스와 개발 방법론](./notes/1_introduction-theory/chapter_2.md)**
+-   *(이후 '소프트웨어공학개론_Lec3.pdf'의 챕터는 여기에 계속 추가)*
+
+### Part 2: UML 모델링 (실습)
+> 이론을 바탕으로, UML을 사용해 시스템을 분석하고 설계하는 실습 내용을 다룹니다.
+
+-   **[Chapter 1: UML과 객체지향 모델링](./notes/2_uml-practice/chapter_1.md)**
+-   *(이후 'UML_Lec2.pdf'의 챕터는 여기에 계속 추가)*
+
+
+
+
+
+
 # 소프트웨어 공학 (Software Engineering)
 
 **수강 학년:** 3학년 2학기 (3rd Grade, 2nd Semester)
