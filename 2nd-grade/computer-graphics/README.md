@@ -1,4 +1,4 @@
-# 🧠 컴퓨터 그래픽스 (Computer Graphics) - 실습 아카이브
+# 🧠 컴퓨터 그래픽스 (Computer Graphics)
 
 **[과목 정보]**
 - **수강:** 2학년 2학기
