@@ -32,11 +32,11 @@
 -   OS가 하드웨어(물리적 또는 가상)와 어떻게 상호작용하며 부팅되고 설치되는지 그 과정을 직접 경험하며 시스템에 대한 이해를 심화했습니다.
 -   격리된 환경의 중요성을 체감하며, 향후 Docker 컨테이너와 같은 더 가볍고 효율적인 가상화 기술의 필요성을 명확히 인지하는 계기가 되었습니다.
 
-### 📸 최종 결과물 (Demo)
+**[Demo]**
 <p align="left">
-  <img src="./assets/ubuntu-vm-setup.gif" alt="Ubuntu VM 설치 과정" width="700"/>
+  <img src="./assets/ubuntu-vm-usage.gif" alt="Ubuntu VM 사용 과정" width="700"/>
   <br/>
-  <i>VMware Workstation Pro를 이용해 가상 머신을 생성하고, Ubuntu Server 22.04 LTS 이미지를 설치하여 초기 설정을 완료하는 과정</i>
+  <i>VMware에 성공적으로 구축한 Ubuntu Server에 접속하여, 기본 리눅스 명령어를 실행하는 모습</i>
 </p>
 
 ---
