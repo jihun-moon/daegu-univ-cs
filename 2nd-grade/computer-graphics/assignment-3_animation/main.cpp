@@ -1,297 +1,142 @@
 #include <GL/glut.h>
-
 #include <stdio.h>
 
- 
+GLfloat Delta = 0.0;       // ë„í˜•ì˜ ì´ë™ ê±°ë¦¬
+GLfloat Scale = 1.0;       // ë„í˜•ì˜ í¬ê¸° ë³€í™”
+GLboolean IsSphere = true; // ë„í˜•ì´ ì‚¼ê°í˜•ì¸ì§€ ë„¤ëª¨ì¸ì§€ êµ¬ë¶„
+GLboolean IsSmall = true;  // ë„í˜• í¬ê¸° (ì‘ì€ ë„í˜•, í° ë„í˜•)
+GLfloat Speed = 0.01;      // ê¸°ë³¸ ì´ë™ ì†ë„
 
-GLfloat Delta = 0.0;       // µµÇüÀÇ ÀÌµ¿ °Å¸®
-
-GLfloat Scale = 1.0;       // µµÇüÀÇ Å©±â º¯È­
-
-GLboolean IsSphere = true; // µµÇüÀÌ »ï°¢ÇüÀÎÁö ³×¸ğÀÎÁö ±¸ºĞ
-
-GLboolean IsSmall = true;  // µµÇü Å©±â (ÀÛÀº µµÇü, Å« µµÇü)
-
-GLfloat Speed = 0.01;      // ±âº» ÀÌµ¿ ¼Óµµ
-
- 
-
-// µµÇüÀ» ±×¸®´Â ÇÔ¼ö
-
+// ë„í˜•ì„ ê·¸ë¦¬ëŠ” í•¨ìˆ˜
 void drawShape() {
-
     if (IsSphere && IsSmall) {
-
-        glColor3f(1.0, 0.0, 0.0); // »¡°£»ö
-
+        glColor3f(1.0, 0.0, 0.0); // ë¹¨ê°„ìƒ‰
         glBegin(GL_TRIANGLES);
-
         glVertex3f(0.0, 0.2, 0.0);
-
         glVertex3f(-0.2, -0.2, 0.0);
-
         glVertex3f(0.2, -0.2, 0.0);
-
         glEnd();
-
     }
-
     else if (IsSphere && !IsSmall) {
-
-        glColor3f(0.0, 1.0, 0.0); // ÃÊ·Ï»ö
-
+        glColor3f(0.0, 1.0, 0.0); // ì´ˆë¡ìƒ‰
         glBegin(GL_TRIANGLES);
-
         glVertex3f(0.0, 0.5, 0.0);
-
         glVertex3f(-0.5, -0.5, 0.0);
-
         glVertex3f(0.5, -0.5, 0.0);
-
         glEnd();
-
     }
-
     else if (!IsSphere && IsSmall) {
-
-        glColor3f(0.0, 0.5, 1.0); // ÆÄ¶õ»ö
-
+        glColor3f(0.0, 0.5, 1.0); // íŒŒë€ìƒ‰
         glBegin(GL_POLYGON);
-
         glVertex3f(-0.2, -0.2, 0.0);
-
         glVertex3f(0.2, -0.2, 0.0);
-
         glVertex3f(0.2, 0.2, 0.0);
-
         glVertex3f(-0.2, 0.2, 0.0);
-
         glEnd();
-
     }
-
     else {
-
-        glColor3f(1.0, 1.0, 0.0); // ³ë¶õ»ö
-
+        glColor3f(1.0, 1.0, 0.0); // ë…¸ë€ìƒ‰
         glBegin(GL_POLYGON);
-
         glVertex3f(-0.5, -0.5, 0.0);
-
         glVertex3f(0.5, -0.5, 0.0);
-
         glVertex3f(0.5, 0.5, 0.0);
-
         glVertex3f(-0.5, 0.5, 0.0);
-
         glEnd();
-
     }
-
 }
 
- 
-
-// µğ½ºÇÃ·¹ÀÌ ÇÔ¼ö: µµÇüÀ» ±×¸°´Ù
-
+// ë””ìŠ¤í”Œë ˆì´ í•¨ìˆ˜: ë„í˜•ì„ ê·¸ë¦°ë‹¤
 void mydisplay() {
-
     glClear(GL_COLOR_BUFFER_BIT);
-
- 
-
     glPushMatrix();
-
-    glTranslatef(Delta, 0.0, 0.0);  // ÀÌµ¿
-
-    glScalef(Scale, Scale, 1.0);    // Å©±â Á¶Á¤
-
+    glTranslatef(Delta, 0.0, 0.0);  // ì´ë™
+    glScalef(Scale, Scale, 1.0);    // í¬ê¸° ì¡°ì •
     drawShape();
-
     glPopMatrix();
-
- 
-
     glFlush();
-
-    glutSwapBuffers(); // ´õºí ¹öÆÛ¸µ
-
+    glutSwapBuffers(); // ë”ë¸” ë²„í¼ë§
 }
 
- 
-
-// Ã¢ Å©±â º¯°æ ½Ã µµÇüÀÌ Âî±×·¯ÁöÁö ¾Êµµ·Ï ¼³Á¤
-
+// ì°½ í¬ê¸° ë³€ê²½ ì‹œ ë„í˜•ì´ ì°Œê·¸ëŸ¬ì§€ì§€ ì•Šë„ë¡ ì„¤ì •
 void MyReshape(int NewWidth, int NewHeight) {
-
     glViewport(0, 0, NewWidth, NewHeight);
-
- 
-
     glMatrixMode(GL_PROJECTION);
-
     glLoadIdentity();
-
- 
-
     GLfloat aspectRatio = (GLfloat)NewWidth / (GLfloat)NewHeight;
-
- 
-
     if (NewWidth >= NewHeight) {
-
         glOrtho(-1.0 * aspectRatio, 1.0 * aspectRatio, -1.0, 1.0, -1.0, 1.0);
-
     }
-
     else {
-
         glOrtho(-1.0, 1.0, -1.0 / aspectRatio, 1.0 / aspectRatio, -1.0, 1.0);
-
     }
-
 }
 
- 
-
-// Å°º¸µå ÀÔ·Â¿¡ µû¶ó ¼Óµµ Á¶Àı
-
+// í‚¤ë³´ë“œ ì…ë ¥ì— ë”°ë¼ ì†ë„ ì¡°ì ˆ
 void keyboard(unsigned char key, int x, int y) {
-
     if (key == 'f') {
-
-        Speed += 0.01;  // ¼Óµµ Áõ°¡
-
+        Speed += 0.01;  // ì†ë„ ì¦ê°€
         if (Speed > 0.2) Speed = 0.2;
-
     }
-
     else if (key == 's') {
-
-        Speed -= 0.01;  // ¼Óµµ °¨¼Ò
-
+        Speed -= 0.01;  // ì†ë„ ê°ì†Œ
         if (Speed < 0.01) Speed = 0.01;
-
     }
-
 }
 
- 
-
-// ¾Ö´Ï¸ŞÀÌ¼Ç Å¸ÀÌ¸Ó ÇÔ¼ö
-
+// ì• ë‹ˆë©”ì´ì…˜ íƒ€ì´ë¨¸ í•¨ìˆ˜
 void MyTimer(int Value) {
-
-    Delta += Speed;  // µµÇü ÀÌµ¿
-
-    if (Delta > 1.0) Delta = -1.0;  // È­¸é ¹ÛÀ¸·Î ³ª°¡¸é ´Ù½Ã ½ÃÀÛ
-
- 
-
-    Scale += 0.01;  // µµÇü Å©±â º¯È­
-
+    Delta += Speed;  // ë„í˜• ì´ë™
+    if (Delta > 1.0) Delta = -1.0;  // í™”ë©´ ë°–ìœ¼ë¡œ ë‚˜ê°€ë©´ ë‹¤ì‹œ ì‹œì‘
+    Scale += 0.01;  // ë„í˜• í¬ê¸° ë³€í™”
     if (Scale > 2.0) Scale = 1.0;
-
- 
-
     glutPostRedisplay();
-
     glutTimerFunc(40, MyTimer, 1);
-
 }
 
- 
-
-// ¸Ş´º ¼³Á¤ ÇÔ¼ö
-
+// ë©”ë‰´ ì„¤ì • í•¨ìˆ˜
 void MyMainMenu(int entryID) {
-
-    if (entryID == 1) IsSphere = false;  // ³×¸ğ
-
-    else if (entryID == 2) IsSphere = true;   // »ï°¢Çü
-
-    else if (entryID == 3) exit(0);  // ÇÁ·Î±×·¥ Á¾·á
-
+    if (entryID == 1) IsSphere = false;      // ë„¤ëª¨
+    else if (entryID == 2) IsSphere = true;  // ì‚¼ê°í˜•
+    else if (entryID == 3) exit(0);          // í”„ë¡œê·¸ë¨ ì¢…ë£Œ
     glutPostRedisplay();
-
 }
 
- 
-
-// ¼­ºê¸Ş´º ¼³Á¤ ÇÔ¼ö
-
+// ì„œë¸Œë©”ë‰´ ì„¤ì • í•¨ìˆ˜
 void MySubMenu(int entryID) {
-
-    if (entryID == 1) IsSmall = true;  // ÀÛÀº µµÇü
-
-    else if (entryID == 2) IsSmall = false;  // Å« µµÇü
-
+    if (entryID == 1) IsSmall = true;       // ì‘ì€ ë„í˜•
+    else if (entryID == 2) IsSmall = false; // í° ë„í˜•
     glutPostRedisplay();
-
 }
-
- 
 
 int main(int argc, char* argv[]) {
-
     glutInit(&argc, argv);
-
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
-
-    glutInitWindowPosition(100, 100);  // Ã¢ À§Ä¡
-
-    glutInitWindowSize(800, 400);      // Ã¢ Å©±â
-
+    glutInitWindowPosition(100, 100);  // ì°½ ìœ„ì¹˜
+    glutInitWindowSize(800, 400);      // ì°½ í¬ê¸°
     glutCreateWindow("OpenGL Drawing Example");
 
- 
-
     GLint MySubMenuID = glutCreateMenu(MySubMenu);
-
     glutAddMenuEntry("Small One", 1);
-
     glutAddMenuEntry("Big One", 2);
 
- 
-
     GLint MyMainMenuID = glutCreateMenu(MyMainMenu);
-
     glutAddMenuEntry("Draw Square", 1);
-
     glutAddMenuEntry("Draw Triangle", 2);
-
     glutAddSubMenu("Change Size", MySubMenuID);
-
     glutAddMenuEntry("Exit", 3);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);  // ì˜¤ë¥¸ìª½ í´ë¦­ ë©”ë‰´
 
-    glutAttachMenu(GLUT_RIGHT_BUTTON);  // ¿À¸¥ÂÊ Å¬¸¯ ¸Ş´º
-
- 
-
-    glClearColor(1.0, 1.0, 1.0, 1.0);  // Èò»ö ¹è°æ
-
+    glClearColor(1.0, 1.0, 1.0, 1.0);  // í°ìƒ‰ ë°°ê²½
     glMatrixMode(GL_PROJECTION);
-
     glLoadIdentity();
-
-    glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);  // ÁÂÇ¥°è
-
- 
+    glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);  // ì¢Œí‘œê³„
 
     glutDisplayFunc(mydisplay);
-
     glutReshapeFunc(MyReshape);
-
     glutKeyboardFunc(keyboard);
-
     glutTimerFunc(40, MyTimer, 1);
 
- 
-
-    glutMainLoop();  // ÀÌº¥Æ® Ã³¸® ·çÇÁ
-
- 
+    glutMainLoop();  // ì´ë²¤íŠ¸ ì²˜ë¦¬ ë£¨í”„
 
     return 0;
-
 }
