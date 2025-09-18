@@ -1,0 +1,114 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f5f5f5; /* 에브리타임 배경색 */
+    margin: 20px;
+}
+
+/* 리포트 정보 스타일 */
+.report-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 링크 버튼 컨테이너 */
+.link-container {
+    text-align: center;
+    margin: 25px 0;
+}
+
+/* 링크 버튼 스타일 */
+.lms-link {
+    display: inline-block;
+    background-color: #004a9e; /* 대구대학교 메인 색상 */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.lms-link:hover {
+    background-color: #00336b;
+}
+
+/* 시간표 전체 컨테이너 */
+.everytime-wrapper {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    overflow: hidden; /* 테이블의 모서리가 컨테이너를 벗어나지 않도록 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 테이블 스타일 */
+.timetable {
+    width: 100%;
+    border-collapse: collapse; /* 핵심: 표의 선을 한 줄로 만듦 */
+    table-layout: fixed; /* 셀 너비를 고정 */
+}
+
+.timetable th, .timetable td {
+    border: 1px solid #e9e9e9; /* 얇은 격자선 */
+    height: 55px;
+    text-align: center;
+    vertical-align: top; /* 셀 내용을 위쪽으로 정렬 */
+    font-size: 13px;
+}
+
+.timetable thead th {
+    background-color: #f9f9f9;
+    height: 35px;
+    font-weight: 500;
+    color: #555;
+    vertical-align: middle;
+}
+
+/* 시간 표시 컬럼 스타일 */
+.timetable .time-col {
+    width: 45px;
+    font-size: 12px;
+    color: #888;
+    background-color: #f9f9f9;
+    vertical-align: middle;
+}
+
+.timetable td {
+    padding: 2px;
+}
+
+/* 개별 수업 아이템 */
+.class-item {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-item .title {
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.class-item .location {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+/* 수업별 색상 (에브리타임 팔레트) */
+.c1 { background-color: #58B99D; } /* 소프트웨어공학 */
+.c2 { background-color: #F7C566; } /* 서버시스템관리 */
+.c3 { background-color: #F78B7D; } /* 데이터마이닝 */
+.c4 { background-color: #9293F8; } /* 진로·취업설계 */
+.c5 { background-color: #64C5F8; } /* 웹프로그래밍 */
