@@ -1,4 +1,4 @@
-# 🧠 컴퓨터 그래픽스 (Computer Graphics)
+# 🧠 컴퓨터 그래픽스 (Computer Graphics) - 실습 아카이브
 
 **[과목 정보]**
 - **수강:** 2학년 2학기
@@ -21,6 +21,12 @@
 - **확보 역량:** `개발 환경 설정`, `라이브러리 링킹`
 - **결과물:** [assignment-1_setup/](./assignment-1_setup/) 폴더에서 PDF 보고서 확인 가능
 
+<p align="center">
+  <img src="./assets/setup-screenshot.png" alt="OpenGL 개발 환경 구축" width="600"/>
+  <br/>
+  <i>Visual Studio에서 OpenGL 개발 환경을 성공적으로 구축하고 테스트 코드를 실행한 화면</i>
+</p>
+
 ---
 
 ### 3주차: 정점(Vertex)을 이용한 기본 도형 렌더링
@@ -28,6 +34,21 @@
 - **확보 역량:** `기본 렌더링 파이프라인`, `좌표계 이해`, `도형 프리미티브`
 - **결과물:** [assignment-2_vertex/](./assignment-2_vertex/) 폴더에서 코드 및 결과 이미지 확인 가능
     - 이를 통해 컴퓨터가 어떻게 수학적인 점들의 집합을 의미 있는 시각적 형태로 변환하는지에 대한 근본 원리를 이해했습니다.
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="./assets/star-rendering.png" alt="별 모양 렌더링 결과" width="420"/>
+      <br/>
+      <i>GL_LINE_LOOP를 이용해 렌더링한 별 모양</i>
+    </td>
+    <td align="center">
+      <img src="./assets/line-rendering.png" alt="선분 렌더링 결과" width="420"/>
+      <br/>
+      <i>GL_LINES를 이용해 렌더링한 선분들</i>
+    </td>
+  </tr>
+</table>
 
 ---
 
