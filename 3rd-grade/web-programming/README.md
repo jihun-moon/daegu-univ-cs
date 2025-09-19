@@ -1,6 +1,5 @@
 # 🌐 웹 프로그래밍 (Web Programming)
 
-
 ### **[과목 정보]**
 - **수강:** 3학년 2학기
 - **핵심 기술:** `HTML`, `CSS`, `JavaScript`, `Node.js`, `Express`
