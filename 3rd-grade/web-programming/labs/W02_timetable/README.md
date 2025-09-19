@@ -12,3 +12,10 @@ HTML의 `<table>` 태그를 심도 있게 사용하여, 제공된 시간표 이�
 * 시맨틱한 데이터 테이블 구성 및 웹 접근성
 * `rowspan` 및 `colspan` 속성을 활용한 고급 테이블 레이아웃
 * CSS 선택자를 이용한 테이블 요소 스타일링
+
+
+## 🖼️ 결과물 비교 (Before & After)
+
+| 요구사항 원본 (Original Requirements) | 구현 결과 (Final Result) |
+| :---: | :---: |
+| ![Original Timetable](./assets/timetable_requirements.png) | ![My Timetable Screenshot](./assets/my_timetable_screenshot.png) |
