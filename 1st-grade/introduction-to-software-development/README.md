@@ -36,10 +36,7 @@ README.md                     # 이 파일
 ## 라이선스 / 사용 범위
 - 교육 목적의 예제 코드
 - 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
-```
 
-추가로 노트 스냅샷도 보이게 하려면 아래 섹션을 원하는 위치에 넣으세요.
-```markdown
 ## 노트 스냅샷
 ![](assets/language-comparison-note-1.jpg)
 ![](assets/language-comparison-note-2.jpg)
