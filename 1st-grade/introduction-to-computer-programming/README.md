@@ -1,5 +1,3 @@
-
-```markdown
 # Introduction to Computer Programming — 1학년 실습 모음
 
 Python으로 기본 문법과 GUI 프로그래밍을 연습한 미니 프로젝트 모음입니다. 동일 코어 로직을 GUI(Turtle/Tkinter)와 Console에 분리 적용하는 연습에 중점을 두었습니다.
@@ -55,4 +53,3 @@ README.md                       # 이 파일
 
 ## 링크
 - Notion 과목 정리: 소프트웨어 개발 입문
-```
