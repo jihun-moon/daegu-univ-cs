@@ -59,14 +59,24 @@ aₙ = r·aₙ₋₁, a₀=c ⇒ aₙ = c·rⁿ
 
 ## 스크린샷
 
-- 과제 1  
-  <image source="assets/discrete-math-assignment-1.jpg">assignment-1</image>
-- 과제 2  
-  <image source="assets/discrete-math-assignment-2.jpg">assignment-2</image>
-- 과제 3  
-  <image source="assets/discrete-math-assignment-3.jpg">assignment-3</image>
-- 과제 4  
-  <image source="assets/discrete-math-assignment-4.jpg">assignment-4</image>
+<table>
+  <tr>
+    <td align="center"><strong>과제 1: 논리와 증명</strong></td>
+    <td align="center"><strong>과제 2: 집합과 관계</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/discrete-math-assignment-1.jpg" alt="과제 1: 논리와 증명" width="400"/></td>
+    <td><img src="./assets/discrete-math-assignment-2.jpg" alt="과제 2: 집합과 관계" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>과제 3: 조합론과 행렬</strong></td>
+    <td align="center"><strong>과제 4: 트리와 알고리즘</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/discrete-math-assignment-3.jpg" alt="과제 3: 조합론과 행렬" width="400"/></td>
+    <td><img src="./assets/discrete-math-assignment-4.jpg" alt="과제 4: 트리와 알고리즘" width="400"/></td>
+  </tr>
+</table>
 
 ## 참고
 
