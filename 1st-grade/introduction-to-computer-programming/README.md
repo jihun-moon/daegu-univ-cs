@@ -8,11 +8,11 @@ Python으로 기본 문법과 GUI 프로그래밍을 연습한 미니 프로젝�
 
 ## 프로젝트 목록
 
-| Name | Tech | 한 줄 설명 | 실행 |
-|---|---|---|---|
-| Angry Turtle | Python, Turtle | 포물선 운동 슈팅. 각도·속도 조절, 충돌 시 스코어 갱신 | `python angry-turtle.py` |
-| Ball Simulation | Python, Tkinter | 2D 공 이동·충돌 시뮬레이션. 고정 타임스텝 업데이트 | `python ball-simulation-tkinter.py` |
-| Fortress (Console) | Python | 콘솔 기반 캐논 게임. GUI 없이 코어 로직 검증 | `python fortress-game-console.py` |
+| Name               | Tech             | 한 줄 설명                                                         | 실행                                 |
+|--------------------|------------------|--------------------------------------------------------------------|--------------------------------------|
+| Angry Turtle       | Python, Turtle   | 포물선 운동 슈팅. 각도·속도 조절, 충돌 시 스코어 갱신              | `python angry-turtle.py`             |
+| Ball Simulation    | Python, Tkinter  | 2D 공 이동·충돌 시뮬레이션. 고정 타임스텝 업데이트                 | `python ball-simulation-tkinter.py`  |
+| Fortress (Console) | Python           | 콘솔 기반 캐논 게임. GUI 없이 코어 로직 검증                       | `python fortress-game-console.py`    |
 
 ## 핵심 학습 포인트
 - 입력 이벤트와 렌더링/물리 업데이트 분리 (`update()` vs `draw()`)
@@ -20,9 +20,28 @@ Python으로 기본 문법과 GUI 프로그래밍을 연습한 미니 프로젝�
 - 순수 함수 기반 코어 로직(예: `step(pos, vel, dt)`)으로 테스트 용이성 확보
 - 로직–표현 분리로 동일 로직의 GUI/Console 재사용
 
+## 요구 사항
+- Python 3.9 이상
+- Tkinter, Turtle는 표준 라이브러리 활용
+- 선택: 가상환경 사용 권장
+
 ## 사용 방법
-1) Python 3.9+ 준비
-2) 각 스크립트 실행
+
+가상환경 생성 및 활성화
+```bash
+python -m venv .venv
+# macOS/Linux
+source .venv/bin/activate
+# Windows
+.\.venv\Scripts\activate
+```
+
+의존성 설치(필요 시)
+```bash
+pip install -r requirements.txt
+```
+
+각 스크립트 실행
 ```bash
 # Angry Turtle
 python angry-turtle.py
@@ -36,7 +55,7 @@ python fortress-game-console.py
 
 ## 조작법 (요약)
 - Angry Turtle: ↑/↓ 각도, ←/→ 속도, Space 발사
-- Fortress(Console): 안내에 따라 각도·속도 입력
+- Fortress (Console): 안내에 따라 각도·속도 입력
 
 ## 디렉터리
 ```
@@ -52,4 +71,4 @@ README.md                       # 이 파일
 - 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
 
 ## 링크
-- [Notion 과목 정리: 소프트웨어 개발 입문](https://www.notion.so/9494b9bfd15442178be23b57065b4279?source=copy_link)
+- Notion 과목 정리: 소프트웨어 개발 입문: https://www.notion.so/9494b9bfd15442178be23b57065b4279?source=copy_link
