@@ -95,10 +95,16 @@ python3 huffman-coding.py
 
 ## 스크린샷
 
-- Binary Tree Operations  
-  <image source="assets/binary-tree-operations-result.png">binary-tree-operations</image>
-- Huffman Coding  
-  <image source="assets/huffman-coding-result.png">huffman-coding</image>
+<table>
+  <tr>
+    <td align="center"><strong>Binary Tree Operations</strong></td>
+    <td align="center"><strong>Huffman Coding</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/binary-tree-operations-result.png" alt="Binary Tree Operations Result" width="400"/></td>
+    <td><img src="./assets/huffman-coding-result.png" alt="Huffman Coding Result" width="400"/></td>
+  </tr>
+</table>
 
 ## 참고
 
