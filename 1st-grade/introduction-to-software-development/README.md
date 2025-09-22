@@ -1,62 +1,36 @@
-# 🚀 소프트웨어 개발 입문 (Introduction to Software Development)
+# Introduction to Software Development — 1학년 실습 모음
 
-**[과목 정보]**
-- **수강:** 1학년 1학기
-- **사용 도구:** `App Inventor`, `Processing`
-- **핵심:** `비주얼 프로그래밍`, `이벤트 처리`, `UI/UX 기초`
+App Inventor와 Processing으로 이벤트 기반 로직과 상호작용(UX)을 연습한 실습 모음입니다. 상태 관리와 입력 검증, 타이머 등 기초 개념을 실제 결과물에 적용하는 데 중점을 두었습니다.
 
----
+## 데모 스크린샷
+- 구구단 트레이너(App Inventor): ![](assets/gugudan-screenshot.png)
+- Interactive Zoog(Processing): ![](assets/processing-zoog-screenshot.png)
 
-## 📖 과목 개요 (Overview)
-블록 코딩(App Inventor)과 시각적 프로그래밍(Processing)을 통해 **소프트웨어 개발의 핵심 원리를 직관적으로 체득**한 입문 과목입니다. 텍스트 코딩에 앞서 이벤트 처리, 객체 활용 등 근본적인 개념을 시각적으로 구현하며 개발에 대한 흥미와 자신감을 키웠습니다.
+## 프로젝트 목록
 
-## 🚀 주요 프로젝트 (Key Projects)
+| Name                         | Tech           | 한 줄 설명                               | 실행/열기                          |
+|-----------------------------|----------------|------------------------------------------|------------------------------------|
+| 구구단 트레이너              | App Inventor   | 입력 검증과 피드백 중심의 학습 앱        | gugudan-trainer-app.aia (AI2로 열기) |
+| Interactive Zoog (스케치)   | Processing     | 키 입력에 반응하는 인터랙티브 그래픽     | `processing`로 interactive-zoog.pde |
 
-### 1. 기능성 구구단 트레이너 앱
-- **프로젝트 파일**: `gugudan-trainer-app.aia`
-- **핵심 역량**: `App Inventor`, `이벤트 처리`, `모바일 UI/UX 설계`
-- **설명**: 난이도 조절, 타이머, 시각/청각 효과 등 다양한 기능을 포함한 구구단 학습 안드로이드 앱입니다. 사용자의 행동에 즉각적으로 피드백을 제공하는 인터랙티브한 경험을 구현했습니다.
-- **성장 포인트**:
-    - 단순 기능 구현을 넘어, **타이머와 시각적 피드백(화면 색상 변경)을 통해 사용자 경험(UX)을 개선**하는 과정을 처음으로 경험했습니다.
-    - 이는 사용자의 입장에서 서비스를 고민하는 **제품 중심적 사고의 시작**이 되었습니다.
+## 핵심 학습 포인트
+- 이벤트 기반 로직과 상태 관리 분리
+- 입력 검증과 사용자 피드백(시각/청각)
+- 타이머 기반 업데이트와 화면 갱신 분리
+- 간단한 객체지향 렌더링 패턴
 
-**[Demo]**
+## 사용 방법
+- App Inventor: AI2(웹)에서 gugudan-trainer-app.aia 가져오기 → 연결 혹은 에뮬레이터로 실행
+- Processing: Processing IDE에서 interactive-zoog.pde 열기 → Run
 
-<img src="./assets/gugudan-app-screenshot.jpg" alt="구구단을 외자! 앱 실행 화면" width="400"/>
+## 디렉터리
+```
+assets/                       # 스크린샷/이미지
+gugudan-trainer-app.aia       # App Inventor 프로젝트 파일
+interactive-zoog.pde          # Processing 스케치
+README.md                     # 이 파일
+```
 
----
-
-### 2. 인터랙티브 'Zoog' 캐릭터
-- **프로젝트 파일**: `interactive-zoog.pde`
-- **핵심 역량**: `Processing`, `객체지향 개념`, `좌표계 변환`
-- **설명**: 변수, 조건문, 함수 등 프로그램의 핵심 개념을 종합하여 마우스 입력에 동적으로 반응하는 캐릭터 'Zoog'를 구현했습니다.
-- **성장 포인트**:
-    - `translate()`와 `rotate()` 함수를 활용한 좌표계 변환 원리를 깊이 있게 이해했으며, 이는 향후 **복잡한 2D/3D 그래픽 렌더링의 수학적 기반**을 학습하는 데 큰 도움이 되었습니다.
-
-**[Demo]**
-
-![Zoog 캐릭터 애니메이션](./assets/zoog-screenshot.png)
-
----
-
-## 💡 심화 학습 노트 (Further Study)
-
-이 과목을 통해 프로그래밍 언어의 다양성에 흥미를 갖게 되어, 향후 배울 C++, Java, Python 등 **주요 객체 지향 언어들의 특징과 장단점을 비교 분석**하는 개인적인 학습을 진행했습니다. 이는 언어의 문법을 넘어 각 언어의 철학과 적합한 사용처를 고민하는 폭넓은 시야를 기르는 계기가 되었습니다.
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="./assets/language-comparison-note-1.jpg" alt="언어 비교 노트 1" width="500"/>
-      <br/>
-      <i>언어 비교 노트 1</i>
-    </td>
-    <td align="center">
-      <img src="./assets/language-comparison-note-2.jpg" alt="언어 비교 노트 2" width="500"/>
-      <br/>
-      <i>언어 비교 노트 2</i>
-    </td>
-  </tr>
-</table>
-
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
+## 라이선스 / 사용 범위
+- 교육 목적의 예제 코드
+- 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
