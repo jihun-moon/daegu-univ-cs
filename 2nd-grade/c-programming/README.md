@@ -1,68 +1,104 @@
-# 💻 C 프로그래밍 (C Programming)
+# C Programming Exercises
 
-**[과목 정보]**
-- **수강:** 2학년 1학기
-- **언어:** `C`
-- **핵심 역량:** `포인터`, `메모리 관리`, `저수준 데이터 조작`
+간단한 문제를 절차적으로 분해해 함수 단위로 구현하는 연습을 통해, 자료형·제어문·함수·배열·문자열·포인터·동적 메모리와 디버깅 습관을 확립합니다.
 
----
+- 학년: 2학년
+- 언어: C
+- 빌드: gcc 또는 clang
 
-## 📖 과목 개요 (Overview)
-컴퓨터의 동작 원리와 가장 가까운 C언어를 통해, **고수준 언어(Java, Python 등)의 블랙박스 내부를 이해하는 기반**을 다진 과목입니다. 추상화되어 있던 **메모리 주소와 포인터** 같은 근본적인 개념을 직접 제어하며, '효율적인 코드'란 무엇인지 하드웨어 관점에서 고민하는 능력을 길렀습니다.
+## 폴더 구조
 
-## 🚀 주요 과제 및 확보한 역량
+- assets
+  - case-converter.png
+  - find-max-min-pointer.png
+  - multiplication-table.png
+  - simple-xor-cipher.png
+- case-converter.c
+- find-max-min-pointer.c
+- multiplication-table.c
+- simple-xor-cipher.c
+- README.md
 
-### 1. XOR 연산을 이용한 대칭키 암호화/복호화
-- **소스 파일:** `simple-xor-cipher.c`
-- **핵심 역량:** `비트 단위 연산`
-- **설명:** 사용자 입력을 받아 고정된 키(key) 값과 **XOR 비트 연산**을 통해 암호화 및 복호화를 수행하는 콘솔 애플리케이션입니다.
-- **성장 포인트**:
-    - `^`(XOR) 연산자를 활용해 1과 0의 비트 세계에서 어떻게 **정보의 가역적(Reversible) 변환**이 일어나는지, 기본적인 암호화 알고리즘의 원리를 직접 구현했습니다.
-    - 이는 향후 네트워크 패킷 분석, 데이터 압축 등 **메모리 효율성이 극도로 중요한 분야**에서 데이터를 저수준에서 다룰 수 있는 자신감을 주었습니다.
+## 빠른 실행
 
-**[Demo]**
+```bash
+# 1) 컴파일
+gcc -O2 -Wall -Wextra -std=c11 -o case-converter case-converter.c
+gcc -O2 -Wall -Wextra -std=c11 -o find-max-min-pointer find-max-min-pointer.c
+gcc -O2 -Wall -Wextra -std=c11 -o multiplication-table multiplication-table.c
+gcc -O2 -Wall -Wextra -std=c11 -o simple-xor-cipher simple-xor-cipher.c
 
-![XOR 암호화 프로그램 데모](./assets/simple-xor-cipher.png)
+# 2) 실행 예
+./case-converter
+./find-max-min-pointer
+./multiplication-table
+./simple-xor-cipher
+```
 
----
+- 권장 옵션: -fsanitize=address,undefined 로 런타임 검사를 추가해 메모리/UB를 조기에 발견하세요.
 
-### 2. 포인터를 활용한 효율적인 값의 교환 및 반환
-- **소스 파일:** `find-max-min-pointer.c`
-- **핵심 역량:** `포인터`, `참조에 의한 전달(Pass-by-Reference)`
-- **설명:** **포인터**를 함수 인자로 전달하여, 단일 반환 값의 제약을 넘어 여러 개의 결과(최대값, 최소값)를 효과적으로 반환하는 함수를 구현했습니다.
-- **성장 포인트**:
-    - **값에 의한 전달(Pass-by-Value)** 방식의 비효율(데이터 복사 비용)을 극복하고, **참조에 의한 전달(Pass-by-Reference)** 을 통해 메모리 주소 값만으로 원본 데이터를 직접 수정하는 원리를 체득했습니다.
-    - 이 경험은 C++의 참조(Reference), Java의 객체 전달 방식 등 **현대 프로그래밍 언어의 핵심 동작 원리**를 깊이 있게 이해하는 계기가 되었습니다.
+## 과제별 설명
 
-**[Demo]**
+### 1) case-converter.c
+- 내용: 입력된 영문 문자열의 대소문자를 변환
+- 포인트: 문자 범위 검사, 입력 길이 제한, 버퍼 종료 처리
+- 입력 예: Hello → hELLO
+- 스크린샷  
+  <image source="assets/case-converter.png">case-converter output</image>
 
-![최대/최소값 탐색 프로그램 데모](./assets/find-max-min-pointer.png)
+### 2) find-max-min-pointer.c
+- 내용: 포인터를 이용해 배열의 최댓값·최솟값 탐색
+- 포인트: 포인터 산술, const 포인터 인터페이스, 경계값 테스트
+- 입력 예: 3 9 -1 7 → max=9, min=-1
+- 스크린샷  
+  <image source="assets/find-max-min-pointer.png">find-max-min-pointer output</image>
 
----
+### 3) multiplication-table.c
+- 내용: n까지의 구구단 또는 곱셈표 출력
+- 포인트: 중첩 반복, 출력 포맷 정렬
+- 입력 예: n=5 → 5×5 표
+- 스크린샷  
+  <image source="assets/multiplication-table.png">multiplication-table output</image>
 
-### 3. C언어 기초 문법 및 표준 라이브러리 실습
-- **소스 파일:** `multiplication-table.c`, `case-converter.c`
-- **핵심 역량:** `콘솔 입출력`, `제어 흐름`
-- **설명:** 콘솔 입출력(`scanf`, `printf`) 및 제어문을 활용하여 구구단 출력, 알파벳 대소문자 변환 등 C언어의 기본 문법을 다루는 작은 유틸리티 모음입니다.
-- **성장 포인트**:
-    - 이 과제들을 통해 C언어의 기본 문법과 표준 라이브러리 함수를 활용한 사용자 상호작용 방법을 확실히 다졌습니다.
+### 4) simple-xor-cipher.c
+- 내용: 고정 키로 XOR 암복호화
+- 포인트: 비트연산 가역성 a^k^k=a, 파일/표준입력 선택, 널 종료
+- 입력 예: plain + key → cipher, 같은 key로 복호화
+- 스크린샷  
+  <image source="assets/simple-xor-cipher.png">simple-xor-cipher output</image>
 
-**[Demos]**
+## 코드 스타일과 품질
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="./assets/multiplication-table.png" alt="구구단 출력 프로그램 데모" width="400"/>
-      <br/>
-      <i>구구단 출력 결과</i>
-    </td>
-    <td align="center">
-      <img src="./assets/case-converter.png" alt="알파벳 변환 프로그램 데모" width="400"/>
-      <br/>
-      <i>소문자-대문자 변환 결과</i>
-    </td>
-  </tr>
-</table>
+- 포맷: clang-format 권장
+- 경고: -Wall -Wextra 기본, 필요 시 -Wshadow -Wconversion 추가
+- 입력 검증: scanf에는 길이 제한 사용. 문자열은 항상 널 종료 보장
+- 메모리: malloc 결과 검사, 사용 후 free, 이중 해제 방지 위해 p=NULL
 
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
+## 테스트 가이드
+
+- 경계값: 빈 문자열, 최솟값/최댓값이 같은 배열, n=1·n=0
+- 비정상 입력: 비문자·음수·과도한 길이
+- 시간복잡도: 변환/탐색/출력 모두 O(n). 표 출력은 O(n^2)
+
+## 빌드 스크립트 예시
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+CC=${CC:-gcc}
+CFLAGS="-O2 -Wall -Wextra -std=c11"
+$CC $CFLAGS -o case-converter case-converter.c
+$CC $CFLAGS -o find-max-min-pointer find-max-min-pointer.c
+$CC $CFLAGS -o multiplication-table multiplication-table.c
+$CC $CFLAGS -o simple-xor-cipher simple-xor-cipher.c
+echo "Build OK"
+```
+
+## 라이선스
+
+- 교육 목적의 예제 코드입니다. 필요 시 MIT 등으로 라이선스를 지정하세요.
+
+## 참고
+
+- C 언어 레퍼런스: https://en.cppreference.com
+- C 보안 코딩(문자열): https://wiki.sei.cmu.edu
