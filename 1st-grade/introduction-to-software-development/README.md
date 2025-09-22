@@ -40,3 +40,9 @@ README.md                     # 이 파일
 ## 노트 스냅샷
 ![](assets/language-comparison-note-1.jpg)
 ![](assets/language-comparison-note-2.jpg)
+
+README 최하단에 아래 한 줄만 추가하면 됩니다.
+
+
+## 링크
+- Notion 과목 정리: https://www.notion.so/da2f0b466abf4e7e9cc791b918da8578
