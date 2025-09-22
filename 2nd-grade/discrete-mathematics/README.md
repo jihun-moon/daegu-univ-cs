@@ -1,5 +1,3 @@
-아래를 README.md로 복붙하면 됩니다. 파일명은 assets 폴더 이미지 기준으로 맞춰두었습니다.[[1]](https://github.com/jihun-moon/daegu-univ-cs/tree/main/2nd-grade/discrete-mathematics)
-
 # Discrete Mathematics Notes
 
 논리와 증명, 집합·함수·관계, 수열·점화식, 그래프 이론의 핵심을 면접용으로 간단 명료하게 정리했습니다. 알고리즘 정확성·복잡도 분석으로 자연스럽게 연결됩니다.
