@@ -110,3 +110,7 @@ python3 huffman-coding.py
 
 - Python docs: collections.deque, heapq  
 - CLRS 요약 정리 링크 추가 가능
+
+## Notion Page
+- Data Structures: https://www.notion.so/6d05cd2e94344baabf9b9f8eb4910227
+
