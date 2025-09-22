@@ -1,42 +1,78 @@
-# 🌐 컴퓨터 네트워크 (Computer Networks)
+# Computer Networks Notes
 
-**[과목 정보]**
-- **수강:** 2학년 2학기
-- **핵심 기술:** `TCP/IP`, `Wireshark`, `Socket Programming`
-- **핵심 역량:** `네트워크 프로토콜 스택`, `패킷 분석`, `클라우드 네이티브 트러블슈팅`
+프로토콜 스택을 계층별로 이해하고 실전 패킷 분석으로 문제를 진단하는 학습 노트입니다. IPv4/IPv6, ARP, TCP, 혼잡 제어를 Wireshark와 간단한 소켓 실습으로 확인합니다.
 
----
+- 학년: 2학년
+- 과목: 컴퓨터 네트워크
+- 도구: Wireshark, tcpdump, Python socket
+- 목적: 보고서·캡처·분석 절차 아카이브
 
-## 📖 과목 개요 (Overview)
-클라우드 환경에서 동작하는 **분산 시스템의 근간**인 네트워크 통신 원리를 깊이 있게 학습한 과목입니다. TCP/IP 프로토콜 스택의 각 계층을 분석하고, Wireshark를 이용한 패킷 캡처 실습을 통해 이론적 지식을 **클라우드 환경의 통신 문제를 해결하는 실용적인 트러블슈팅 역량으로 전환**하는 데 집중했습니다.
+## 폴더 구조
 
-## 🛠️ 확보한 핵심 역량 (Acquired Skills)
--   **네트워크 프로토콜 스택 이해**: OSI 7계층과 TCP/IP 모델을 기반으로 데이터가 애플리케이션 계층에서 물리 계층까지 **캡슐화(Encapsulation)** 되고 다시 역캡슐화되는 전 과정을 설명할 수 있습니다.
--   **핵심 프로토콜 분석 능력**: TCP의 3-way-handshake, 흐름/오류 제어 메커니즘과 UDP의 비연결성 특징을 이해하고, IP/ARP/ICMP 프로토콜의 역할과 동작 방식을 설명할 수 있습니다.
--   **실용적인 패킷 분석 및 트러블슈팅**: **Wireshark**를 활용하여 실제 네트워크 트래픽을 분석하고, 특정 프로토콜의 헤더 정보를 해석하여 통신 문제를 진단하는 기초 역량을 확보했습니다.
+- assets  
+  - ipv6-report.png  
+  - wireshark-arp-analysis.png
+- README.md
+- (선택) scripts, captures, docs
 
-> 이 역량들은 향후 Docker 컨테이너 간의 네트워크를 설정하고, 쿠버네티스(Kubernetes) 환경에서 서비스들의 통신 문제를 디버깅하며, 클라우드 환경의 API 엔드포인트 문제를 해결하는 **MLOps/Cloud-Native 엔지니어의 핵심 기반 역량**입니다.
+## 3줄 요약
 
-## 🚀 주요 과제 및 실습 (Key Assignments & Labs)
+- 인터넷 프로토콜 스택의 동작을 계층별로 정리하고 헤더 필드를 근거로 해석
+- IPv6 주소 설계, ARP 해석, TCP 3-way·혼잡 제어를 실습으로 검증
+- 재현 가능한 캡처 필터와 분석 루틴을 문서화해 트러블슈팅 기반 마련
 
-### 1. 차세대 인터넷 프로토콜(IPv6) 연구 보고서
--   **과제**: 기존 IPv4의 주소 고갈 문제를 해결하기 위한 **IPv6의 아키텍처와 핵심 특징**을 조사하고 기술 보고서를 작성했습니다.
--   **성장 포인트**: 128비트 주소 체계와 같은 차세대 기술의 필요성을 이해하며, **수십억 개의 디바이스가 연결되는 IoT 및 대규모 클라우드 환경을 위한 확장성 있는 네트워크 설계**의 중요성을 깨달았습니다.
+## 핵심 개념 5개
 
-**[보고서 요약]**
+1) 주소 체계: IPv4 vs IPv6  
+- IPv6는 128비트 주소, 확장 헤더, 멀티/애니캐스트 지원. 전환은 듀얼스택·터널링·NAT64  
+// 언제/왜: 주소 고갈 해소, 대규모·IoT 네트워크 확장성
 
-![IPv6 조사 보고서](./assets/ipv6-report.png)
+2) ARP와 L2 브로드캐스트  
+- ARP Request: Who has <IP>? Tell <Sender IP/MAC>  
+// 언제/왜: 같은 브로드캐스트 도메인에서 IP→MAC 매핑, ARP 스푸핑 탐지
 
----
+3) TCP 연결 수립과 종료  
+- 3-way handshake, 4-way 종료. MSS·윈도·옵션으로 전송 특성 협상  
+// 언제/왜: 지연·재전송 원인 파악, 방화벽/로드밸런서 동작 검증
 
-### 2. Wireshark를 이용한 ARP 패킷 실시간 분석
--   **실습**: 로컬 네트워크 트래픽을 실시간으로 캡처하고 ARP 패킷을 필터링하여, **논리 주소(IP)가 물리 주소(MAC)로 변환되는 과정을 직접 확인**했습니다.
--   **성장 포인트**: 추상적인 이론으로만 존재하던 2계층과 3계층의 상호작용을 실제 데이터로 확인하며, **"컨테이너 A가 컨테이너 B를 찾지 못하는" 것과 같은 실제 클라우드 환경 문제의 근본 원인을 진단하고 해결하는 트러블슈팅 역량**의 기초를 다졌습니다.
+4) 혼잡 제어와 흐름 제어  
+- 슬로우스타트→혼잡회피(AIMD). 수신 윈도는 흐름, cwnd는 혼잡 제어 지표  
+// 언제/왜: RTT 급등·스루풋 저하 분석, BDP 기반 버퍼·윈도 튜닝
 
-**[분석 결과]**
+5) 캡처·필터링 루틴  
+- 디스플레이: arp || icmp || tcp.port==80  
+- 캡처: host 192.168.0.10 and not port 22  
+// 언제/왜: 관심 트래픽만 좁혀 재현성·분석 속도 향상
 
-![와이어샤크 ARP 패킷 분석](./assets/wireshark-arp-analysis.png)
-*<p align="center">ARP request 패킷을 캡처하여 발신지/목적지 주소를 분석하는 화면</p>*
+## 실습 메모
 
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
+- IPv6 접두사/인터페이스 ID 혼동 → hextet 압축 규칙·프리픽스 길이 표로 정리 → 주소 표기 오류 제거  
+- ARP 캡처 범람 → 캡처 필터(ether dst ff:ff:ff:ff:ff:ff)와 디스플레이 필터 분리 → 원인 구간만 추출  
+- TCP 재전송 오탐 → MSS 미스매치 확인, MTU/DF 및 PMTUD 점검 루틴 추가
+
+## 제출 전 체크리스트
+
+- [ ] 캡처 환경(인터페이스, 필터, 시간대)을 기록했다  
+- [ ] 계층별 헤더 필드에서 근거를 라벨링했다(IPv6, TCP 옵션 등)  
+- [ ] 가설→증거 패킷→결론 흐름으로 서술했다  
+- [ ] 보조 실험(ping, traceroute, 간단 소켓 테스트)을 포함했다  
+- [ ] 무관한 패킷/로그는 부록으로 분리했다
+
+## 스크린샷
+
+<table>
+  <tr>
+    <td align="center"><strong>IPv6 조사 보고서</strong></td>
+    <td align="center"><strong>Wireshark ARP 패킷 분석</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/ipv6-report.png" alt="IPv6 조사 보고서 요약" width="400"/></td>
+    <td><img src="assets/wireshark-arp-analysis.png" alt="Wireshark ARP 패킷 분석" width="400"/></td>
+  </tr>
+</table>
+
+## 빠른 참고
+
+- Wireshark Display Filter: https://www.wireshark.org/docs/dfref/  
+- RFC 8200 (IPv6): https://www.rfc-editor.org/rfc/rfc8200  
+- 소켓 실습 예시(간단 echo 서버/클라이언트) 추가 가능
