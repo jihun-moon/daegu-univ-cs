@@ -1,45 +1,57 @@
-# 🧠 알고리즘 (Algorithm)
+# Algorithms — 2학년 정리
 
-**[과목 정보]**
-- **수강:** 2학년 2학기
-- **언어:** `Python`
-- **핵심:** `시간 복잡도 분석`, `알고리즘 설계 기법`, `동적 프로그래밍`
+복잡도 분석과 알고리즘 설계 패러다임(분할정복, 그리디, DP, 그래프)을 실습으로 정리한 저장소입니다.
 
----
+## Quick start
+- Python 3.10+
+- 가상환경 권장
+```bash
+python -m venv .venv && source .venv/bin/activate  # Windows: .\.venv\Scripts\activate
+pip install -r requirements.txt  # 필요 시
+```
 
-## 📖 과목 개요 (Overview)
-**'동작하는 코드'를 넘어 '효율적이고 확장 가능한 코드'를 작성**하기 위해, 문제 해결 절차를 설계하고 수학적으로 성능을 분석하는 능력을 배양한 컴퓨터 과학의 핵심 과목입니다. **점근적 표기법(Big-O)**을 이용한 시간 복잡도 분석부터 **동적 프로그래밍, 그래프** 등 고급 알고리즘 설계 기법까지 학습하며, 복잡한 문제에 대한 **최적의 해결책을 논리적으로 찾아내는 역량**을 길렀습니다.
+## 데모 스크린샷
+<table>
+<tr>
+<td align="center"><strong>선택 정렬 실행 결과</strong></td>
+<td align="center"><strong>DP 행렬 경로 최대합</strong></td>
+</tr>
+<tr>
+<td><img src="assets/selection-sort-result.png" width="420" /></td>
+<td><img src="assets/dp-matrix-path-solution.jpg" width="420" /></td>
+</tr>
+</table>
 
-## 🚀 주요 과제 및 실습 (Key Assignments)
+## 학습 주제
+- 시간·공간 복잡도: O, Ω, Θ와 상수항 vs 차수
+- 분할정복: Merge Sort, Quick Sort
+- 그래프 탐색: BFS/DFS, 무가중 최단경로는 BFS
+- 그리디: 활동 선택, 전제 점검과 교환 논법
+- 동적 계획법(DP): 점화식, 테이블링, 경로 복원
 
-### 1. 선택 정렬 (Selection Sort) 알고리즘 구현 및 성능 분석
-- **소스 파일**: `selection-sort.py`
-- **핵심 역량**: `알고리즘 성능 분석`, `주요 정렬 알고리즘 이해`
-- **설명**: 대표적인 **O(n²)** 복잡도의 정렬 알고리즘인 **선택 정렬**을 Python으로 직접 구현하고, 숫자 배열이 단계별로 정렬되는 과정을 시각적으로 증명했습니다.
-- **성장 포인트**:
-    - 이론으로만 배우던 정렬 알고리즘을 코드로 구현하며 **내부 동작 원리를 완벽하게 체득**했습니다.
-    - 이중 `for` 루프가 시간 복잡도에 어떻게 직접적으로 영향을 미치는지 확인하며, **코드 구조만으로도 잠재적인 성능 병목(Performance Bottleneck)을 예측**할 수 있는 분석적 시야를 확보했습니다.
+## 예제 코드
+- selection-sort.py: 선택 정렬과 단계별 상태 출력
+- bfs_shortest.py: 무가중 그래프 최단거리
+- edit_distance.py: Levenshtein 거리(bottom-up DP)
+- merge_sort.py: 분할정복 정렬
 
-**[Demo]**
+## 실행 예
+```bash
+python selection-sort.py
+python bfs_shortest.py
+python edit_distance.py
+```
 
-![선택 정렬 실행 결과](./assets/selection-sort-result.png)
-*<p align="center">구현된 선택 정렬 알고리즘의 단계별 실행 결과</p>*
+## 디렉터리
+```
+assets/                          # 스크린샷
+selection-sort.py
+bfs_shortest.py
+edit_distance.py
+merge_sort.py
+README.md
+```
 
----
+## 참고
+- Notion 정리: https://www.notion.so/d30f2ca47cfb4a92b7762d4c4f23bf68
 
-### 2. 동적 프로그래밍 (Dynamic Programming)을 이용한 최적 경로 탐색
-- **소스 파일**: (과제 풀이 문서)
-- **핵심 역량**: `고급 알고리즘 설계 기법`, `동적 프로그래밍(DP)`
-- **설명**: n x n 행렬에서 최대 합 경로를 찾는 문제를 **동적 프로그래밍(DP)** 기법으로 해결했습니다. 문제의 **최적 부분 구조(Optimal Substructure)** 를 파악하여 점화식을 도출하고, 이를 기반으로 DP 테이블을 채워 최적해를 구했습니다.
-- **성장 포인트**:
-    - `C[i][j] = M[i][j] + max(C[i-1][j], C[i-1][j-1], C[i, j-1])` 라는 **점화식을 직접 설계**하며, 거대하고 복잡한 문제를 작은 하위 문제의 합으로 분할하여 정복하는 DP의 핵심 원리를 적용하는 능력을 길렀습니다.
-    - 이 경험을 통해, 단순 재귀로는 지수 시간(Exponential Time)이 걸리는 비효율적인 문제를 **메모이제이션(Memoization)** 을 통해 어떻게 **다항 시간(Polynomial Time) 내에 해결 가능한 문제로 변환**할 수 있는지 증명했습니다.
-
-**[Solution]**
-
-<img src="./assets/dp-matrix-path-solution.jpg" alt="동적 프로그래밍 과제 풀이" width="600"/>
-
-*<p align="center">DP 테이블을 직접 계산하여 최대 합 '70'을 도출하는 과정</p>*
-
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
