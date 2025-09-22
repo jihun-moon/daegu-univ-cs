@@ -76,3 +76,7 @@
 - Wireshark Display Filter: https://www.wireshark.org/docs/dfref/  
 - RFC 8200 (IPv6): https://www.rfc-editor.org/rfc/rfc8200  
 - 소켓 실습 예시(간단 echo 서버/클라이언트) 추가 가능
+
+
+## Notion Page
+- Computer Networks: https://www.notion.so/0e9573ac966c4806932cc0e7f5d09eef
