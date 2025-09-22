@@ -102,3 +102,7 @@ echo "Build OK"
 
 - C 언어 레퍼런스: https://en.cppreference.com
 - C 보안 코딩(문자열): https://wiki.sei.cmu.edu
+
+
+## Notion Page
+- C Programming: https://www.notion.so/771d07fe436e4f58a0a490fdde107ca6
