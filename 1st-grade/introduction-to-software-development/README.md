@@ -1,6 +1,3 @@
-좋아. 제안했던 미세 개선을 반영해 README를 다듬은 “수정본”이야. 이걸 그대로 README.md에 덮어쓰면 된다.
-
-```markdown
 # Introduction to Software Development — 1학년 실습 모음
 
 App Inventor와 Processing으로 이벤트 기반 로직과 상호작용(UX)을 연습한 실습 모음입니다. 상태 관리와 입력 검증, 타이머 등 기초 개념을 실제 결과물에 적용하는 데 중점을 두었습니다.
