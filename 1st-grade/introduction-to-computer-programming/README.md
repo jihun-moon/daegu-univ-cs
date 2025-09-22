@@ -52,4 +52,4 @@ README.md                       # 이 파일
 - 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
 
 ## 링크
-- Notion 과목 정리: 소프트웨어 개발 입문
+- [Notion 과목 정리: 소프트웨어 개발 입문](https://www.notion.so/9494b9bfd15442178be23b57065b4279?source=copy_link)
