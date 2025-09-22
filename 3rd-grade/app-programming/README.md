@@ -1,36 +1,64 @@
-# 📱 앱 프로그래밍 (App Programming)
+# App Programming — Course Summary
 
-**[과목 정보]**
-- **수강:** 3학년 1학기
-- **핵심 기술:** `Android Studio`, `Java`, `Git`
-- **핵심 역량:** `안드로이드 앱 개발`, `UI/UX 설계`, `Git 기반 팀 협업`
+안드로이드 4대 컴포넌트와 Activity 생명주기를 이해하고, RecyclerView·ViewBinding·입력 검증으로 실사용 품질을 높였습니다. Intent 기반 컴포넌트 통신과 비동기 처리, ViewModel 상태 보존까지 실습으로 체득했습니다.
 
----
+## Screenshot
+![Login UI](assets/login-ui-design.png)
 
-## 📖 학습 목표 및 과정 (Learning Goals & Process)
+## What I Learned
+- Components and Lifecycle: Activity/Fragment 생명주기와 상태 보존(ViewModel, SavedState)
+- UI Patterns: RecyclerView + Adapter + DiffUtil, ViewBinding
+- Input Validation: TextInputLayout 에러 피드백, 접근성 고려
+- Inter-Component: Intent·Bundle 데이터 전달, Nav 흐름
+- Async Basics: 코루틴 또는 스레드·핸들러를 이용한 비동기 처리
 
-Java와 Android Studio를 기반으로, 사용자 중심의 모바일 앱을 개발하는 풀 사이클(Full-Cycle)을 경험했습니다. 안드로이드 4대 컴포넌트의 동작 원리를 이해하고, `RecyclerView`를 활용한 동적 UI 구현 및 `Intent`를 통한 컴포넌트 간 통신 방법을 체득했습니다. 이를 통해 단순 기능 구현을 넘어, 사용자의 상호작용에 반응하는 안정적인 앱을 설계하고 개발할 수 있는 핵심 역량을 길렀습니다.
+## Example
+```kotlin
+// RecyclerView + DiffUtil + ViewBinding
+data class Item(val id: Long, val title: String)
 
----
+class ItemDiff : DiffUtil.ItemCallback<Item>() {
+    override fun areItemsTheSame(a: Item, b: Item) = a.id == b.id
+    override fun areContentsTheSame(a: Item, b: Item) = a == b
+}
 
-### Step 1. [개인 실습] 안드로이드 UI/UX 기초 다지기
-- **학습 내용:** `EditText`, `Button`, `Switch` 등 안드로이드의 기본 UI 위젯을 활용하여 로그인 화면을 직접 디자인하고 XML로 구현했습니다. 이 과정을 통해 사용자와 애플리케이션의 첫 상호작용이 일어나는 UI 화면을 직접 구성하며, XML 코드와 시각적 결과물 사이의 관계를 이해하고 사용자 중심적 사고의 첫걸음을 내디뎠습니다.
+class ItemsAdapter :
+    ListAdapter<Item, ItemsAdapter.VH>(ItemDiff()) {
 
-**[최종 결과물: 로그인 UI]**
-<p align="left">
-  <img src="./assets/login-ui-design.png" alt="로그인 UI 디자인" width="700"/>
-  <br/>
-  <i>XML 레이아웃을 이용해 구현한 로그인 UI 디자인(왼쪽)과 블루프린트(오른쪽)</i>
-</p>
+    class VH(private val b: ItemRowBinding) : RecyclerView.ViewHolder(b.root) {
+        fun bind(it: Item) { b.title.text = it.title }
+    }
 
----
+    override fun onCreateViewHolder(p: ViewGroup, v: Int) =
+        VH(ItemRowBinding.inflate(LayoutInflater.from(p.context), p, false))
 
-### Step 2. [팀 프로젝트] '모바일 닥터' 앱 개발
-- **학습 내용:** Step 1에서 다진 UI/UX 기초 역량을 바탕으로, 팀원들과 협업하여 `RecyclerView`, `Intent` 등 고급 기능을 포함한 완성도 높은 '모바일 닥터' 애플리케이션을 개발했습니다. 이 프로젝트는 UI/UX 부문 1위를 포함, **총 3개 부문에서 우수 프로젝트로 선정**되며 기획, 디자인, 개발 역량을 종합적으로 인정받았습니다.
+    override fun onBindViewHolder(h: VH, i: Int) = h.bind(getItem(i))
+}
+```
 
-> 👇 아래 링크를 클릭하시면 프로젝트의 전체 소스 코드와 저의 구체적인 역할, 기술적인 성장 경험이 담긴 **단독 레포지토리**로 이동합니다.
+## Troubleshooting
+- 스크롤 시 깜빡임: DiffUtil 적용으로 불필요한 재바인딩 감소
+- 회전 시 데이터 유실: ViewModel + SavedState로 상태 보존
+- 입력 오류 누락: TextInputLayout 에러 메시지와 규칙 추가
 
-> **➡️ ['모바일 닥터' 대표 프로젝트 저장소 바로가기](https://github.com/jihun-moon/mobile-doctor-app)**
+## Checklist
+- [ ] 입력 검증 루틴 적용
+- [ ] 생명주기 이벤트 처리 점검
+- [ ] RecyclerView 성능 옵션(LayoutManager, setHasFixedSize)
+- [ ] 코드 스타일·린트 통과
+- [ ] 비동기 처리 시 UI 스레드 규칙 준수
 
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
+## Folder Structure
+```
+/assets/                 # README 이미지 (login-ui-design.png 등)
+/src/                    # 샘플 코드/과제
+README.md
+```
+
+## Links
+- Android Guides: https://developer.android.com/guide
+- RecyclerView: https://developer.android.com/guide/topics/ui/layout/recyclerview
+- Notion 정리: 앱 프로그래밍 페이지 참조
+
+## License
+MIT 또는 강의 요구사항에 맞는 라이선스 표기
