@@ -1,82 +1,116 @@
-# 🧠 자료구조 (Data Structures)
+# Data Structures Notes
 
-**[과목 정보]**
-- **수강:** 2학년 1학기
-- **언어:** `Python`
-- **핵심 역량:** `알고리즘 복잡도 분석`, `핵심 자료구조 구현`, `알고리즘 응용`
+스택·큐·트리·힙 등 핵심 자료구조를 Python으로 직접 구현하고, 연산 복잡도를 근거와 함께 정리한 학습 노트입니다.
 
----
+- 학년: 2학년
+- 언어: Python 3.11+
+- 목적: 과제 코드와 실행 결과, 핵심 개념 요약 아카이브
 
-## 📖 과목 개요 (Overview)
-**'더 빠르고 효율적인 코드는 무엇인가?'** 라는 질문에 답하기 위해, 데이터의 특성에 맞는 최적의 저장 및 관리 구조를 설계하고 구현하는 능력을 배양한 과목입니다. **시간/공간 복잡도 분석**을 바탕으로 스택, 큐, 트리, 힙 등 핵심 자료구조를 Python으로 직접 구현하며, **알고리즘 성능 최적화의 단단한 기반**을 다졌습니다.
+## 구조
 
----
+- assets
+  - binary-tree-operations-result.png
+  - huffman-coding-result.png
+  - ds-note-bst-creation.png
+  - ds-note-heap-insertion.png
+  - data-structures-notes.pdf
+- binary-tree-operations.py
+- postfix-calculator.py
+- huffman-coding.py
+- README.md
 
-## 🚀 핵심 구현 프로젝트 (Core Implementation Projects)
+## 3줄 요약
 
-### 1. 스택(Stack)을 활용한 후위표기법 계산기
-- **소스 파일:** `postfix-calculator.py`
-- **핵심 역량:** `스택(Stack)`, `알고리즘 설계`
-- **설명:** 중위표기법으로 입력된 수식을 컴퓨터가 이해하기 쉬운 후위표기법으로 변환하고, **스택(Stack)** 을 이용해 최종 결과를 계산하는 프로그램입니다. 연산자 우선순위와 괄호 유효성 검사 로직을 포함하여 계산의 정확성을 높였습니다.
-- **성장 포인트**:
-    - 스택의 **LIFO(Last-In, First-Out) 특성**이 후위표기법 변환이라는 고전적인 컴퓨터 과학 문제의 핵심 해결책이 됨을 코드로 증명하며, **자료구조가 알고리즘의 본질**임을 체득했습니다.
+- 데이터 특성에 맞는 구조를 선택하고, 시간·공간 복잡도로 타당성을 설명
+- 스택·큐·트리·힙을 직접 구현하며 ADT 인터페이스와 단위 테스트 습관 확립
+- 입력 검증, 코드 스타일, 경계값 테스트를 일관되게 적용
 
-**[Demo]**
+## 핵심 개념 5개
 
-![사칙 연산 계산기 실행 결과](./assets/postfix-calculator-result.png)
-*<p align="center">`100 / ( 6 - 1 ) * 2 - 3` 수식의 계산 결과</p>*
+1) Stack  
+```python
+class Stack:
+    def __init__(self): self._a=[]
+    def push(self,x): self._a.append(x)     # O(1)
+    def pop(self):  return self._a.pop()    # O(1) amortized
+# 언제/왜: RPN 계산, undo, 괄호 균형
+```
 
----
+2) Queue  
+```python
+from collections import deque
+q=deque(); q.append(x); q.popleft()         # O(1)
+# 언제/왜: BFS, 작업 스케줄링, 레벨 순회
+```
 
-### 2. 허프만 코딩(Huffman Coding) 파일 압축기
-- **소스 파일:** `huffman-coding.py`
-- **핵심 역량:** `트리(Tree)`, `힙(Heap)`, `우선순위 큐`, `그리디 알고리즘`
-- **설명:** 텍스트 파일 내 문자 빈도를 분석하여 **허프만 트리**를 생성하고, 이를 기반으로 파일을 압축 및 해제하는 무손실 압축 알고리즘을 구현했습니다.
-- **성장 포인트**:
-    - **최소 힙(Min-Heap)을 우선순위 큐로 활용**하여, 가장 빈도가 낮은 노드를 우선적으로 병합하는 그리디(Greedy) 방식으로 최적의 이진 트리를 구축하는 과정을 직접 구현했습니다.
-    - 이 경험을 통해, 여러 자료구조(트리, 힙)를 복합적으로 사용하여 **실제 응용 분야(데이터 압축)의 복잡한 문제를 해결**하는 실전 능력을 길렀습니다.
+3) Tree/BST  
+```python
+class Node:
+    def __init__(self,k,l=None,r=None): self.k,self.l,self.r=k,l,r
+def insert(t,k):
+    if not t: return Node(k)
+    if k<t.k: t.l=insert(t.l,k)
+    elif k>t.k: t.r=insert(t.r,k)
+    return t
+# 언제/왜: 정렬된 탐색·순위, 중위순회=정렬 결과
+```
 
-**[Demo]**
+4) Heap / Priority Queue  
+```python
+import heapq
+pq=[]; heapq.heappush(pq,(w,x)); w,x=heapq.heappop(pq)  # O(log n)
+# 언제/왜: 다익스트라, 허프만 코딩, 스케줄러
+```
 
-![허프만 코딩 실행 결과](./assets/huffman-coding-result.png)
-*<p align="center">'hello world' 텍스트(왼쪽)가 압축된 결과(오른쪽)</p>*
+5) Hash Map 감각  
+```python
+freq={}
+for ch in text: freq[ch]=freq.get(ch,0)+1  # 평균 O(1)
+# 언제/왜: 카운팅, 인덱싱. 충돌시 최악 O(n) 인지
+```
 
----
+## 실습 메모
 
-### 3. 재귀와 큐를 이용한 이진트리(Binary Tree) 라이브러리
-- **소스 파일:** `binary-tree-operations.py`
-- **핵심 역량:** `비선형 자료구조`, `재귀(Recursion)`, `너비 우선 탐색(BFS)`
-- **설명:** 이진트리의 생성, 삭제 및 **4가지 핵심 순회(전위, 중위, 후위, 레벨)** 알고리즘을 구현한 모듈입니다. 트리의 높이, 노드 수 등 보조 연산 기능도 포함합니다.
-- **성장 포인트**:
-    - **재귀 호출** 스택의 동작 원리를 이용해 깊이 우선 탐색(DFS)을, **큐(Queue)의 FIFO 특성**을 이용해 너비 우선 탐색(BFS)을 구현하며 두 탐색 방식의 근본적인 차이를 코드를 통해 완벽히 체득했습니다.
-    - 이는 향후 그래프 탐색 등 더 복잡한 비선형 데이터 구조를 다루는 데 필수적인 **알고리즘적 사고의 기반**이 되었습니다.
+- RPN 계산기 토큰화에서 음수/공백 처리 → 토큰화 단계 분리, 정규식으로 단항/이항 구분  
+- BST 중복 키 정책 혼재 → “중복 무시”로 계약 통일, 주석 명시  
+- 허프만 코딩 비트 버퍼 오류 → 8비트 단위 flush, 패딩 비트 수 기록
 
-**[Demo]**
+## 제출 전 체크리스트
 
-![이진트리 연산 실행 결과](./assets/binary-tree-operations-result.png)
-*<p align="center">두 개의 다른 이진트리에 대한 순회 및 연산 결과</p>*
+- [ ] 입력 검증과 예외 처리 적용
+- [ ] 기능별 함수 분리, 단위 테스트 작성
+- [ ] 반복/재귀의 종료 조건·불변식 점검
+- [ ] black + ruff 또는 pylint로 스타일·린트 통과
+- [ ] 핵심 연산 복잡도 O(1)/O(log n)/O(n) 표기
 
----
+## 실행 예
 
-### 📝 문제 해결 노트: 알고리즘 시각화 및 분석
-코드를 작성하기에 앞서, 복잡한 자료구조의 동작 원리를 시각적으로 이해하고 분석하기 위해 태블릿에 직접 그림을 그려가며 문제를 해결하는 과정을 거쳤습니다.
+```bash
+python3 postfix-calculator.py
+python3 binary-tree-operations.py
+python3 huffman-coding.py
+```
+
+권장: python -m venv venv && source venv/bin/activate, ruff/black 설치
+
+## 스크린샷
 
 <table>
   <tr>
-    <td align="center">
-      <img src="./assets/ds-note-heap-insertion.png" alt="최소 힙 삽입 과정 노트" width="450"/>
-      <br/>
-      <i><b>[그림 1]</b> 최소 힙(Min-Heap)에 신규 데이터 삽입 시, 업힙(Up-Heap) 과정을 통해 트리 구조를 재조정하는 과정 시각화</i>
-    </td>
-    <td align="center">
-      <img src="./assets/ds-note-bst-creation.png" alt="이진탐색트리 생성 과정 노트" width="450"/>
-      <br/>
-      <i><b>[그림 2]</b> 주어진 숫자 시퀀스를 이진탐색트리(BST)에 순차적으로 삽입하여 최종 트리를 구성하는 과정</i>
-    </td>
+    <td align="center"><strong>Binary Tree Operations</strong></td>
+    <td align="center"><strong>Huffman Coding</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/binary-tree-operations-result.png" alt="Binary Tree Operations Result" width="400"/></td>
+    <td><img src="./assets/huffman-coding-result.png" alt="Huffman Coding Result" width="400"/></td>
   </tr>
 </table>
 
->  전체 문제 풀이 노트 PDF는 **[여기](./assets/data-structures-notes.pdf)** 에서 확인하실 수 있습니다.
+## 참고
 
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
+- Python docs: collections.deque, heapq  
+- CLRS 요약 정리 링크 추가 가능
+
+## Notion Page
+- Data Structures: https://www.notion.so/6d05cd2e94344baabf9b9f8eb4910227
+

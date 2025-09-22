@@ -1,38 +1,55 @@
-# ☕ 자바 프로그래밍 (Java Programming)
+# Pac‑Man Game in Java (Swing)
 
-**[과목 정보]**
-- **수강:** 2학년 2학기
-- **언어/프레임워크:** `Java`, `Swing`
-- **핵심 역량:** `객체 지향 설계(OOD)`, `멀티스레드 프로그래밍`, `GUI 애플리케이션 개발`
+객체지향 설계 원칙, 이벤트 기반 GUI, 멀티스레딩을 통합하여 Java Swing으로 구현한 개인 프로젝트입니다.
 
----
+## Demo
+<img src="assets/pacman-game-screenshot.png" width="420" alt="Pac-Man game screenshot" />
 
-## 📖 과목 개요 (Overview)
-객체 지향 프로그래밍(OOP)의 정수인 Java를 통해 **대규모 애플리케이션을 체계적으로 설계하고 개발**하는 방법을 학습했습니다. 캡슐화, 상속, 다형성 등 OOP 핵심 원칙을 적용하여 **유지보수가 용이하고 확장성 높은 코드를 설계**하는 역량을 길렀습니다. 특히, '1인 1 창작 게임'이라는 최종 프로젝트를 통해 GUI, 스레드, 네트워크 등 다양한 Java API를 통합하여 하나의 완성된 애플리케이션을 구축하는 종합적인 개발 경험에 집중했습니다.
+## Key Features & Concepts
+- 객체지향 설계(OOD)
+  - 플레이어, 고스트, 맵 등 핵심 엔티티를 클래스로 분리
+  - Movable, Renderable 인터페이스로 다형성 구현 → 확장성과 테스트 용이성 확보
+- GUI & Event Handling
+  - Swing 기반 화면 구성, MVC 분리
+  - 키 입력 처리는 EDT 규칙 준수로 안정적 상호작용 보장
+- Concurrency
+  - 고정 tick 루프(메인 스레드)
+  - 각 고스트 AI는 별도 스레드에서 동작하여 렌더링과 분리
 
-## 🚀 핵심 프로젝트: Java Swing 기반 멀티스레드 팩맨(Pac-Man) 게임
+## Prerequisites
+- JDK 17+
 
-- **소스 코드:** `pacman-game/`
-- **프로젝트 목표:** Java의 핵심 기술(OOP, Swing, Thread)을 총동원하여 고전 명작 게임인 팩맨을 **독창적으로 재해석하고 구현**합니다. 이를 통해 상속 관계, 클래스 설계 등 주어진 **요구사항(Requirements)을 만족시키는 복잡한 시스템의 전체 개발 생명주기를 경험**합니다.
+## Quick Start
 
-### 🛠️ 주요 구현 기능 및 아키텍처
--   **객체 지향 설계 (OOD)**
-    -   게임의 모든 요소(`Player`, `Ghost`, `Item`)를 클래스로 추상화했으며, `GameCharacter` 추상 클래스를 정의하고 이를 `Player`와 `Ghost`가 상속받도록 하여 **코드의 재사용성과 확장성을 극대화**했습니다. (프로젝트 요구사항 충족)
--   **GUI 및 그래픽 렌더링**
-    -   `JFrame`과 `JPanel`을 활용하여 게임의 핵심 뷰(View)를 설계했으며, `paintComponent()` 메소드 오버라이딩을 통해 **게임 맵과 캐릭터의 상태를 실시간으로 렌더링**했습니다.
--   **멀티스레드 기반 동시성 제어**
-    -   메인 게임 루프와 각 `Ghost` 객체를 **별도의 스레드(Thread)로 구현**하여, 게임의 상태 업데이트와 캐릭터의 AI 로직이 **동시에 독립적으로 동작**하도록 설계했습니다. 이를 통해 끊김 없는 실시간 상호작용의 기반을 마련했습니다.
--   **키보드 이벤트 처리**
-    -   `KeyListener` 인터페이스를 구현하여 사용자의 키보드 입력이 `Player` 객체의 상태에 즉시 반영되도록 하는 **이벤트 기반 프로그래밍**을 적용했습니다.
+### 1) Gradle (권장)
+```bash
+./gradlew run
+```
 
-### 🌱 성장 및 핵심 경험 (Growth & Takeaways)
--   이 프로젝트를 통해 OOP, GUI, 이벤트 처리, 스레드 등 **개별적으로 학습한 지식들을 하나의 완성된 제품으로 통합**하는 실질적인 소프트웨어 개발 과정을 경험했습니다.
--   특히, 각 캐릭터를 독립적인 스레드로 관리하며 발생할 수 있는 동시성 문제를 고민하는 과정에서, **멀티스레드 환경에서의 자원 관리와 안정적인 프로그래밍**에 대한 깊은 이해를 얻었습니다.
--   이는 향후 대규모 트래픽을 처리하는 **백엔드 서버 시스템을 개발**하거나, **실시간 반응성이 중요한 안드로이드 앱을 개발**하는 데 중요한 기술적 밑거름이 될 것입니다.
+### 2) Javac (수동 컴파일, 소스가 pacman-game/src 아래에 있는 경우)
+```bash
+# 1. 모든 Java 소스 파일 목록 생성
+find pacman-game/src -name "*.java" > sources.txt
 
-### 📸 실행 화면 (Screenshot)
-![팩맨 게임 실행 화면](./assets/pacman-game-screenshot.png)
-*<p align="center">Java Swing으로 구현한 팩맨 게임 플레이 화면</p>*
+# 2. 컴파일 (out 디렉터리에 .class 생성)
+javac -d out @sources.txt
 
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
+# 3. 실행 (메인 클래스명으로 교체: 예 com.example.pacman.Main)
+java -cp out com.example.pacman.Main
+```
+
+## Run Options (예시)
+- --speed=FAST|NORMAL|SLOW  기본: NORMAL
+- --seed=42                 고스트 AI 랜덤 시드
+
+## Directory Structure
+```
+.
+├── assets/         # 스크린샷 등 이미지 리소스
+├── pacman-game/    # Java 소스 코드 및 리소스 (src/, resources/)
+└── README.md       # 이 파일
+```
+
+## Project Documentation
+더 자세한 설계와 학습 노트는 노션 문서를 참고하세요.
+- Notion: https://www.notion.so/052f54c39c5448d8baf1e403326f9e0e
