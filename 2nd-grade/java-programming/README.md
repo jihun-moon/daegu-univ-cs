@@ -53,8 +53,3 @@ java -cp out com.example.pacman.Main
 ## Project Documentation
 더 자세한 설계와 학습 노트는 노션 문서를 참고하세요.
 - Notion: https://www.notion.so/052f54c39c5448d8baf1e403326f9e0e
-```
-
-메모
-- 이미지 파일명이 다르면 Demo 섹션의 경로를 실제 파일명에 맞춰 바꿔줘.
-- Gradle 사용 중이면 build.gradle에 application { mainClass = "패키지.Main" }만 지정하면 돼.
