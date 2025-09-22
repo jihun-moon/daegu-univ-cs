@@ -3,15 +3,17 @@
 App Inventor와 Processing으로 이벤트 기반 로직과 상호작용(UX)을 연습한 실습 모음입니다. 상태 관리와 입력 검증, 타이머 등 기초 개념을 실제 결과물에 적용하는 데 중점을 두었습니다.
 
 ## 데모 스크린샷
-- 구구단 트레이너(App Inventor): ![](assets/gugudan-screenshot.png)
-- Interactive Zoog(Processing): ![](assets/processing-zoog-screenshot.png)
+- 구구단 트레이너(App Inventor):  
+  ![](assets/gugudan-app-screenshot.jpg)
+- Interactive Zoog(Processing):  
+  ![](assets/zoog-screenshot.png)
 
 ## 프로젝트 목록
 
-| Name                         | Tech           | 한 줄 설명                               | 실행/열기                          |
-|-----------------------------|----------------|------------------------------------------|------------------------------------|
-| 구구단 트레이너              | App Inventor   | 입력 검증과 피드백 중심의 학습 앱        | gugudan-trainer-app.aia (AI2로 열기) |
-| Interactive Zoog (스케치)   | Processing     | 키 입력에 반응하는 인터랙티브 그래픽     | `processing`로 interactive-zoog.pde |
+| Name                       | Tech         | 한 줄 설명                               | 실행/열기                             |
+|---------------------------|--------------|------------------------------------------|---------------------------------------|
+| 구구단 트레이너           | App Inventor | 입력 검증과 피드백 중심의 학습 앱        | gugudan-trainer-app.aia (AI2로 열기)  |
+| Interactive Zoog (스케치) | Processing   | 키 입력에 반응하는 인터랙티브 그래픽     | Processing IDE로 interactive-zoog.pde |
 
 ## 핵심 학습 포인트
 - 이벤트 기반 로직과 상태 관리 분리
@@ -34,3 +36,10 @@ README.md                     # 이 파일
 ## 라이선스 / 사용 범위
 - 교육 목적의 예제 코드
 - 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
+```
+
+추가로 노트 스냅샷도 보이게 하려면 아래 섹션을 원하는 위치에 넣으세요.
+```markdown
+## 노트 스냅샷
+![](assets/language-comparison-note-1.jpg)
+![](assets/language-comparison-note-2.jpg)
