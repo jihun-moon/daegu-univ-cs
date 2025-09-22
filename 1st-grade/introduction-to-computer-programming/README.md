@@ -1,43 +1,58 @@
-# 💻 컴퓨터프로그래밍 기초 (Python)
 
-**[과목 정보]**
-- **수강:** 1학년 2학기
-- **언어:** `Python`
-- **핵심:** `OOP 기초`, `GUI 프로그래밍`, `알고리즘 적용`
+```markdown
+# Introduction to Computer Programming — 1학년 실습 모음
 
----
+Python으로 기본 문법과 GUI 프로그래밍을 연습한 미니 프로젝트 모음입니다. 동일 코어 로직을 GUI(Turtle/Tkinter)와 Console에 분리 적용하는 연습에 중점을 두었습니다.
 
-## 📖 과목 개요 (Overview)
-Python을 활용해 프로그래밍의 핵심 원리를 실제 코드로 구현하며 **체계적인 소프트웨어 개발의 기반을 구축**한 과목입니다. 객체 지향 프로그래밍(OOP)과 GUI 라이브러리(Tkinter, Turtle)를 통해 아이디어를 실제 동작하는 애플리케이션으로 만드는 과정을 경험했습니다.
+## 데모 스크린샷
+- Angry Turtle: ./assets/angry-turtle-game-screenshot.png
+- Ball Simulation (Tkinter): ./assets/ball-simulation-tkinter-screenshot.png
 
-## 🚀 주요 프로젝트 (Key Projects)
+## 프로젝트 목록
 
-### 1. 물리 엔진 기반 캐논 슈팅 게임
-- **프로젝트 파일**: `angry-turtle.py`, `fortress-game-console.py`
-- **핵심 역량**: `OOP`, `Turtle Graphics`, `수학/물리 로직 적용`
-- **설명**: 물리 공식(포물선 운동)을 적용하여 각도와 힘을 조절해 목표물을 맞추는 캐논 슈팅 게임입니다. 동일한 게임 로직을 **GUI(Turtle) 환경과 텍스트(Console) 환경** 모두에서 동작하도록 구현하며 응용력을 높였습니다.
-- **성장 포인트**:
-    - `Player`와 `Cannonball` 객체를 **클래스로 설계**하여 게임의 상태와 동작을 효율적으로 관리하며 코드의 재사용성을 높였습니다.
-    - 동일한 비즈니스 로직을 서로 다른 프레젠테이션(GUI, Console)에 적용하는 경험을 통해, **로직과 화면의 분리**라는 중요한 설계 원칙을 처음으로 체득했습니다.
+| Name | Tech | 한 줄 설명 | 실행 |
+|---|---|---|---|
+| Angry Turtle | Python, Turtle | 포물선 운동 슈팅. 각도·속도 조절, 충돌 시 스코어 갱신 | `python angry-turtle.py` |
+| Ball Simulation | Python, Tkinter | 2D 공 이동·충돌 시뮬레이션. 고정 타임스텝 업데이트 | `python ball-simulation-tkinter.py` |
+| Fortress (Console) | Python | 콘솔 기반 캐논 게임. GUI 없이 코어 로직 검증 | `python fortress-game-console.py` |
 
-**[Demo]**
-![앵그리 터틀 실행 화면](./assets/angry-turtle-game-screenshot.png)
-*<p align="center">Turtle 그래픽을 활용한 GUI 버전</p>*
+## 핵심 학습 포인트
+- 입력 이벤트와 렌더링/물리 업데이트 분리 (`update()` vs `draw()`)
+- 고정 타임스텝(Δt)과 보간으로 시각 떨림 감소
+- 순수 함수 기반 코어 로직(예: `step(pos, vel, dt)`)으로 테스트 용이성 확보
+- 로직–표현 분리로 동일 로직의 GUI/Console 재사용
 
----
+## 사용 방법
+1) Python 3.9+ 준비
+2) 각 스크립트 실행
+```bash
+# Angry Turtle
+python angry-turtle.py
 
-### 2. GUI 객체 시뮬레이션
-- **프로젝트 파일**: `ball-simulation-tkinter.py`
-- **핵심 역량**: `OOP`, `Tkinter`, `GUI 이벤트 처리`
-- **설명**: Tkinter GUI 환경에서 다수의 공(Ball) 객체들이 독립적으로 움직이고 벽에 충돌하며 튕겨 나오는 물리 시뮬레이션입니다.
-- **성장 포인트**:
-    - `Ball` 클래스를 통해 **다수의 객체를 효율적으로 생성하고 관리**하는 방법을 학습했습니다.
-    - 각 객체의 상태(위치, 속도)를 업데이트하는 게임 루프의 기본 구조를 이해했으며, 이는 향후 복잡한 시스템의 구성 요소를 모델링하는 데 중요한 기초가 되었습니다.
+# Ball Simulation (Tkinter)
+python ball-simulation-tkinter.py
 
-**[Demo]**
+# Fortress (Console)
+python fortress-game-console.py
+```
 
-![Ball Project 실행 화면](./assets/ball-simulation-tkinter-screenshot.png)
-*<p align="center">Tkinter로 구현한 공 시뮬레이션</p>*
+## 조작법 (요약)
+- Angry Turtle: ↑/↓ 각도, ←/→ 속도, Space 발사
+- Fortress(Console): 안내에 따라 각도·속도 입력
 
----
-> ↩️ **[전체 학습 로드맵으로 돌아가기](../../README.md)**
+## 디렉터리
+```
+assets/                         # 스크린샷/이미지
+angry-turtle.py                 # 터틀 슈팅
+ball-simulation-tkinter.py      # Tkinter 충돌 시뮬
+fortress-game-console.py        # 콘솔 버전 캐논 게임
+README.md                       # 이 파일
+```
+
+## 라이선스 / 사용 범위
+- 교육 목적의 예제 코드
+- 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
+
+## 링크
+- Notion 과목 정리: 소프트웨어 개발 입문
+```
