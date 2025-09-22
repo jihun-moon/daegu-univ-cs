@@ -2,11 +2,21 @@
 
 App Inventor와 Processing으로 이벤트 기반 로직과 상호작용(UX)을 연습한 실습 모음입니다. 상태 관리와 입력 검증, 타이머 등 기초 개념을 실제 결과물에 적용하는 데 중점을 두었습니다.
 
+---
+
 ## 데모 스크린샷
-- 구구단 트레이너(App Inventor):  
-  ![](assets/gugudan-app-screenshot.jpg)
-- Interactive Zoog(Processing):  
-  ![](assets/zoog-screenshot.png)
+<table>
+  <tr>
+    <td align="center"><strong>구구단 트레이너 (App Inventor)</strong></td>
+    <td align="center"><strong>Interactive Zoog (Processing)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/gugudan-app-screenshot.jpg" alt="구구단 트레이너 앱 스크린샷" width="400"/></td>
+    <td><img src="./assets/zoog-screenshot.png" alt="Interactive Zoog 스크린샷" width="400"/></td>
+  </tr>
+</table>
+
+---
 
 ## 프로젝트 목록
 
@@ -38,10 +48,16 @@ README.md                     # 이 파일
 - 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
 
 ## 노트 스냅샷
-![](assets/language-comparison-note-1.jpg)
-![](assets/language-comparison-note-2.jpg)
-
-README 최하단에 아래 한 줄만 추가하면 됩니다.
+<table>
+  <tr>
+    <td align="center"><strong>언어별 특징 비교 노트 1</strong></td>
+    <td align="center"><strong>언어별 특징 비교 노트 2</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/language-comparison-note-1.jpg" alt="언어 비교 노트 1" width="400"/></td>
+    <td><img src="./assets/language-comparison-note-2.jpg" alt="언어 비교 노트 2" width="400"/></td>
+  </tr>
+</table>
 
 
 ## 링크
