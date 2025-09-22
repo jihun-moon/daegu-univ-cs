@@ -83,4 +83,6 @@ aₙ = r·aₙ₋₁, a₀=c ⇒ aₙ = c·rⁿ
 - 강의 자료 요약 링크와 과제 스캔은 레포 내 docs 또는 위 이미지 참조  
 - 그래프 이론 기초와 표기법 레퍼런스 추가 가능
 
-필요하면 깃허브 레포에 맞춰 배지, 목차, 라이선스 섹션도 추가해 드릴게요.
+
+## Notion Page
+- Discrete Mathematics: https://www.notion.so/54e0d256c57342c4bdfbac29d8b72336
