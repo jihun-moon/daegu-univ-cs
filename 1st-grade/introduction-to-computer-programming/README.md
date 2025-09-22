@@ -3,8 +3,16 @@
 Python으로 기본 문법과 GUI 프로그래밍을 연습한 미니 프로젝트 모음입니다. 동일 코어 로직을 GUI(Turtle/Tkinter)와 Console에 분리 적용하는 연습에 중점을 두었습니다.
 
 ## 데모 스크린샷
-- Angry Turtle: ./assets/angry-turtle-game-screenshot.png
-- Ball Simulation (Tkinter): ./assets/ball-simulation-tkinter-screenshot.png
+<table>
+  <tr>
+    <td align="center"><strong>Angry Turtle (Turtle Graphics)</strong></td>
+    <td align="center"><strong>Ball Simulation (Tkinter)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/angry-turtle-game-screenshot.png" alt="Angry Turtle 게임 스크린샷" width="400"/></td>
+    <td><img src="./assets/ball-simulation-tkinter-screenshot.png" alt="Ball Simulation 스크린샷" width="400"/></td>
+  </tr>
+</table>
 
 ## 프로젝트 목록
 
