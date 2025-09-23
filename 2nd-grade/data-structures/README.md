@@ -1,116 +1,126 @@
-# Data Structures Notes
+# Data Structures – Mini Projects (Stack, Tree, Huffman)
 
-스택·큐·트리·힙 등 핵심 자료구조를 Python으로 직접 구현하고, 연산 복잡도를 근거와 함께 정리한 학습 노트입니다.
+> 3줄 요약  
+> - 스택 기반 후위 표기 계산기, 이진 트리 핵심 연산, 허프만 인코더 3종 실습  
+> - 자료구조·알고리즘의 구현과 시간 복잡도 감각을 함께 훈련  
+> - 단일 README로 실행 방법과 테스트 체크리스트를 통합 관리
 
-- 학년: 2학년
-- 언어: Python 3.11+
-- 목적: 과제 코드와 실행 결과, 핵심 개념 요약 아카이브
+## 📁 파일 구조
+​
+data-structures/
+├── README.md
+├── postfix-calculator.py        # 후위 표기 계산기
+├── binary-tree-operations.py    # 이진 트리 연산
+├── huffman_coding.py            # 허프만 인코더
+└── assets/                      # 샘플 입력/출력, 스크린샷
 
-## 구조
+## 🔧 환경
+- Python 3.10+ 권장
+- 가상환경(venv) 사용 권장
+- 외부 의존성 없음(표준 라이브러리만 사용)
 
-- assets
-  - binary-tree-operations-result.png
-  - huffman-coding-result.png
-  - ds-note-bst-creation.png
-  - ds-note-heap-insertion.png
-  - data-structures-notes.pdf
-- binary-tree-operations.py
-- postfix-calculator.py
-- huffman-coding.py
-- README.md
+​
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venvScriptsactivate
+pip install -U pip
 
-## 3줄 요약
+---
 
-- 데이터 특성에 맞는 구조를 선택하고, 시간·공간 복잡도로 타당성을 설명
-- 스택·큐·트리·힙을 직접 구현하며 ADT 인터페이스와 단위 테스트 습관 확립
-- 입력 검증, 코드 스타일, 경계값 테스트를 일관되게 적용
+## 1) 후위 표기 계산기 (postfix-calculator.py)
+스택을 직접(배열/리스트 기반) 구현하여 중위 표기식을 후위 표기식으로 변환하고 계산합니다.[^‣]
 
-## 핵심 개념 5개
+### 실행
+​
+python postfix-calculator.py --expr "(3+4)*2"
+또는
+echo "(3+4)*2" | python postfix-calculator.py
 
-1) Stack  
-```python
-class Stack:
-    def __init__(self): self._a=[]
-    def push(self,x): self._a.append(x)     # O(1)
-    def pop(self):  return self._a.pop()    # O(1) amortized
-# 언제/왜: RPN 계산, undo, 괄호 균형
-```
+### 필수 요건 체크리스트
+- [ ] 스택 API: push, pop, peek, is_empty  
+- [ ] 중위 → 후위 변환(연산자 우선순위, 괄호)  
+- [ ] 후위식 평가  
+- [ ] 예외 처리: 언더플로우, 잘못된 토큰, 불일치 괄호  
+- [ ] 확장 옵션: 음수, 소수, 공백 허용
 
-2) Queue  
-```python
-from collections import deque
-q=deque(); q.append(x); q.popleft()         # O(1)
-# 언제/왜: BFS, 작업 스케줄링, 레벨 순회
-```
+### 예시
+​
+입력: (3+4)*2
+후위: 3 4 + 2 *
+값: 14
 
-3) Tree/BST  
-```python
-class Node:
-    def __init__(self,k,l=None,r=None): self.k,self.l,self.r=k,l,r
-def insert(t,k):
-    if not t: return Node(k)
-    if k<t.k: t.l=insert(t.l,k)
-    elif k>t.k: t.r=insert(t.r,k)
-    return t
-# 언제/왜: 정렬된 탐색·순위, 중위순회=정렬 결과
-```
+---
 
-4) Heap / Priority Queue  
-```python
-import heapq
-pq=[]; heapq.heappush(pq,(w,x)); w,x=heapq.heappop(pq)  # O(log n)
-# 언제/왜: 다익스트라, 허프만 코딩, 스케줄러
-```
+## 2) 이진 트리 연산 (binary-tree-operations.py)
+노드 자료구조와 순회, 노드 수/단말 수/높이 등의 핵심 연산을 구현합니다.[^‣]
 
-5) Hash Map 감각  
-```python
-freq={}
-for ch in text: freq[ch]=freq.get(ch,0)+1  # 평균 O(1)
-# 언제/왜: 카운팅, 인덱싱. 충돌시 최악 O(n) 인지
-```
+### 실행
+​
+python binary-tree-operations.py --demo
 
-## 실습 메모
+### 필수 요건 체크리스트
+- [ ] TNode(value, left, right) 정의  
+- [ ] 순회: 전위, 중위, 후위, 레벨(BFS)  
+- [ ] size(노드 수), leaf_count(단말 수), height(높이)  
+- [ ] 레벨 순회용 큐(리스트 or deque)  
+- [ ] 확장: BST 삽입/탐색/삭제, 균형 트리(AVL) 스텁
 
-- RPN 계산기 토큰화에서 음수/공백 처리 → 토큰화 단계 분리, 정규식으로 단항/이항 구분  
-- BST 중복 키 정책 혼재 → “중복 무시”로 계약 통일, 주석 명시  
-- 허프만 코딩 비트 버퍼 오류 → 8비트 단위 flush, 패딩 비트 수 기록
+### 예시 출력
+​
+Preorder: A B D E C F
+Inorder : D B E A C F
+Postord: D E B F C A
+Level  : A B C D E F
+size=6, leaves=3, height=3
 
-## 제출 전 체크리스트
+---
 
-- [ ] 입력 검증과 예외 처리 적용
-- [ ] 기능별 함수 분리, 단위 테스트 작성
-- [ ] 반복/재귀의 종료 조건·불변식 점검
-- [ ] black + ruff 또는 pylint로 스타일·린트 통과
-- [ ] 핵심 연산 복잡도 O(1)/O(log n)/O(n) 표기
+## 3) 허프만 인코더 (huffman_coding.py)
+문자 빈도 분석 후 최소 힙 기반 우선순위 큐로 허프만 트리를 구성해 인코딩/디코딩합니다.[^‣]
 
-## 실행 예
+### 실행
+​
+인코딩
+python huffman_coding.py encode --in assets/sample.txt --out assets/sample.huf
+디코딩
+python huffman_coding.py decode --in assets/sample.huf --out assets/sample.dec.txt
 
-```bash
-python3 postfix-calculator.py
-python3 binary-tree-operations.py
-python3 huffman-coding.py
-```
+### 필수 요건 체크리스트
+- [ ] 빈도수 테이블 생성  
+- [ ] Min-Heap으로 트리 구성(leaf merge 반복)  
+- [ ] 문자→비트 문자열 매핑 테이블 생성  
+- [ ] 인코딩/디코딩 및 파일 입출력  
+- [ ] 프리픽스 코드 검증, EOF 처리  
+- [ ] 확장: 비트 단위 바이너리 포맷, 스트리밍 처리
 
-권장: python -m venv venv && source venv/bin/activate, ruff/black 설치
+### 복잡도 메모
+- 빌드 O(n log n) ≈ 힙 push/pop 반복
+- 인코딩 O(L)  L=전체 문자 수
 
-## 스크린샷
+---
 
-<table>
-  <tr>
-    <td align="center"><strong>Binary Tree Operations</strong></td>
-    <td align="center"><strong>Huffman Coding</strong></td>
-  </tr>
-  <tr>
-    <td><img src="./assets/binary-tree-operations-result.png" alt="Binary Tree Operations Result" width="400"/></td>
-    <td><img src="./assets/huffman-coding-result.png" alt="Huffman Coding Result" width="400"/></td>
-  </tr>
-</table>
+## 🧪 빠른 테스트 스크립트
+​
+1) 후위 표기
+python postfix-calculator.py --expr "(1+2)*3-4/2"
+2) 이진 트리
+python binary-tree-operations.py --demo
+3) 허프만
+echo "mississippi river" > assets/sample.txt
+python huffman_coding.py encode --in assets/sample.txt --out assets/sample.huf
+python huffman_coding.py decode --in assets/sample.huf --out assets/sample.dec.txt
+diff assets/sample.txt assets/sample.dec.txt && echo "OK"
 
-## 참고
+## 📸 스크린샷/다이어그램
+- assets/postfix.png  
+- assets/tree-traversal.png  
+- assets/huffman.png
 
-- Python docs: collections.deque, heapq  
-- CLRS 요약 정리 링크 추가 가능
+## 🗺 로드맵(선택)
+- [ ] 후위 계산기: 토큰 파서 개선, 함수 추가(sin, pow)  
+- [ ] 트리: BST·AVL 확장, 시각화  
+- [ ] 허프만: 바이너리 포맷과 대용량 벤치마크
 
-## Notion Page
-- Data Structures: https://www.notion.so/6d05cd2e94344baabf9b9f8eb4910227
-
+## 🬭 라이선스
+MIT
+​
+필요하면 각 스크립트의 CLI 옵션 뼈대(argparse)와 샘플 테스트 데이터까지 바로 써넣은 버전도 만들어 드릴게요.
