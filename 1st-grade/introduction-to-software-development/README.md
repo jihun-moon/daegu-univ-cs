@@ -1,62 +1,79 @@
-# Introduction to Software Development — 1학년 실습 모음
+# 🚀 구구단 트레이너 (App Inventor)
 
-App Inventor와 Processing으로 이벤트 기반 로직과 상호작용(UX)을 연습한 실습 모음입니다. 상태 관리와 입력 검증, 타이머 등 기초 개념을 실제 결과물에 적용하는 데 중점을 두었습니다.
+> ### 3줄 요약
+>
+>   - **학습 도구**: MIT 앱 인벤터(App Inventor)로 제작한 구구단 학습 및 테스트용 안드로이드 앱입니다.
+>   - **핵심 기능**: 구구단 표 보기, 난이도 조절 기능이 있는 10초 시간제한 테스트 모드를 제공합니다.
+>   - **결과 분석**: 테스트 종료 후 정답률과 평균 응답 시간 등 상세 리포트를 확인할 수 있습니다.
 
-## Quick start
-- Processing: interactive-zoog.pde 열기 → Run
-- App Inventor: AI2에서 gugudan-trainer-app.aia 가져오기 → Connect (에뮬레이터 또는 기기)
+-----
 
-## 데모 스크린샷
-<table>
-<tr>
-<td align="center"><strong>구구단 트레이너 (App Inventor)</strong></td>
-<td align="center"><strong>Interactive Zoog (Processing)</strong></td>
-</tr>
-<tr>
-<td><img src="./assets/gugudan-app-screenshot.jpg" alt="구구단 트레이너 앱 스크린샷" width="400"/></td>
-<td><img src="./assets/zoog-screenshot.png" alt="Interactive Zoog 스크린샷" width="400"/></td>
-</tr>
-</table>
+## ✨ 주요 기능
 
-## 프로젝트 목록
+  - **구구단 표 보기**: 2단부터 9단까지 전체 또는 개별 단을 선택하여 학습할 수 있습니다.
+  - **테스트 모드**: 문제 수(5, 10, 20개)와 난이도(쉬움, 보통, 어려움)를 직접 설정하고, 문제당 10초의 시간제한으로 실력을 점검할 수 있습니다.
+  - **결과 리포트**: 테스트가 끝나면 맞힌 개수, 정답률, 문제당 평균 응답 시간을 보여주어 학습 성과를 분석할 수 있습니다.
+  - **연습 모드**: 시간제한 없이 자유롭게 문제를 풀며 힌트를 참고할 수 있습니다.
 
-| Name                       | Tech         | 한 줄 설명                               | 실행/열기                             |
-|---------------------------|--------------|------------------------------------------|---------------------------------------|
-| 구구단 트레이너           | App Inventor | 입력 검증과 피드백 중심의 학습 앱        | gugudan-trainer-app.aia (AI2로 열기)  |
-| Interactive Zoog (스케치) | Processing   | 키 입력에 반응하는 인터랙티브 그래픽     | Processing IDE로 interactive-zoog.pde |
+-----
 
-## 핵심 학습 포인트
-- 이벤트 기반 로직과 상태 관리 분리
-- 입력 검증과 사용자 피드백(시각/청각)
-- 타이머 기반 업데이트와 화면 갱신 분리
-- 간단한 객체지향 렌더링 패턴
+## 🖼️ 스크린샷
 
-## 사용 방법
-- App Inventor: https://ai2.appinventor.mit.edu 접속 → Projects → Import project (.aia) from my computer → gugudan-trainer-app.aia → Connect로 실행
-- Processing: Processing IDE에서 interactive-zoog.pde 열기 → Run
+| 홈 | 표 보기 | 테스트 | 결과 |
+| :---: | :---: | :---: | :---: |
+| \<img src="docs/home.png" width="200"/\> | \<img src="docs/table.png" width="200"/\> | \<img src="docs/test.png" width="200"/\> | \<img src="docs/result.png" width="200"/\> |
 
-## 디렉터리
+-----
+
+## 🚀 실행(빌드) 방법
+
+1.  **프로젝트 가져오기**: [MIT App Inventor](https://www.google.com/search?q=http://ai2.appinventor.mit.edu/)에 접속하여 `src/` 폴더의 `.aia` 파일을 가져옵니다.
+2.  **실시간 테스트**: '연결' 메뉴를 통해 AI 컴패니언(안드로이드 기기) 또는 에뮬레이터로 앱을 실시간 테스트합니다.
+3.  **빌드 및 설치**: '빌드' 메뉴에서 `.apk` 파일로 빌드한 후, 안드로이드 기기에 직접 설치하여 사용할 수 있습니다.
+
+-----
+
+## ⚙️ 설정 옵션
+
+  - **난이도**: 쉬움 / 보통 / 어려움
+  - **문제 수**: 5개 / 10개 / 20개
+  - **시간제한**: 10초 (테스트 모드 한정)
+
+-----
+
+## 🧠 설계 노트
+
+  - **핵심 로직**: 블록 코딩을 통해 랜덤 문제 생성, 타이머 동작, 자동 채점 로직을 구현했습니다.
+  - **데이터 관리**: 모든 통계 데이터는 앱 실행 세션을 기준으로 메모리에 임시 보관되며, 영구적으로 저장되지는 않습니다.
+
+-----
+
+## 🧪 테스트 시나리오
+
+  - **표 모드**: 2단과 9단의 구구단 표가 정확하게 표시되는지 확인합니다.
+  - **테스트 모드**: 문제당 제한 시간(10초)이 초과되면 자동으로 오답 처리되는지 확인합니다.
+  - **난이도**: '어려움' 난이도에서 두 자릿수 곱셈 문제가 정상적으로 출제되는지 확인합니다.
+
+-----
+
+## 📁 폴더 구조 (권장)
+
 ```
-assets/                       # 스크린샷/이미지
-gugudan-trainer-app.aia       # App Inventor 프로젝트 파일
-interactive-zoog.pde          # Processing 스케치
-README.md                     # 이 파일
+.
+├── README.md
+├── docs/           # 스크린샷, 다이어그램 등 문서 자료
+├── releases/       # 빌드된 APK 파일
+└── src/            # .aia 소스 파일 또는 블록 이미지, 애셋
 ```
 
-## 노트 스냅샷
-<table>
-<tr>
-<td align="center"><strong>언어별 특징 비교 노트 1</strong></td>
-<td align="center"><strong>언어별 특징 비교 노트 2</strong></td>
-</tr>
-<tr>
-<td><img src="./assets/language-comparison-note-1.jpg" alt="언어 비교 노트 1" width="400"/></td>
-<td><img src="./assets/language-comparison-note-2.jpg" alt="언어 비교 노트 2" width="400"/></td>
-</tr>
-</table>
+-----
 
-## 라이선스
-MIT
+## 📦 릴리스 노트
 
-## 링크
-- Notion 과목 정리: https://www.notion.so/da2f0b466abf4e7e9cc791b918da8578
+  - **v1.0.0 (2025-09-24)**: 초기 버전 공개. 구구단 표 보기, 시간제한 테스트, 결과 리포트 기능 포함.
+
+-----
+
+## 🪪 라이선스
+
+이 프로젝트는 [MIT 라이선스](https://opensource.org/licenses/MIT)를 따릅니다.
