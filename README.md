@@ -1,5 +1,3 @@
------
-
 \<br\>
 \<div align="center"\>
 \<img src="[https://capsule-render.vercel.app/api?type=waving\&color=auto\&height=180\&text=Daegu%20Univ.\&animation=fadeIn\&fontColor=000000\&fontSize=40](https://www.google.com/search?q=https://capsule-render.vercel.app/api%3Ftype%3Dwaving%26color%3Dauto%26height%3D180%26text%3DDaegu%2520Univ.%26animation%3DfadeIn%26fontColor%3D000000%26fontSize%3D40)" /\>
