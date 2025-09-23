@@ -1,108 +1,164 @@
-# C Programming Exercises
+# ⚙️ C Programming – Mini Utilities
 
-간단한 문제를 절차적으로 분해해 함수 단위로 구현하는 연습을 통해, 자료형·제어문·함수·배열·문자열·포인터·동적 메모리와 디버깅 습관을 확립합니다.
+> ### 3줄 요약
+>
+>   - **콘솔 실습 4종**: 구구단 출력기, 대소문자 변환, XOR 암복호화, 포인터를 이용한 최대·최소값 탐색 유틸리티 모음입니다.
+>   - **핵심 문법 연습**: 표준 입출력, 포인터, 비트 연산자, 제어문 등 C언어의 핵심 문법을 종합적으로 연습합니다.
+>   - **통합 관리**: 단일 README 파일을 통해 여러 프로그램의 빌드, 실행, 테스트 방법을 한 곳에서 관리합니다.
 
-- 학년: 2학년
-- 언어: C
-- 빌드: gcc 또는 clang
+-----
 
-## 폴더 구조
+## 📁 파일 목록
 
-- assets
-  - case-converter.png
-  - find-max-min-pointer.png
-  - multiplication-table.png
-  - simple-xor-cipher.png
-- case-converter.c
-- find-max-min-pointer.c
-- multiplication-table.c
-- simple-xor-cipher.c
-- README.md
+  - `multiplication-table.c`: 구구단 출력기
+  - `case-converter.c`: 대소문자 변환기
+  - `simple-xor-cipher.c`: XOR 암호화/복호화기
+  - `find-max-min-pointer.c`: 포인터를 이용한 최대·최소값 탐색기
+  - `assets/`: 샘플 입출력, 스크린샷 등
 
-## 빠른 실행
+-----
 
-```bash
-# 1) 컴파일
-gcc -O2 -Wall -Wextra -std=c11 -o case-converter case-converter.c
-gcc -O2 -Wall -Wextra -std=c11 -o find-max-min-pointer find-max-min-pointer.c
-gcc -O2 -Wall -Wextra -std=c11 -o multiplication-table multiplication-table.c
-gcc -O2 -Wall -Wextra -std=c11 -o simple-xor-cipher simple-xor-cipher.c
+## 🔧 빌드 방법
 
-# 2) 실행 예
-./case-converter
-./find-max-min-pointer
-./multiplication-table
-./simple-xor-cipher
-```
+### 단일 파일 컴파일
 
-- 권장 옵션: -fsanitize=address,undefined 로 런타임 검사를 추가해 메모리/UB를 조기에 발견하세요.
-
-## 과제별 설명
-
-### 1) case-converter.c
-- 내용: 입력된 영문 문자열의 대소문자를 변환
-- 포인트: 문자 범위 검사, 입력 길이 제한, 버퍼 종료 처리
-- 입력 예: Hello → hELLO
-- 스크린샷  
-  <image source="assets/case-converter.png">case-converter output</image>
-
-### 2) find-max-min-pointer.c
-- 내용: 포인터를 이용해 배열의 최댓값·최솟값 탐색
-- 포인트: 포인터 산술, const 포인터 인터페이스, 경계값 테스트
-- 입력 예: 3 9 -1 7 → max=9, min=-1
-- 스크린샷  
-  <image source="assets/find-max-min-pointer.png">find-max-min-pointer output</image>
-
-### 3) multiplication-table.c
-- 내용: n까지의 구구단 또는 곱셈표 출력
-- 포인트: 중첩 반복, 출력 포맷 정렬
-- 입력 예: n=5 → 5×5 표
-- 스크린샷  
-  <image source="assets/multiplication-table.png">multiplication-table output</image>
-
-### 4) simple-xor-cipher.c
-- 내용: 고정 키로 XOR 암복호화
-- 포인트: 비트연산 가역성 a^k^k=a, 파일/표준입력 선택, 널 종료
-- 입력 예: plain + key → cipher, 같은 key로 복호화
-- 스크린샷  
-  <image source="assets/simple-xor-cipher.png">simple-xor-cipher output</image>
-
-## 코드 스타일과 품질
-
-- 포맷: clang-format 권장
-- 경고: -Wall -Wextra 기본, 필요 시 -Wshadow -Wconversion 추가
-- 입력 검증: scanf에는 길이 제한 사용. 문자열은 항상 널 종료 보장
-- 메모리: malloc 결과 검사, 사용 후 free, 이중 해제 방지 위해 p=NULL
-
-## 테스트 가이드
-
-- 경계값: 빈 문자열, 최솟값/최댓값이 같은 배열, n=1·n=0
-- 비정상 입력: 비문자·음수·과도한 길이
-- 시간복잡도: 변환/탐색/출력 모두 O(n). 표 출력은 O(n^2)
-
-## 빌드 스크립트 예시
+`bin` 디렉터리를 생성한 후, 각 파일을 개별적으로 컴파일합니다. (Windows MinGW, WSL, macOS, Linux 환경)
 
 ```bash
-#!/usr/bin/env bash
-set -euo pipefail
-CC=${CC:-gcc}
-CFLAGS="-O2 -Wall -Wextra -std=c11"
-$CC $CFLAGS -o case-converter case-converter.c
-$CC $CFLAGS -o find-max-min-pointer find-max-min-pointer.c
-$CC $CFLAGS -o multiplication-table multiplication-table.c
-$CC $CFLAGS -o simple-xor-cipher simple-xor-cipher.c
-echo "Build OK"
+mkdir -p bin
+gcc -O2 -Wall -Wextra -o bin/mul multiplication-table.c
+gcc -O2 -Wall -Wextra -o bin/case case-converter.c
+gcc -O2 -Wall -Wextra -o bin/xor  simple-xor-cipher.c
+gcc -O2 -Wall -Wextra -o bin/ptr  find-max-min-pointer.c
 ```
 
-## 라이선스
+### Makefile 사용 (선택)
 
-- 교육 목적의 예제 코드입니다. 필요 시 MIT 등으로 라이선스를 지정하세요.
+프로젝트 루트에 `Makefile`을 생성하고 아래 내용을 붙여넣은 뒤, `make` 명령어로 모든 파일을 한 번에 빌드할 수 있습니다.
 
-## 참고
+```makefile
+CC=gcc
+CFLAGS=-O2 -Wall -Wextra
+BIN=bin
 
-- C 언어 레퍼런스: https://en.cppreference.com
-- C 보안 코딩(문자열): https://wiki.sei.cmu.edu
+TARGETS=$(BIN)/mul $(BIN)/case $(BIN)/xor $(BIN)/ptr
 
+all: $(TARGETS)
 
-## Notion Page
-- C Programming: https://www.notion.so/771d07fe436e4f58a0a490fdde107ca6
+$(BIN)/mul: multiplication-table.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+$(BIN)/case: case-converter.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+$(BIN)/xor: simple-xor-cipher.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+$(BIN)/ptr: find-max-min-pointer.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+clean:
+	rm -f $(TARGETS)
+```
+
+-----
+
+## 1\. 구구단 출력기 (`multiplication-table.c`)
+
+정수 하나를 입력받아 해당하는 구구단을 형식에 맞춰 콘솔에 출력합니다.
+
+#### 실행
+
+```bash
+# 7단을 출력하는 예시
+echo 7 | ./bin/mul
+```
+
+#### 요구사항 체크
+
+  - [ ] 단 입력 유효성 검사 (2\~9단)
+  - [ ] 포맷팅: `"7 x i = 값"` 형식으로 한 줄씩 9개 출력
+  - [ ] 잘못된 입력 시 에러 메시지 출력 또는 재입력 요구
+
+-----
+
+## 2\. 대소문자 변환기 (`case-converter.c`)
+
+알파벳 문자 하나를 입력받아 아스키코드(ASCII) 값 연산을 통해 대문자는 소문자로, 소문자는 대문자로 변환합니다.
+
+#### 실행
+
+```bash
+echo a | ./bin/case
+```
+
+#### 요구사항 체크
+
+  - [ ] 입력된 문자가 알파벳인지 검증
+  - [ ] 소문자 → 대문자 변환 로직 (`c - 32` 또는 `c - 'a' + 'A'`)
+  - [ ] 대문자 → 소문자 변환 로직 (`c + 32` 또는 `c - 'A' + 'a'`)
+  - [ ] 알파벳이 아닐 경우 원본 문자 그대로 출력
+
+-----
+
+## 3\. XOR 암호화/복호화기 (`simple-xor-cipher.c`)
+
+XOR 비트 연산의 특징(`A ^ B ^ B = A`)을 이용하여, 동일한 키(Key)로 암호화와 복호화를 모두 수행하는 간단한 암호화 프로그램입니다.
+
+#### 실행
+
+```bash
+# "hello"라는 평문을 "secret" 키로 암호화하여 enc.bin 파일에 저장
+echo "hello" | ./bin/xor secret > assets/enc.bin
+
+# 암호화된 파일을 동일한 키로 복호화하여 dec.txt 파일에 저장
+./bin/xor secret < assets/enc.bin > assets/dec.txt
+```
+
+#### 요구사항 체크
+
+  - [ ] 표준 입력(stdin)으로 데이터를 받고, 표준 출력(stdout)으로 결과를 출력
+  - [ ] 암호화/복호화에 사용할 키 문자열을 인자로 전달받음
+  - [ ] 키의 길이를 순환하며 XOR 연산을 적용
+
+-----
+
+## 4\. 포인터 최대·최소 탐색기 (`find-max-min-pointer.c`)
+
+두 개의 정수를 입력받아, 함수의 인자로 전달된 포인터 변수에 최대값과 최소값을 저장하여 반환합니다.
+
+#### 실행
+
+```bash
+echo "12 5" | ./bin/ptr
+```
+
+#### 요구사항 체크
+
+  - [ ] 함수 시그니처: `void findMinMax(int a, int b, int* min, int* max);`
+  - [ ] 주소 값 전달을 통해 `main` 함수에 선언된 변수의 값을 변경
+  - [ ] 입력 값에 대한 유효성 검증 및 예외 처리
+
+-----
+
+## 🧪 빠른 테스트 시나리오
+
+```bash
+# 1) 구구단: 9줄이 정상적으로 출력되는지 확인
+for n in 2 5 9; do echo $n | ./bin/mul | wc -l; done
+
+# 2) 대소문자: a -> A, Z -> z, 3 -> 3으로 변환되는지 확인
+printf "aZ3" | ./bin/case
+
+# 3) XOR: 암호화 -> 복호화 후 원본 텍스트로 돌아오는지 확인
+echo "Hello, World!" | ./bin/xor mySecretKey | ./bin/xor mySecretKey
+
+# 4) 포인터: 최대/최소값이 올바르게 출력되는지 확인
+echo "10 20" | ./bin/ptr
+```
+
+-----
+
+## 🪪 라이선스
+
+이 프로젝트는 [MIT 라이선스](https://opensource.org/licenses/MIT)를 따릅니다.
