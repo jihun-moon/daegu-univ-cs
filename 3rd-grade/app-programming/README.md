@@ -67,7 +67,7 @@ CREATE TABLE visit_history (
 
 ## 🗺️ 예시 프로젝트
 
-  - **[Mobile Doctor | Android](https://www.google.com/search?q=https://github.com/your-username/mobile-doctor-app)**
+  - **[Mobile Doctor | Android](https://www.google.com/search?q=https://github.com/jihun-moon/mobile-doctor-app)**
       - 본 과목에서 배운 내용을 총망라한 팀 프로젝트입니다.
       - 주요 기능: 지도 기반 병원/약국 정보, 증상 검색, SQLite 기록 관리, 접근성 기능 등
       - 프로젝트 `README`를 통해 실무적인 앱 구조와 개발 과정을 학습할 수 있습니다.
