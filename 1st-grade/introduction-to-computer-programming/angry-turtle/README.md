@@ -1,6 +1,3 @@
-### **2. Angry Turtle README (`angry-turtle/README.md`)**
-
-````markdown
 # 🐢 Angry Turtle
 
 > ### 3줄 요약
