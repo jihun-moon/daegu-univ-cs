@@ -1,128 +1,147 @@
-# System Software Practice (시스템 SW 실무)
+# 🐧 리눅스 명령어 활용 및 셸 스크립트 작성 실습
 
-C, Assembly, Linux, Docker를 중심으로 커널–유저 공간 경계 이해부터 가상화, 서버 운영 자동화, 컨테이너 배포까지 실습했습니다. 재현 가능한 개발·운영 환경을 구축하고 운영 절차를 코드화했습니다.
+> ### 3줄 요약
+>
+>   - **리눅스 실무**: Ubuntu 환경에서 파일 시스템, 프로세스, 네트워크 관련 핵심 명령어를 실습합니다.
+>   - **자동화 스크립팅**: Bash 셸 스크립트를 사용하여 파일 일괄 처리, 로그 관리 등 반복적인 작업을 자동화하는 스크립트를 작성합니다.
+>   - **핵심 문법**: 스크립트 작성에 필수적인 입출력, 조건문, 반복문, 함수, 그리고 `cron`을 이용한 스케줄링까지 단계별로 학습합니다.
 
-- OS/Virtualization: Ubuntu VM, VT‑x/AMD‑V, Hypervisor basics
-- Linux Ops: Bash, systemd, 네트워킹, 권한 관리
-- Containerization: Dockerfile, Multi-stage build, Docker Compose
+-----
 
-## 🎥 Demo
-![Ubuntu VM Usage](assets/ubuntu-vm-usage.gif)
+## 📁 폴더 구조 (권장)
 
-assets 경로/파일명은 실제 레포에 맞게 수정하세요.
-
-## What I Built
-- Reproducible Ubuntu VM 템플릿과 스냅샷 워크플로
-- Bash 기반 데이터 처리·로그 수집 파이프라인
-- Dockerfile + Compose로 웹/DB 등 멀티 서비스 로컬 오케스트레이션
-
-## Key Concepts
-- 링 보호 모델, 커널/유저 공간, 시스템 콜 경계
-- systemd(Unit/Timer/Journal), 권한(UGO, sudoers), 네트워크(브리지/NAT)
-- 이미지 최적화(멀티스테이지, 캐시/레이어 관리), .dockerignore
-- Compose 환경 분리(.env), 의존성, Healthcheck
-
-## Examples
-
-systemd 타이머로 주기 작업 자동화
-```ini
-# /etc/systemd/system/logrotate-job.service
-[Unit]
-Description=Rotate logs
-
-[Service]
-Type=oneshot
-ExecStart=/usr/sbin/logrotate /etc/logrotate.conf
+```
+systems-software-practice/
+├── README.md
+├── assets/
+│   └── ubuntu-vm-usage.gif
+└── scripts/
+    ├── setup.sh
+    ├── batch_rename.sh
+    ├── log_rotate.sh
+    ├── find_large_files.sh
+    └── menu_tool.sh
 ```
 
-```ini
-# /etc/systemd/system/logrotate-job.timer
-[Unit]
-Description=Run logrotate hourly
+-----
 
-[Timer]
-OnCalendar=hourly
-Persistent=true
+## 🧰 실습 환경
 
-[Install]
-WantedBy=timers.target
+  - **배포판**: Ubuntu LTS (WSL, VM, 또는 베어메탈)
+  - **셸**: Bash 5+
+  - **편집기**: `vim` 또는 `nano`
+  - **권한**: `sudo`를 이용한 관리자 권한 필요
+
+-----
+
+## 1\. 기본 명령어 체크리스트
+
+| 카테고리 | 명령어 |
+| :--- | :--- |
+| **파일/디렉터리** | `pwd`, `ls -al`, `cd`, `mkdir -p`, `rm -rf`, `cp -r`, `mv` |
+| **내용 확인** | `cat`, `less`, `head`, `tail`, `wc`, `nl` |
+| **검색/필터** | `grep`, `find`, `cut`, `sort`, `uniq`, `xargs` |
+| **압축** | `tar`, `zip`, `unzip` |
+| **권한** | `chmod`, `chown`, `umask` |
+| **시스템/프로세스**| `ps aux`, `top`/`htop`, `kill`, `df -h`, `du -sh` |
+| **네트워킹** | `ping`, `curl`, `ss -tulpn` |
+
+> **⚠️ 주의**: `rm -rf /` 와 같이 시스템에 치명적인 명령어는 사용 전 `echo`로 실행될 대상을 먼저 확인하는 습관을 들이세요.
+
+-----
+
+## 2\. Bash 스크립트 기초
+
+#### 스크립트 헤더 (안전 모드)
+
+스크립트 실행 중 오류 발생 시 즉시 중단하여 예기치 않은 동작을 방지합니다.
+
+```bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
 ```
 
-Docker 멀티스테이지 빌드
-```dockerfile
-# syntax=docker/dockerfile:1
-FROM golang:1.22 AS build
-WORKDIR /app
-COPY . .
-RUN CGO_ENABLED=0 go build -o app
+#### 변수 및 인자 처리
 
-FROM gcr.io/distroless/base-debian12
-COPY --from=build /app/app /usr/local/bin/app
-USER nonroot
-ENTRYPOINT ["/usr/local/bin/app"]
+```bash
+# $1 인자가 없으면 "world"를 기본값으로 사용
+NAME=${1:-world}
+echo "Hello, $NAME"
 ```
 
-Compose 예시
-```yaml
-version: "3.9"
-services:
-  api:
-    build: .
-    ports: ["8080:8080"]
-    env_file: .env
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
-      interval: 10s
-      timeout: 2s
-      retries: 3
-  db:
-    image: mysql:8.4
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-    volumes:
-      - db_data:/var/lib/mysql
-volumes:
-  db_data:
+#### 사용자 입력 받기
+
+```bash
+read -rp "파일명을 입력하세요: " FILE
 ```
 
-## Troubleshooting
-- VM 네트워크 통신 불가 → 브리지/NAT 구분 적용, 게이트웨이/서브넷 확인
-- 이미지 과체중 → 멀티스테이지 빌드, 패키지 캐시 삭제, distroless/ubi‑micro 사용
-- 주기 작업 실패 → systemd timer + journalctl ‑u로 원인 추적, Restart 정책 설정
+#### 조건문 및 반복문
 
-## Checklist
-- [ ] 최소 권한 원칙(사용자/그룹/권한/ sudoers) 적용
-- [ ] systemd Unit에 ExecStartPre·Restart·Timeout 정의
-- [ ] Dockerfile 고정 태그/healthcheck 및 .dockerignore 설정
-- [ ] Compose .env로 환경 분리, 네트워크/볼륨 명시
-- [ ] 보안 업데이트·로그 로테이션 스케줄 적용
+```bash
+# 파일 존재 여부 확인
+if [[ -f "$FILE" ]]; then echo "OK"; fi
 
-## Folder Structure
-```
-/assets/                  # README 데모(gif)
-/vm/                      # VM 세팅 스크립트/문서(있다면)
-/scripts/                 # Bash 자동화 스크립트
-/docker/                  # Dockerfile, compose.yaml
-README.md
+# for 반복문
+for f in *.log; do echo "$f"; done
+
+# while 반복문 (파일 라인별 읽기)
+while read -r line; do echo "$line"; done < input.txt
 ```
 
-## How to Reproduce
-1. VM 준비  
-   - Ubuntu 설치 → 브리지/NAT 설정 → 스냅샷 생성
-2. 시스템 자동화  
-   - scripts/ 하위 스크립트 배치, systemd Unit/Timer 등록
-3. 컨테이너 실행  
-   - docker build -t app .  
-   - docker compose up -d
+-----
 
-## Roadmap
-- [ ] CI/CD 파이프라인 연결(빌드/보안 스캔/서명)
-- [ ] SBOM 생성 및 취약점 스캔(Grype/Trivy)
-- [ ] 로그/메트릭 수집(Stack: Prometheus + Loki/Grafana)
+## 3\. 예제 스크립트 모음
 
-## Links
-- Notion: 시스템SW실무 페이지
-- 실습 레포/문서 링크 추가
+### `setup.sh` — 개발 환경 초기 설정
 
-## License
-MIT (또는 팀/과목 정책에 맞게 명시)
+```bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
+sudo apt-get update -y && sudo apt-get install -y vim git curl htop tree
+```
+
+### `batch_rename.sh` — 파일 이름 일괄 변경
+
+```bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
+prefix=${1:-img}
+i=1
+for f in *.png; do
+    new=$(printf "%s_%03d.png" "$prefix" "$i")
+    mv -- "$f" "$new"
+    ((i++))
+done
+```
+
+### `find_large_files.sh` — 용량이 큰 파일/디렉터리 탐색
+
+```bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
+du -ah . | sort -hr | head -n 20
+```
+
+-----
+
+## 4\. 크론(Cron) 스케줄링
+
+`crontab -e` 명령어로 특정 시간에 스크립트를 자동 실행하도록 등록할 수 있습니다.
+
+```bash
+# 매일 새벽 3시에 log_rotate.sh 스크립트를 실행하고, 결과를 /tmp/logrotate.out에 기록
+0 3 * * * /home/USER/scripts/log_rotate.sh >/tmp/logrotate.out 2>&1
+```
+
+-----
+
+## 🖼️ 실행 데모
+
+\<img src="assets/ubuntu-vm-usage.gif" alt="Ubuntu VM Usage Demo"/\>
+
+-----
+
+## 🪪 라이선스
+
+이 프로젝트는 [MIT 라이선스](https://opensource.org/licenses/MIT)를 따릅니다.
