@@ -1,73 +1,60 @@
-### 1) 과목 폴더용 미니 README 템플릿
+# 📚 대구대학교 CS 학습 저장소 (Daegu University CS Coursework Archive)
 
-# (과목명) (Course)
-
-> (한 줄 소개)
+> 대구대학교 컴퓨터소프트웨어 전공 과정에서 수행한 코드, 실습, 과제물을 체계적으로 기록한 저장소입니다. 상세한 개념 정리와 학습 노트는 Notion에서 관리합니다.[[1]](https://www.notion.so/Jihun-s-Hub-27672d9f979f8057acffe48b5240fc75?pvs=21)
 > 
-
-## 1. 개요 (Overview)
-
-- 수업 코드: (예: CSE123)
-- 학기: (YYYY-학기)
-- 강의 주제: (예: 자료구조, 운영체제 기초)
-- 목표: (예: 기본 개념 이해와 실습 능력 강화)
-
-## 2. 학습 내용 요약 (What I Learned)
-
-- (핵심 개념 1)
-- (핵심 개념 2)
-- (핵심 개념 3)
-
-## 3. 디렉터리 구조 (Directory)
-
-```
-(과목폴더)/
-├─ notes/          # 개념 정리, 요약
-├─ labs/           # 실습 코드
-├─ assignments/    # 과제 및 보고서
-├─ examples/       # 수업 예제 재구현
-└─ [README.md](http://README.md)
-```
-
-## 4. 실행 방법 (How to Run)
-
-```bash
-# 언어/도구에 맞춰 예시 기입
-# C/C++
-gcc -o main src/main.c && ./main
-
-# Python
-python src/[main.py](http://main.py)
-```
-
-## 5. 참고 자료 (References)
-
-- 강의 자료: (링크)
-- 공식 문서: (링크)
-- 추가 자료: (링크)
 
 ---
 
-### 2) 실습(Lab) 폴더 템플릿
+## 🗂️ 노션 지식 베이스 (Notion Knowledge Base)
 
-# (주차/주제) 실습 (Lab)
+- 메인 허브: [Jihun's Hub](https://www.notion.so/Jihun-s-Hub-27672d9f979f8057acffe48b5240fc75?pvs=21)[[1]](https://www.notion.so/Jihun-s-Hub-27672d9f979f8057acffe48b5240fc75?pvs=21)
+- 과목별 상세 노트 바로가기: [🔗 Jihun's Knowledge Base로 이동](https://www.notion.so/Jihun-s-Hub-27672d9f979f8057acffe48b5240fc75?pvs=21)
 
-## 목적 (Purpose)
+---
 
-- (무엇을 연습하는 실습인지)
+## 👋 소개 (About)
 
-## 요구 사항 (Requirements)
+- 전공 과목별 실습·과제 아카이브
+- 통일된 폴더 구조와 커밋 규칙 적용
+- 노션과 연동해 개념·진행 상황 버전 관리
 
-- (도구/버전)
-- (외부 라이브러리)
+---
 
-## 실행 (Run)
+## 🛠️ 주요 기술 스택 (Tech Stack)
 
-```bash
-(명령어)
+- Languages: Java, Python, C C++, JavaScript, SQL
+- Frameworks Libraries: Spring Boot, Node.js, React
+- Tools Environments: Git, Docker, Linux, AWS
+
+---
+
+## 📂 폴더 구조 (Folder Structure)
+
+```
+my-learning-journey/
+├─ 1st-grade/
+│  ├─ introduction-to-computer-programming/
+│  └─ introduction-to-software-development/
+├─ 2nd-grade/
+│  ├─ algorithm/  ├─ c-programming/  ├─ computer-graphics/
+│  ├─ computer-networks/  ├─ data-structures/
+│  ├─ discrete-mathematics/  └─ java-programming/
+└─ 3rd-grade/
+   ├─ app-programming/  ├─ data-mining/  ├─ database/
+   ├─ game-programming/ ├─ server-system-administration/
+   ├─ software-engineering/ ├─ systems-software-practice/
+   └─ web-programming/
 ```
 
-## 체크포인트 (Checkpoints)
+## 🔖 커밋 규칙 (Conventional Commits)
 
-- [ ]  (조건 1)
-- [ ]  (조건 2)
+- feat, fix, docs, refactor, test 등 표준 태그 사용
+
+## ▶️ 시작하기 (Getting Started)
+
+```bash
+git clone <repo-url>
+cd my-learning-journey
+```
+
+필요하면 이 블록에 배지나 레포 링크만 추가해서 쓰세요.
