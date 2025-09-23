@@ -1,90 +1,130 @@
-# Database — Course Summary
+# 📊 MySQL × Python 매출 분석 파이프라인
 
-관계형 데이터 모델과 SQL로 스키마를 설계하고, 질의 최적화·집계·리포팅까지 일관된 파이프라인을 실습했습니다. ERD 정규화와 인덱스 설계를 통해 읽기/쓰기 균형을 잡고, Python(Pandas) 연동으로 시각화 결과를 산출했습니다.
+> ### 3줄 요약
+>
+>   - **데이터 파이프라인**: MySQL(한빛무역 샘플 스키마)에 저장된 데이터를 Python으로 연동하여 분석하고 시각화하는 엔드투엔드(End-to-End) 파이프라인입니다.
+>   - **핵심 기술**: 복합 SQL(`JOIN`, `GROUP BY`, `CASE`)로 데이터를 집계하고, `pandas`로 가공한 뒤 `plotly`와 `matplotlib`으로 시각화합니다.
+>   - **결과물**: 재현 가능한 분석 스크립트와 대시보드형 차트(막대, 도넛, Sunburst)를 산출합니다.
 
-- DBMS: MySQL
-- Language: SQL, Python
-- Topics: ERD·정규화, 인덱스·실행계획, 윈도우 함수, 데이터 파이프라인
+-----
 
-## 📸 Screenshots
-| ERD | 매출 분석(제품군) |
-| --- | --- |
-| ![ERD](assets/db-erd.png) | ![Sales by Category](assets/sales-by-category.png) |
+## 🖼️ 예시 산출물
 
-assets 경로·파일명은 레포에 맞게 변경하세요.
+| 지역별 매출 (막대그래프) | 제품군별 매출 비중 (도넛 차트) |
+| :---: | :---: |
+| \<img src="assets/sales-by-region.png" alt="Sales by Region" width="400"/\> | \<img src="assets/sales-by-category.png" alt="Sales by Category" width="400"/\> |
 
-## What I Learned
-- Schema Design: 정규화, PK/UK, FK·제약, 관계 무결성
-- Query Patterns: JOIN·GROUP BY·HAVING, CTE/서브쿼리
-- Window Functions: 누계, 랭킹, 이동 평균
-- Index & EXPLAIN: 커버링 인덱스, 범위 스캔 유도, 계획 해석
-- Python 연동: PyMySQL로 적재, Pandas 집계, Plotly 시각화
+  - **ERD**: `assets/db-erd.png`
+  - **인터랙티브 대시보드**: `outputs/sunburst.html` (스크립트 실행 후 생성)
 
-## Example (SQL)
+-----
+
+## 🧰 개발 환경 및 설정
+
+  - **언어/DB**: Python 3.10+, MySQL 8.x
+  - **핵심 라이브러리**: `pymysql`, `pandas`, `matplotlib`, `plotly`
+  - **권장**: 가상환경(`venv`) 사용
+
+#### 1\. 환경 설정
+
+```bash
+# 가상환경 생성 및 활성화
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# 라이브러리 설치
+pip install -U pip
+pip install pymysql pandas matplotlib plotly python-dotenv
+```
+
+#### 2\. 접속 정보 설정 (`.env` 파일)
+
+프로젝트 루트에 `.env` 파일을 생성하고 아래와 같이 데이터베이스 접속 정보를 입력합니다.
+
+```env
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_USER=hanbit
+MYSQL_PASSWORD=secret
+MYSQL_DB=hanbit_trade
+```
+
+-----
+
+## 🚀 빠른 실행
+
+### 1\. 기초 연동 및 데이터 확인
+
+`Mysql_Basic.py` 스크립트는 DB 연결을 테스트하고 기본 데이터를 조회하는 역할을 합니다.
+
+```bash
+python src/Mysql_Basic.py
+```
+
+### 2\. 분석 및 시각화 파이프라인 실행
+
+`Mysql_Visualization.py` 스크립트는 SQL 쿼리로 데이터를 집계하고, `outputs` 폴더에 시각화 결과물을 저장합니다.
+
+```bash
+python src/Mysql_Visualization.py --save-dir outputs
+```
+
+#### 스크립트 인자 (선택)
+
+```bash
+python src/Mysql_Visualization.py \
+  --start-date 2023-01-01 \
+  --end-date 2023-12-31 \
+  --top-n 10 \
+  --save-dir outputs
+```
+
+  - `--start-date`, `--end-date`: 분석 기간 필터
+  - `--top-n`: 상위 카테고리/지역 필터
+  - `--save-dir`: 결과 저장 폴더
+
+-----
+
+## 🧩 대표 SQL 쿼리 예시
+
+#### 지역 및 연도별 매출 집계
+
 ```sql
--- 지역·제품군 월 매출, 누계 및 지역 내 Top-N
-WITH monthly AS (
-  SELECT  r.region,
-          p.category,
-          DATE_FORMAT(o.order_date, '%Y-%m') AS ym,
-          SUM(o.amount) AS revenue
+SELECT r.region,
+       YEAR(o.order_date) AS y,
+       SUM(od.quantity * od.unit_price * (1 - od.discount)) AS revenue
   FROM orders o
-  JOIN products p ON p.id = o.product_id
-  JOIN regions  r ON r.id = o.region_id
-  GROUP BY r.region, p.category, ym
-)
-SELECT  region, category, ym, revenue,
-        SUM(revenue) OVER (PARTITION BY region, category ORDER BY ym) AS cum_rev,
-        RANK() OVER (PARTITION BY region, ym ORDER BY revenue DESC)      AS rk_in_region
-FROM monthly
-WHERE ym BETWEEN '2025-01' AND '2025-06'
-ORDER BY region, category, ym;
+  JOIN order_details od ON o.order_id = od.order_id
+  JOIN customers c ON o.customer_id = c.customer_id
+  JOIN regions r ON c.region_id = r.region_id
+ GROUP BY r.region, YEAR(o.order_date)
+ ORDER BY y, revenue DESC;
 ```
 
-## Troubleshooting
-- N+1 조인 지연 → 사전 집계 CTE + 필요한 컬럼만 SELECT로 I/O 감소
-- LIKE '%keyword' 인덱스 미사용 → 접두 검색 재설계 + 적절한 인덱스
-- GROUP BY 오차 → NULL 규칙 합의, COALESCE 적용으로 집계 일관성 확보
+#### 제품군별 매출 비중
 
-## Checklist
-- [ ] PK/UK, FK, ON DELETE/UPDATE 정책 정의
-- [ ] SELECT * 금지, 필요한 컬럼만 명시
-- [ ] EXPLAIN으로 인덱스/계획 검증
-- [ ] 트랜잭션 경계·격리 수준 명시
-- [ ] 리포트 쿼리와 운영 트랜잭션 분리
-
-## Python Pipeline (optional)
-```python
-# pip install PyMySQL pandas plotly
-import pymysql, pandas as pd, plotly.express as px
-
-conn = pymysql.connect(host="localhost", user="user", password="pw", db="hanbit")
-df = pd.read_sql("SELECT region, category, ym, revenue FROM monthly_view", conn)
-fig = px.bar(df, x="ym", y="revenue", color="category", facet_col="region")
-fig.write_image("assets/sales-by-region.png")
+```sql
+SELECT p.category AS category,
+       SUM(od.quantity * od.unit_price) AS revenue
+  FROM order_details od
+  JOIN products p ON od.product_id = p.product_id
+ GROUP BY p.category
+ ORDER BY revenue DESC;
 ```
 
-## Folder Structure
+-----
+
+## 🐳 (선택) Docker로 MySQL 환경 구성
+
+로컬에 MySQL이 설치되어 있지 않은 경우, Docker를 사용하여 간단하게 테스트 환경을 구성할 수 있습니다.
+
+```bash
+docker run --name hanbit-mysql -e MYSQL_ROOT_PASSWORD=root \
+-e MYSQL_DATABASE=hanbit_trade -p 3306:3306 -d mysql:8
 ```
-/assets/                # ERD/차트 이미지
-/docs/                  # 발표 자료(PPT/PDF)
-/src/                   # SQL 스크립트, Python 파이프라인
-README.md
-```
 
-## How to Reproduce
-1. Create Schema  
-   - DDL 실행 후 인덱스/제약 설정
-2. Load Sample Data  
-   - CSV 또는 스크립트로 적재
-3. Run Queries  
-   - 01_erd.sql → 02_transform.sql → 03_reporting.sql
-4. (선택) Python 시각화  
-   - src/pipeline.py 실행 → assets에 결과 이미지 생성
+-----
 
-## Links
-- Notion 정리: Database 페이지[[1]](https://www.notion.so/7475d01faf314341bd4895dded72be9a)
-- GitHub 실습 레포: 프로젝트 링크 기입
+## 🪪 라이선스
 
-## License
-MIT 또는 과목 가이드에 맞는 라이선스 표기
+이 프로젝트는 [MIT 라이선스](https://opensource.org/licenses/MIT)를 따릅니다.
