@@ -1,82 +1,55 @@
-# Introduction to Computer Programming — 1학년 실습 모음
+### **1. 메인 README (`introduction-to-computer-programming/README.md`)**
 
-Python으로 기본 문법과 GUI 프로그래밍을 연습한 미니 프로젝트 모음입니다. 동일 코어 로직을 GUI(Turtle/Tkinter)와 Console에 분리 적용하는 연습에 중점을 두었습니다.
+```markdown
+# 🐍 Introduction to Computer Programming – Mini Projects
 
-## 데모 스크린샷
-<table>
-  <tr>
-    <td align="center"><strong>Angry Turtle (Turtle Graphics)</strong></td>
-    <td align="center"><strong>Ball Simulation (Tkinter)</strong></td>
-  </tr>
-  <tr>
-    <td><img src="./assets/angry-turtle-game-screenshot.png" alt="Angry Turtle 게임 스크린샷" width="400"/></td>
-    <td><img src="./assets/ball-simulation-tkinter-screenshot.png" alt="Ball Simulation 스크린샷" width="400"/></td>
-  </tr>
-</table>
+이 폴더는 파이썬 기초 프로그래밍 수업에서 진행한 미니 프로젝트들을 모아놓은 저장소입니다. 각 프로젝트의 상세 내용은 하위 폴더의 README를 참고하여 실행하세요.
 
-## 프로젝트 목록
+---
 
-| Name               | Tech             | 한 줄 설명                                                         | 실행                                 |
-|--------------------|------------------|--------------------------------------------------------------------|--------------------------------------|
-| Angry Turtle       | Python, Turtle   | 포물선 운동 슈팅. 각도·속도 조절, 충돌 시 스코어 갱신              | `python angry-turtle.py`             |
-| Ball Simulation    | Python, Tkinter  | 2D 공 이동·충돌 시뮬레이션. 고정 타임스텝 업데이트                 | `python ball-simulation-tkinter.py`  |
-| Fortress (Console) | Python           | 콘솔 기반 캐논 게임. GUI 없이 코어 로직 검증                       | `python fortress-game-console.py`    |
+## 📦 프로젝트 목록
 
-## 핵심 학습 포인트
-- 입력 이벤트와 렌더링/물리 업데이트 분리 (`update()` vs `draw()`)
-- 고정 타임스텝(Δt)과 보간으로 시각 떨림 감소
-- 순수 함수 기반 코어 로직(예: `step(pos, vel, dt)`)으로 테스트 용이성 확보
-- 로직–표현 분리로 동일 로직의 GUI/Console 재사용
+1.  **Angry Turtle**
+    -   키보드 입력으로 각도와 힘을 조절해 포탄을 발사하는 2D 아케이드 미니 게임
+    -   **기술 스택**: `Python`, `turtle`
 
-## 요구 사항
-- Python 3.9 이상
-- Tkinter, Turtle는 표준 라이브러리 활용
-- 선택: 가상환경 사용 권장
+2.  **Tkinter 물리 시뮬레이션**
+    -   Tkinter로 구현한 공(또는 탄환) 물리 시뮬레이션. OOP 설계를 적용
+    -   **기술 스택**: `Python`, `Tkinter`, `OOP`
 
-## 사용 방법
+3.  **콘솔 포트리스**
+    -   각도와 세기 입력으로 포탄 사거리를 계산하는 콘솔 게임
+    -   **기술 스택**: `Python`, `console`, `math`
 
-가상환경 생성 및 활성화
-```bash
-python -m venv .venv
-# macOS/Linux
-source .venv/bin/activate
-# Windows
-.\.venv\Scripts\activate
+---
+
+## 📁 폴더 구조 (예시)
+
 ```
 
-의존성 설치(필요 시)
-```bash
-pip install -r requirements.txt
+introduction-to-computer-programming/
+├── angry-turtle/
+│   └── README.md
+├── ball-simulation-tkinter/
+│   └── README.md
+├── fortress-game-console/
+│   └── README.md
+└── assets/              \# 공통 이미지/데이터(선택)
+
 ```
 
-각 스크립트 실행
-```bash
-# Angry Turtle
-python angry-turtle.py
+---
 
-# Ball Simulation (Tkinter)
-python ball-simulation-tkinter.py
+## 🔧 개발 환경
 
-# Fortress (Console)
-python fortress-game-console.py
-```
+-   **Python**: 3.10+ 권장
+-   **가상환경**: `venv` 또는 `conda` 사용 권장
+-   **의존성**: 각 프로젝트별 `README.md` 파일 참고
 
-## 조작법 (요약)
-- Angry Turtle: ↑/↓ 각도, ←/→ 속도, Space 발사
-- Fortress (Console): 안내에 따라 각도·속도 입력
+---
 
-## 디렉터리
-```
-assets/                         # 스크린샷/이미지
-angry-turtle.py                 # 터틀 슈팅
-ball-simulation-tkinter.py      # Tkinter 충돌 시뮬
-fortress-game-console.py        # 콘솔 버전 캐논 게임
-README.md                       # 이 파일
-```
+## 🗺️ 로드맵 (선택)
 
-## 라이선스 / 사용 범위
-- 교육 목적의 예제 코드
-- 스크린샷 및 결과물은 개인 포트폴리오 용도 사용
-
-## 링크
-- Notion 과목 정리: 소프트웨어 개발 입문: https://www.notion.so/9494b9bfd15442178be23b57065b4279?source=copy_link
+-   [ ] 공통 테스트 스크립트 정리
+-   [ ] 실습용 데이터 샘플 추가
+-   [ ] GIF 데모 캡처 추가
