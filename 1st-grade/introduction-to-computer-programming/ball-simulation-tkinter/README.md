@@ -1,6 +1,3 @@
-### **3. Tkinter 물리 시뮬레이션 README (`ball-simulation-tkinter/README.md`)**
-
-```markdown
 # 🔮 Tkinter 물리 시뮬레이션
 
 > ### 3줄 요약
