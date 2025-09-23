@@ -61,31 +61,6 @@
 
 -----
 
-## 🛠️ 주요 기술 스택 (Tech Stack)
-
-### Languages
-
-  - Java
-  - Python
-  - C / C++
-  - JavaScript
-  - SQL
-
-### Frameworks & Libraries
-
-  - Spring Boot
-  - Node.js
-  - React
-
-### Tools & Environments
-
-  - Git
-  - Docker
-  - Linux
-  - AWS
-
------
-
 ## 📂 폴더 구조 (Folder Structure)
 
 ```
