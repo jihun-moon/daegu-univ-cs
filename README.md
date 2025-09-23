@@ -1,44 +1,44 @@
 -----
 
-\<div align="center"\>
-\<img src="[https://capsule-render.vercel.app/api?type=waving\&color=auto\&height=180\&text=Daegu%20Univ.\&animation=fadeIn\&fontColor=000000\&fontSize=40](https://www.google.com/search?q=https://capsule-render.vercel.app/api%3Ftype%3Dwaving%26color%3Dauto%26height%3D180%26text%3DDaegu%2520Univ.%26animation%3DfadeIn%26fontColor%3D000000%26fontSize%3D40)" /\>
-\</div\>
+<div align="center">
+  <img src="[https://capsule-render.vercel.app/api?type=waving&color=auto&height=180&text=Daegu%20Univ.&animation=fadeIn&fontColor=000000&fontSize=40](https://capsule-render.vercel.app/api?type=waving&color=auto&height=180&text=Daegu%20Univ.&animation=fadeIn&fontColor=000000&fontSize=40)" />
+</div>
 
-\<div align="center"\>
-\<h1\>📚 대구대학교 CS 학습 저장소\</h1\>
-\<strong\>Daegu University CS Coursework Archive\</strong\>
-\</div\>
-
-<br>
-
-\<div align="center"\>
-대구대학교 컴퓨터소프트웨어 전공 과정에서 수행한 코드, 실습, 과제물을 체계적으로 기록한 저장소입니다.\<br\>
-상세한 개념 정리와 학습 노트는 Notion에서 관리하고 있습니다.
-\</div\>
+<div align="center">
+  <h1>📚 대구대학교 CS 학습 저장소</h1>
+  <strong>Daegu University CS Coursework Archive</strong>
+</div>
 
 <br>
 
-\<div align="center"\>
-\<img src="[https://img.shields.io/badge/Java-007396?style=for-the-badge\&logo=java\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Java-007396%3Fstyle%3Dfor-the-badge%26logo%3Djava%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Python-3776AB%3Fstyle%3Dfor-the-badge%26logo%3Dpython%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/C++-00599C?style=for-the-badge\&logo=cplusplus\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/C%2B%2B-00599C%3Fstyle%3Dfor-the-badge%26logo%3Dcplusplus%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/C-A8B9CC?style=for-the-badge\&logo=c\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/C-A8B9CC%3Fstyle%3Dfor-the-badge%26logo%3Dc%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black](https://www.google.com/search?q=https://img.shields.io/badge/JavaScript-F7DF1E%3Fstyle%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3Dblack)"/\>
-\<img src="[https://img.shields.io/badge/SQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/SQL-4479A1%3Fstyle%3Dfor-the-badge%26logo%3Dmysql%26logoColor%3Dwhite)"/\>
-\</div\>
+<div align="center">
+  대구대학교 컴퓨터소프트웨어 전공 과정에서 수행한 코드, 실습, 과제물을 체계적으로 기록한 저장소입니다.<br>
+  상세한 개념 정리와 학습 노트는 Notion에서 관리하고 있습니다.
+</div>
 
-\<div align="center"\>
-\<img src="[https://img.shields.io/badge/Spring\_Boot-6DB33F?style=for-the-badge\&logo=spring-boot\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Spring_Boot-6DB33F%3Fstyle%3Dfor-the-badge%26logo%3Dspring-boot%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=node.js\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Node.js-339933%3Fstyle%3Dfor-the-badge%26logo%3Dnode.js%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/React-61DAFB?style=for-the-badge\&logo=react\&logoColor=black](https://www.google.com/search?q=https://img.shields.io/badge/React-61DAFB%3Fstyle%3Dfor-the-badge%26logo%3Dreact%26logoColor%3Dblack)"/\>
-\</div\>
+<br>
 
-\<div align="center"\>
-\<img src="[https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Git-F05032%3Fstyle%3Dfor-the-badge%26logo%3Dgit%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Docker-2496ED%3Fstyle%3Dfor-the-badge%26logo%3Ddocker%26logoColor%3Dwhite)"/\>
-\<img src="[https://img.shields.io/badge/Linux-FCC624?style=for-the-badge\&logo=linux\&logoColor=black](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)"/\>
-\<img src="[https://img.shields.io/badge/Amazon\_AWS-232F3E?style=for-the-badge\&logo=amazon-aws\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Amazon_AWS-232F3E%3Fstyle%3Dfor-the-badge%26logo%3Damazon-aws%26logoColor%3Dwhite)"/\>
-\</div\>
+<div align="center">
+  <img src="[https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)"/>
+  <img src="[https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)"/> 
+  <img src="[https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)"/>
+  <img src="[https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)"/>
+  <img src="[https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)"/>
+  <img src="[https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)"/>
+</div>
+
+<div align="center">
+  <img src="[https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)"/> 
+  <img src="[https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)"/>
+  <img src="[https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)"/>
+</div>
+
+<div align="center">
+  <img src="[https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)"/>
+  <img src="[https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)"/>
+  <img src="[https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)"/>
+  <img src="[https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)"/>
+</div>
 
 -----
 
