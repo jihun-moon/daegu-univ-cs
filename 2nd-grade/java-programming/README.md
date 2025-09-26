@@ -13,6 +13,7 @@ Java로 진행한 실습 및 프로젝트 코드 저장소입니다. 상세 문�
 
 ### 🏆 기말 프로젝트 (Final Project)
 - [Final Project: Pacman Game](https://github.com/jihun-moon/daegu-univ-cs/tree/main/2nd-grade/java-programming/final-project-pacman)
+- ![Pacman Game Screenshot](./assets/pacman-game-screenshot.png)
 
 ### 💻 주차별 실습 (Labs)
 - [Week 01 (24.09.10) - Introduction](https://github.com/jihun-moon/daegu-univ-cs/tree/main/2nd-grade/java-programming/labs/01-week-20240910-introduction)
