@@ -9,7 +9,7 @@
 
   - **[Angry Turtle](https://github.com/jihun-moon/daegu-univ-cs/tree/main/1st-grade/introduction-to-computer-programming/angry-turtle)**: Turtle 그래픽 라이브러리를 이용해 포물선을 그리는 프로그램입니다.
   - **[공 튀기기 시뮬레이션](https://github.com/jihun-moon/daegu-univ-cs/tree/main/1st-grade/introduction-to-computer-programming/ball-simulation-tkinter)**: Tkinter GUI 라이브러리로 구현한 간단한 공 튀기기 시뮬레이션입니다.
-  - **[콘솔 포트리스 게임](https://www.google.com/search?q=./fortress-game-console/)**: 콘솔 환경에서 각도와 힘을 조절해 상대를 맞추는 텍스트 기반 포트리스 게임입니다.
+  - **[콘솔 포트리스 게임](https://github.com/jihun-moon/daegu-univ-cs/tree/main/1st-grade/introduction-to-computer-programming/fortress-game-console)**: 콘솔 환경에서 각도와 힘을 조절해 상대를 맞추는 텍스트 기반 포트리스 게임입니다.
 
 -----
 
