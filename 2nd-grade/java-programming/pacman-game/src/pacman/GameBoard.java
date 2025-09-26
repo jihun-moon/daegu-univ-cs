@@ -252,7 +252,7 @@ public class GameBoard extends JPanel {
                     pacMan.loseLife(); // Pac-Man 생명 감소
                     if (pacMan.getLives() <= 0 && !gameEnded) {
                         gameEnded = true;
-                        JOptionPane.showMessageDialog(this, "Game Over! Score: " + pacMan.getScore());
+                        JOptionPane.showMessageDialog(this, "Game Over! Score: " + pacMan.getScore(), "제목 변경함.", JOptionPane.INFORMATION_MESSAGE);
                         System.exit(0); // 게임 종료
                     } else if (!gameEnded) {
                         resetPositions(); // 게임 위치 초기화
