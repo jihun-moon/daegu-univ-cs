@@ -21,7 +21,7 @@
 
 ### 📈 DP 테이블 (편집 거리)
 
-<img src="https://assets/dp-matrix-path-solution.jpg" alt="DP 테이블 (편집 거리) 예시" width="600"/>
+<img src="https://assets/dp-matrix-path-solution.pdf" alt="DP 테이블 (편집 거리) 예시" width="600"/>
 
 ## 🚀 실행
 
