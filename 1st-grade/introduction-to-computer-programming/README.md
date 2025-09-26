@@ -2,6 +2,9 @@
 
 1학년 '컴퓨터 프로그래밍 기초' 과목에서 진행한 Python 프로젝트를 모아둔 저장소입니다.
 
+## 🔗 상세 문서 (Notion)
+  - 과목 개요 및 회고: [상세 문서](https://www.notion.so/b26ffa438670490da0abf7f9c9aaf876?source=copy_link)
+
 ## 📂 프로젝트 목록
 
   - **[Angry Turtle](https://github.com/jihun-moon/daegu-univ-cs/tree/main/1st-grade/introduction-to-computer-programming/angry-turtle)**: Turtle 그래픽 라이브러리를 이용해 포물선을 그리는 프로그램입니다.
