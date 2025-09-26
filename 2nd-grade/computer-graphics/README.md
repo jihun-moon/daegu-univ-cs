@@ -3,7 +3,7 @@
 C++와 OpenGL을 사용한 컴퓨터 그래픽스 과목의 실습 및 과제 코드 저장소입니다. 상세 문서는 Notion에 정리합니다.
 
 ## 🔗 상세 문서(Notion)
-- 과목 개요·과제 설명: [상세 문서]https://www.notion.so/48af0e124a3e4ee69c88dda2a1907bc2?source=copy_link
+- 과목 개요·과제 설명: [상세 문서](https://www.notion.so/48af0e124a3e4ee69c88dda2a1907bc2?source=copy_link)
 
 ## 📂 폴더 구조
 - `assignments/` … 과제 코드 및 결과물
