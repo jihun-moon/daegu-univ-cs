@@ -6,7 +6,7 @@ Java로 진행한 실습 및 프로젝트 코드 저장소입니다. 상세 문�
 - **과목 개요·노트 정리:** [자바 프로그래밍](https://www.notion.so/52d43a800b744cffbf32f67c43e75e8a?source=copy_link)
 
 ## 📂 폴더 구조
-- `final-project-pacman/` … Pacman 게임 만들기 (기말 프로젝트)
+- `final-project-pacman/` … 자바로 동작하는 GUI기반 게임 만들기 (기말 프로젝트)
 - `labs/` … 주차별 실습 코드
 
 ## 🧭 항목 바로가기
