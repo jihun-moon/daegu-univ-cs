@@ -21,11 +21,11 @@
 
 ### 🔢 구구단 트레이너
 
-\<img src="https://www.google.com/search?q=./gugudan-trainer/docs/gugudan-app-screenshot.jpg" alt="구구단 트레이너 앱 데모" width="300"/\>
+<img src="gugudan-trainer/docs/gugudan-app-screenshot.jpg" alt="구구단 트레이너 앱 데모" width="300"/>
 
 ### 🤖 인터랙티브 Zoog
 
-\<img src="https://www.google.com/search?q=./interactive-zoog/docs/zoog-screenshot.png" alt="인터랙티브 Zoog 데모" width="600"/\>
+<img src="interactive-zoog/docs/zoog-screenshot.png" alt="인터랙티브 Zoog 데모" width="600"/>
 
 ## 🚀 실행 방법
 
