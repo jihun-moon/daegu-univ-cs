@@ -14,15 +14,15 @@
 
 ### 🐢 Angry Turtle
 
-\<img src="https://www.google.com/search?q=./angry-turtle/docs/angry-turtle-1.png" alt="Angry Turtle 데모" width="600"/\>
+<img src="angry-turtle/docs/angry-turtle-1.png" alt="Angry Turtle 데모" width="600"/>
 
 ### 🏀 공 튀기기 시뮬레이션
 
-\<img src="https://www.google.com/search?q=./ball-simulation-tkinter/docs/tkinter-balls.png" alt="공 튀기기 시뮬레이션 데모" width="600"/\>
+<img src="ball-simulation-tkinter/docs/tkinter-balls.png" alt="공 튀기기 시뮬레이션 데모" width="600"/>
 
 ### 🏰 콘솔 포트리스 게임
 
-\<img src="https://www.google.com/search?q=./fortress-game-console/docs/fortress-console.png" alt="콘솔 포트리스 게임 데모" width="600"/\>
+<img src="fortress-game-console/docs/fortress-console.png" alt="콘솔 포트리스 게임 데모" width="600"/>
 
 -----
 
