@@ -1,0 +1,11 @@
+﻿  실습문제.cpp
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(6,14): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(16,35): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(16,21): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(17,34): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(17,20): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(18,33): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(18,20): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(19,34): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\실습문제.cpp(19,21): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  콜백 실습문제.vcxproj -> C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\Debug\콜백 실습문제.exe

@@ -1,0 +1,17 @@
+﻿  cg(10.28).cpp
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(42,32): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(58,32): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(65,32): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(72,28): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(72,22): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(72,17): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(79,32): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(79,22): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(79,17): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(86,32): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(86,22): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(93,32): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(93,27): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(93,22): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\cg(10.28).cpp(93,17): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  cg(10.28).vcxproj -> C:\Users\PC\source\repos\22124895-문지훈\cg(10.28)\Debug\cg(10.28).exe

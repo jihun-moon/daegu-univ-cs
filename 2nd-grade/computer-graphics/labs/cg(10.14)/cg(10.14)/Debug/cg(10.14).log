@@ -1,0 +1,3 @@
+﻿  cg(10.14).cpp
+C:\Users\PC\source\repos\22124895-문지훈\cg(10.14)\cg(10.14).cpp(24,18): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+  cg(10.14).vcxproj -> C:\Users\PC\source\repos\22124895-문지훈\cg(10.14)\Debug\cg(10.14).exe

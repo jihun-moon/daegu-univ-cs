@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\22124895-\uBB38\uC9C0\uD6C8\\cg(09.16 - \uC120\uBD84)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8AF5FE5-26CE-45F6-8C64-27837F830380}|cg(09.16 - \uC120\uBD84).vcxproj|C:\\Users\\PC\\source\\repos\\22124895-\uBB38\uC9C0\uD6C8\\cg(09.16 - \uC120\uBD84)\\\uC120\uBD84.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8AF5FE5-26CE-45F6-8C64-27837F830380}|cg(09.16 - \uC120\uBD84).vcxproj|solutionrelative:\uC120\uBD84.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\uC120\uBD84.cpp",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\22124895-\uBB38\uC9C0\uD6C8\\cg(09.16 - \uC120\uBD84)\\\uC120\uBD84.cpp",
+              "RelativeDocumentMoniker": "\uC120\uBD84.cpp",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\22124895-\uBB38\uC9C0\uD6C8\\cg(09.16 - \uC120\uBD84)\\\uC120\uBD84.cpp",
+              "RelativeToolTip": "\uC120\uBD84.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-16T13:41:19.916Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

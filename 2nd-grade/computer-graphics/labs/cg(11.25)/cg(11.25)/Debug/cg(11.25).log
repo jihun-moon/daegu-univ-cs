@@ -1,0 +1,4 @@
+﻿  cg(11.25).cpp
+C:\Users\PC\source\repos\22124895-문지훈\cg(11.25)\cg(11.25).cpp(27,43): warning C4244: '인수': 'GLfloat'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(11.25)\cg(11.25).cpp(27,31): warning C4244: '인수': 'GLfloat'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  cg(11.25).vcxproj -> C:\Users\PC\source\repos\22124895-문지훈\cg(11.25)\Debug\cg(11.25).exe

@@ -1,0 +1,8 @@
+﻿  cg(09.30).cpp
+C:\Users\PC\source\repos\22124895-문지훈\cg(09.30)\cg(09.30).cpp(79,22): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(09.30)\cg(09.30).cpp(80,18): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(09.30)\cg(09.30).cpp(81,17): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(09.30)\cg(09.30).cpp(82,17): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(09.30)\cg(09.30).cpp(83,18): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\PC\source\repos\22124895-문지훈\cg(09.30)\cg(09.30).cpp(93,16): warning C4244: '=': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  cg(09.30).vcxproj -> C:\Users\PC\source\repos\22124895-문지훈\cg(09.30)\Debug\cg(09.30).exe

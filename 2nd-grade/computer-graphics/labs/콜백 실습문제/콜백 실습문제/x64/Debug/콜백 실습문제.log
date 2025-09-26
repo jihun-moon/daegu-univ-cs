@@ -1,0 +1,14 @@
+﻿  실습문제.cpp
+실습문제.obj : error LNK2019: __imp_glutMainLoopmain 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp_glutPostRedisplay"void __cdecl keyboard(int,int,int)" (?keyboard@@YAXHHH@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp_glutAddMenuEntrymain 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp_glutAttachMenumain 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp_glutSpecialFuncmain 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp_glutReshapeFuncmain 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp_glutDisplayFuncmain 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp_glutMouseFuncmain 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp___glutInitWithExitglutInit_ATEXIT_HACK 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp___glutCreateWindowWithExitglutCreateWindow_ATEXIT_HACK 함수에서 참조되는 확인할 수 없는 외부 기호
+실습문제.obj : error LNK2019: __imp___glutCreateMenuWithExitglutCreateMenu_ATEXIT_HACK 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\opengl\lib\freeglut.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\PC\source\repos\22124895-문지훈\콜백 실습문제\x64\Debug\콜백 실습문제.exe : fatal error LNK1120: 11개의 확인할 수 없는 외부 참조입니다.
