@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_intent"
+    tools:context=".IntentActivity">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClicked_intent"
+            android:text="전화걸기" />
+
+        <Button
+            android:id="@+id/btn_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClicked_intent"
+            android:text="지도보기" />
+
+        <Button
+            android:id="@+id/btn_web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClicked_intent"
+            android:text="웹브라우저" />
+
+        <Button
+            android:id="@+id/btn_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClicked_intent"
+            android:text="연락처보기" />
+
+        <Button
+            android:id="@+id/btn_TimeDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClicked_intent"
+            android:text="날짜 / 시간" />
+
+        <Button
+            android:id="@+id/btn_memo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClicked_intent"
+            android:text="메모" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
