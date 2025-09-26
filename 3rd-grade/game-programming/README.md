@@ -28,6 +28,8 @@ game-programming/
   - **바로가기:** [**apartment-cinematic 폴더**](https://github.com/jihun-moon/daegu-univ-cs/tree/main/3rd-grade/game-programming/apartment-cinematic/)
   - **데모 영상:**
 
+    <img src="assets/apartment-cinematic-demo.gif" alt="아파트 시네마틱 데모" width="600"/>
+
 ### 2\. Shooting Project
 
   - **설명:** 1인칭 슈팅(FPS) 게임의 기본 기능을 구현하는 프로젝트입니다.
