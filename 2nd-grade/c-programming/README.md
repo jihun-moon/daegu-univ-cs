@@ -10,28 +10,28 @@
 
 각 과제에 대한 설명과 실행 결과입니다.
 
-### 1\. 대소문자 변환 ([case-converter.c](assets/case-converter.c))
+### 1\. 대소문자 변환 [case-converter.c](assets/case-converter.c)
 
   - **설명:** 입력받은 문자열의 대소문자를 상호 변환하여 출력합니다.
   - **실행 결과:**
 
 <br>
 
-### 2\. 포인터를 이용한 최대/최소값 찾기 ([find-max-min-pointer.c](assets/find-max-min-pointer.c))
+### 2\. 포인터를 이용한 최대/최소값 찾기 [find-max-min-pointer.c](assets/find-max-min-pointer.c)
 
   - **설명:** 정수 배열에서 포인터를 사용하여 최댓값과 최솟값을 찾아 출력합니다.
   - **실행 결과:**
 
 <br>
 
-### 3\. 구구단 출력 ([multiplication-table.c](assets/multiplication-table.c))
+### 3\. 구구단 출력 [multiplication-table.c](assets/multiplication-table.c)
 
   - **설명:** 원하는 단을 입력받아 해당 단의 구구단을 출력합니다.
   - **실행 결과:**
 
 <br>
 
-### 4\. 간단한 XOR 암호화 ([simple-xor-cipher.c](assets/simple-xor-cipher.c))
+### 4\. 간단한 XOR 암호화 [simple-xor-cipher.c](assets/simple-xor-cipher.c)
 
   - **설명:** XOR 비트 연산을 이용해 문자열을 간단하게 암호화하고 다시 복호화합니다.
   - **실행 결과:**
