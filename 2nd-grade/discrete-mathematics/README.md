@@ -1,77 +1,26 @@
-# 🎲 Discrete Mathematics
+# 🎲 이산수학 — 실습 모음
 
-> ### 3줄 요약
-> - **핵심 개념**: 논리, 집합, 관계, 그래프, 트리, 조합론 등 컴퓨터 과학의 기초가 되는 이산 구조의 핵심 개념을 정리합니다.
-> - **사고 훈련**: 증명 기법(수학적 귀납법, 대우증명 등)과 알고리즘적 사고의 기반을 연습합니다.
-> - **학습 자료**: 주요 과제 풀이, 진리표 작성, 그래프/트리 순회 등 구체적인 실습 결과물을 포함합니다.
+이산수학 과목의 수업 중 활동 및 문제 풀이(실습)를 정리하는 저장소입니다. 상세 내용은 Notion에 기록합니다.
 
----
+## 🔗 상세 문서(Notion)
+- **과목 개요·노트 정리:** [이산수학](https://www.notion.so/295391b84d244078aaf34e6d1c3c6781?source=copy_link)
 
-## 📚 학습 범위 (Topics)
+## 📂 폴더 구조
+- `assets/` … 실습 문제 이미지
 
--   **논리와 명제**: 진리표, 논리식 등가 변형
--   **집합론**: 부분집합, 멱집합, 드모르간 법칙
--   **증명법**: 수학적 귀납법, 귀류법, 대우증명
--   **관계와 함수**: 반사/대칭/추이 관계, 동치/부분순서
--   **조합론**: 합/곱의 법칙, 순열/조합, 비둘기집 원리
--   **그래프 이론**: DFS/BFS, 최소 신장 트리(MST) 개념
--   **트리**: 전위/중위/후위 순회, 레벨 순회
--   **기타**: 행렬 기초, 부울 대수 및 카르노 맵 간소화
+## 🧭 실습 바로가기
 
----
+### 실습 01: 명제 논리
+- **내용:** 명제 논리 관련 문제 풀이입니다.
+- **결과물:**
+  <img src="https://raw.githubusercontent.com/jihun-moon/daegu-univ-cs/main/2nd-grade/discrete-mathematics/assets/discrete-math-assignment-1.jpg" alt="문제1" width="48%"> <img src="https://raw.githubusercontent.com/jihun-moon/daegu-univ-cs/main/2nd-grade/discrete-mathematics/assets/discrete-math-assignment-2.jpg" alt="문제2" width="48%">
 
-## ✅ 핵심 개념 체크리스트
+<br>
 
--   [ ] 논리식의 등가성을 진리표 또는 법칙으로 증명할 수 있는가?
--   [ ] 드모르간의 법칙, 멱집합의 크기, 조합 항등식을 활용할 수 있는가?
--   [ ] 주어진 관계의 성질(반사/대칭/추이)을 판정하고 하세 다이어그램을 작성할 수 있는가?
--   [ ] 순열, 조합, 비둘기집 원리를 이용한 문제 풀이가 가능한가?
--   [ ] 주어진 그래프와 트리에서 탐색(DFS/BFS) 및 순회 결과를 도출할 수 있는가?
--   [ ] 카르노 맵을 사용하여 주어진 부울식을 간소화할 수 있는가?
+### 실습 02: 집합과 관계
+- **내용:** 집합론 및 관계 관련 문제 풀이입니다.
+- **결과물:**
+  <img src="https.raw.githubusercontent.com/jihun-moon/daegu-univ-cs/main/2nd-grade/discrete-mathematics/assets/discrete-math-assignment-3.jpg" alt="문제3" width="48%"> <img src="https://raw.githubusercontent.com/jihun-moon/daegu-univ-cs/main/2nd-grade/discrete-mathematics/assets/discrete-math-assignment-4.jpg" alt="문제4" width="48%">
 
----
-
-## 📄 예시: 진리표 템플릿
-
-| p | q | p ∧ q (AND) | p ∨ q (OR) | p → q (Implication) | p ⊕ q (XOR) |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| T | T | T | T | T | F |
-| T | F | F | T | F | T |
-| F | T | F | T | T | T |
-| F | F | F | F | T | F |
-
-> **메모**: `p ∧ q ⇒ p ∨ q`는 항상 참(항진명제)이지만, 그 역은 참이 아닐 수 있습니다.
-
----
-
-## 🌳 그래프·트리 실습 가이드
-
--   **그래프**: 정점(Vertex)과 간선(Edge) 집합을 정의 → 인접 행렬 또는 인접 리스트로 표현 → DFS/BFS 탐색 순서 기록
--   **트리**: 주어진 트리에 대해 전위·중위·후위·레벨 순회 결과를 표로 비교하여 정리
--   **추가 학습**: 최소 신장 트리(MST)를 구하는 프림(Prim) 알고리즘과 크루스칼(Kruskal) 알고리즘의 핵심 아이디어 요약
-
----
-
-## 🧮 조합론 미니 치트시트
-
-| 개념 | 공식 |
-| :--- | :--- |
-| **합집합의 크기** | `|A ∪ B| = |A| + |B| − |A ∩ B|` |
-| **순열 (Permutation)** | `nPk = n! / (n−k)!` |
-| **조합 (Combination)**| `nCk = n! / (k!(n−k)!)` |
-| **비둘기집 원리** | n+1개의 물건을 n개의 상자에 넣으면, 어떤 상자에는 반드시 2개 이상의 물건이 들어있다. |
-
----
-
-## 🔎 참고 자료
-
--   **주교재**: 4차 산업혁명 시대의 이산 수학, 김대수, 2019
--   **보조 자료**: MIT 6.042J Mathematics for Computer Science, 관련 강의 노트
--   **관련 과제물**:
-    -   (여기에 `discrete-math-assignment-1.jpg` 등 관련 과제물 이미지를 첨부하거나 링크)
-
----
-
-## 🪪 라이선스
-
-이 리포지토리의 내용은 개인 학습 목적으로 작성되었으며, 별도의 라이선스를 지정하지 않습니다.
+## 📄 라이선스
+MIT
