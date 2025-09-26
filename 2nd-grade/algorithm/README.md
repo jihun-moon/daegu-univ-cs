@@ -8,16 +8,20 @@
 
 ## 🧭 항목 바로가기
 
-  * 선택 정렬: [`selection-sort.py`](https://www.google.com/search?q=./selection-sort.py)
-  * 병합 정렬: [`merge_sort.py`](https://www.google.com/search?q=./merge_sort.py)
-  * 편집 거리 알고리즘: [`edit_distance.py`](https://www.google.com/search?q=./edit_distance.py)
-  * BFS 최단 경로 찾기: [`bfs_shortest.py`](https://www.google.com/search?q=./bfs_shortest.py)
+  * 선택 정렬: `selection-sort.py`
+  * 병합 정렬: `merge_sort.py`
+  * 편집 거리 알고리즘: `edit_distance.py`
+  * BFS 최단 경로 찾기: `bfs_shortest.py`
 
 ## 🖼️ 실행 결과
 
-#### 선택 정렬
+### 🔢 선택 정렬
 
-#### DP 테이블 (편집 거리)
+<img src="assets/selection-sort-result.png" alt="선택 정렬 실행 결과" width="600"/>
+
+### 📈 DP 테이블 (편집 거리)
+
+<img src="https://assets/dp-matrix-path-solution.jpg" alt="DP 테이블 (편집 거리) 예시" width="600"/>
 
 ## 🚀 실행
 
