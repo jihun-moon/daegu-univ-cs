@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 문제 모음</title>
+    <style>
+        /* 페이지 가독성을 위한 간단한 스타일 */
+        body { 
+            font-family: sans-serif; 
+            padding: 20px; 
+            line-height: 1.6;
+        }
+        h2 { 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 10px; 
+            margin-top: 40px;
+        }
+        .frame-container {
+            display: flex;
+            gap: 10px;
+        }
+        .frame-container iframe {
+            width: 50%;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML 문제 결과 모음</h1>
+
+    <h2>문제 39번: 프레임</h2>
+    <div class="frame-container">
+         <iframe src="https://mcdonalds.co.kr" width="300" height="200"></iframe>
+         <iframe src="https://www.burgerking.co.kr" width="300" height="200"></iframe>
+    </div>
+    <p><strong>⚠️ 참고:</strong> 요즘 대부분의 웹사이트는 보안 정책상 프레임 안에 표시되는 것을 차단하므로, 위 영역이 비어 보이거나 오류가 나타날 수 있습니다.</p>
+
+    <hr>
+
+    <h2>문제 40번: 텍스트 영역</h2>
+    <textarea rows="5">문자</textarea>
+
+    <hr>
+
+    <h2>문제 41번: 레이블과 입력창</h2>
+    <form>
+        <label for="user-id">아이디:</label>
+        <input type="text" id="user-id" placeholder="아이디를 입력하시오">
+        <br>
+        <label for="user-pw">패스워드:</label>
+        <input type="password" id="user-pw">
+    </form>
+
+    <hr>
+
+    <h2>문제 42번: 드롭다운 선택</h2>
+    <form>
+        <label for="zoo-select">가고 싶은 동물원은?</label>
+        <br>
+        <select name="zoo" id="zoo-select">
+            <option value="seoul_grand_park">서울대공원</option>
+            <option value="childrens_grand_park">어린이대공원</option>
+            <option value="everland">에버랜드</option>
+        </select>
+    </form>
+
+    <hr>
+
+    <h2>문제 43번: 숫자 입력</h2>
+    <form>
+        고양이 
+        <input type="number" min="0" max="10" step="1" value="2">
+        마리 키우고 싶어요.
+    </form>
+
+    <hr>
+
+    <h2>문제 44번: 폼 전송</h2>
+    <form action="server.php" method="post">
+        아이디 <input type="text" id="id"><br>
+        비밀번호 <input type="password" id="pwd">
+        <br><input type="submit" value="submit">
+    </form>
+
+    <hr>
+    
+    <h2>문제 45번: 날짜 입력</h2>
+    <input type="date" value="2024-03-02">
+
+</body>
+</html>

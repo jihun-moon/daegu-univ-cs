@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>자동으로 설정되는 날짜와 시간</title>
+</head>
+<body>
+  <p><input type="month" id="month-input"></p>
+  <p><input type="week" id="week-input"></p>
+  <p><input type="date" id="date-input"></p>
+  <p><input type="datetime-local" id="datetime-local-input"></p>
+  <p><input type="time" id="time-input"></p>
+
+  <script>
+    // 페이지가 로드되면 아래 코드가 실행됩니다.
+    document.addEventListener('DOMContentLoaded', function() {
+      const now = new Date();
+
+      // 숫자가 10보다 작으면 앞에 '0'을 붙여주는 함수
+      const pad = (num) => String(num).padStart(2, '0');
+
+      // 1. 현재 날짜와 시간 정보 가져오기
+      const year = now.getFullYear();
+      const month = pad(now.getMonth() + 1); // 월은 0부터 시작하므로 1을 더해줍니다.
+      const day = pad(now.getDate());
+      const hour = pad(now.getHours());
+      const minute = pad(now.getMinutes());
+
+      // 2. 각 입력창 형식에 맞게 날짜/시간 텍스트 만들기
+      const yyyy_mm = `${year}-${month}`;
+      const yyyy_mm_dd = `${year}-${month}-${day}`;
+      const yyyy_mm_dd_T_hh_mm = `${yyyy_mm_dd}T${hour}:${minute}`;
+      const hh_mm = `${hour}:${minute}`;
+      
+      // '주(week)' 형식으로 변환하는 함수
+      function getWeekNumber(d) {
+        d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+        d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+        const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+        const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+        return `${d.getUTCFullYear()}-W${pad(weekNo)}`;
+      }
+
+      // 3. id를 이용해 입력창을 찾고, 만들어둔 날짜/시간 값 설정하기
+      document.getElementById('month-input').value = yyyy_mm;
+      document.getElementById('week-input').value = getWeekNumber(now);
+      document.getElementById('date-input').value = yyyy_mm_dd;
+      document.getElementById('datetime-local-input').value = yyyy_mm_dd_T_hh_mm;
+      document.getElementById('time-input').value = hh_mm;
+    });
+  </script>
+</body>
+</html>
