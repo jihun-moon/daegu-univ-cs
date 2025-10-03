@@ -1,107 +1,100 @@
-# 📝 웹 프로그래밍 1-3장 최종 요약 (세로 3단 구성)
+알겠습니다. 요청하신 대로 \`\`와 같은 표시를 모두 제거하고 내용을 다시 정리해 드릴게요. 아래 내용을 노션에 복사해서 3단으로 설정하면 완벽한 '치트 시트'가 될 거예요.
 
 -----
 
 ### **[1단] HTML의 뼈대 (개념 & 기본)**
 
-#### **1️⃣ 챕터 1: 웹 프로그래밍 핵심 개념**
+#### **1️⃣ 챕터 1: HTML5와 웹 프로그래밍**
 
-  * **웹 페이지 역할 분담 (O/X 대비)**
-    | 요소 | 역할 | 설명 |
+  * **웹 페이지 3요소 역할 분담 (O/X 대비)**
+    | 요소 | 역할 | 상세 설명 |
     | :--- | :--- | :--- |
-    | `HTML` | 뼈대 | 내용, 구조 담당 |
-    | `CSS` | 디자인 | 색상, 모양 등 꾸미기 |
-    | `JS` | 동작 | 클릭 효과, 상호작용 |
+    | `HTML` | 구조 | 페이지의 내용과 뼈대를 구성한다. |
+    | `CSS` | 디자인 | 색상, 글꼴 등 시각적 스타일을 담당한다. |
+    | `JavaScript` | 동작 | 사용자와의 상호작용, 동적 기능을 구현한다. |
 
-    > 📢 **함정**: "HTML로 글자색을 바꾼다." → **(X) `CSS` 역할\!**
+    > 📢 **함정**: HTML은 구조 담당. "HTML로 디자인한다" → **(X)**
 
-  * **웹 동작 원리 (O/X 대비)**
+  * **웹 동작 원리 (클라이언트-서버)**
 
-      * **한 문장 요약**: `클라이언트`(브라우저)가 `URL`로 **요청**하면, `서버`는 `HTTP` 규칙에 따라 **응답**한다.
+      * **흐름**: `클라이언트`(브라우저)가 `서버`에게 **HTTP**로 페이지를 \*\*요청(Request)\*\*하면, 서버가 해당 `HTML` 문서를 \*\*응답(Response)\*\*해준다.
 
-    > 📢 **함정**: "서버는 클라이언트 컴퓨터에 있다." → **(X)**, "HTTP는 언어다." → **(X)** HTTP는 **통신 규칙**.
+    > 📢 **함정**: 클라이언트는 **요청**하는 컴퓨터, 서버는 **응답**하는 컴퓨터. `HTTP`는 통신 \*\*규약(Protocol)\*\*이지 언어가 아니다.
 
-  * **주소 체계 (포함 관계)**
+  * **이미지 포맷 비교 (빈칸/O/X 대비)**
+    | 포맷 | 핵심 특징 | 주 용도 |
+    | :--- | :--- | :--- |
+    | `JPEG` | **손실 압축**, 고용량 사진을 저용량으로 표현. | 사진 이미지 |
+    | `PNG` | **비손실 압축**, **투명 배경** 지원, 화질 우수. | 로고, 아이콘 |
+    | `GIF` | **256색 제한**, **움직이는 이미지(애니메이션)** 지원. | 간단한 아이콘, 움짤 |
 
-      * `URL` (전체 주소) \> `도메인` (문자 주소) \> `IP` (숫자 주소)
+  * **핵심 용어 정의**
 
-    > 📢 **함정**: "URL과 도메인은 같다." → **(X)** URL이 더 큰 개념.
-
-  * **이미지 포맷 (O/X, 빈칸 대비)**
-    | 포맷 | 압축 | 특징 | 용도 |
-    | :--- | :--- | :--- | :--- |
-    | `JPEG` | **손실** | 1600만 색상, 용량 작음 | 사진 |
-    | `PNG` | **비손실** | 화질 좋음, **투명 배경** 지원 | 로고, 아이콘 |
-    | `GIF` | 비손실 | **256색 제한**, **움짤**, 투명 지원 | 단순 아이콘 |
-
-    > 📢 **함정**: "GIF는 고화질 사진에 적합하다." → **(X)** 256색 제한 때문.
-
-  * **주요 용어 정의 (서술형 대비)**
-
-      * `W3C`: 웹 **표준**을 만드는 국제 단체.
-      * `CGI`: 웹 서버와 외부 프로그램(DB 등)을 연결하는 **규칙(인터페이스)**.
+      * `W3C`: 웹 표준을 제정하는 국제 컨소시엄.
+      * `URL`: 웹 자원의 전체 주소. `프로토콜://도메인/경로` 형식.
+      * `Domain`: 숫자로 된 IP 주소를 사람이 외우기 쉽게 만든 문자 주소.
 
 -----
 
-#### **2️⃣ 챕터 2: HTML5로 기본 문서 만들기**
+#### **2️⃣ 챕터 2: HTML5 기본 문서**
 
-  * **HTML 기본 문서 구조 (필수 암기)**
+  * **HTML5 기본 구조 (암기 필수)**
 
     ```html
-    <!DOCTYPE html> <!-- HTML5 문서 선언 (단일 태그) -->
-    <html>
+    <!DOCTYPE html> <html>
       <head>
-        <!-- 페이지 설정 정보 (화면에 안 보임) -->
-        <meta charset="UTF-8"> <!-- 한글 깨짐 방지 (단일 태그) -->
-        <title>브라우저 탭 제목</title>
-      </head>
+        <meta charset="utf-8"> <title>문서 제목</title> </head>
       <body>
-        <!-- 화면에 보이는 모든 내용 -->
-      </body>
+        </body>
     </html>
     ```
 
-  * **주요 태그와 사용법**
+  * **핵심 태그 & 기본 예시**
 
-      * **텍스트 관련**
-          * `<h1>` \~ `<h6>`: 제목. `<h1>가장 큰 제목</h1>`
-          * `<p>`: 문단. `<p>하나의 문단입니다.</p>`
-          * `<br>`: 강제 줄 바꿈. **(단일 태그)**
-          * `<strong>` / `<b>`: **중요/굵게**
-          * `<em>` / `<i>`: *강조/기울임*
-          * `<mark>`: \<mark\>형광펜 효과\</mark\>
-          * 엔티티: `&lt;` (\<), `&gt;` (\>), `&nbsp;` (공백)
-      * **이미지 및 링크 (필수 속성 암기)**
-          * `<img>`: 이미지. **(단일 태그)**
-            `<img src="./images/dog.jpg" alt="강아지 사진">`
-          * `<a>`: 하이퍼링크(Anchor).
-            `<a href="https://google.com" target="_blank">구글</a>`
+      * **텍스트**
+
+          * `<h1>`\~`<h6>`: 제목. `<h1>가장 큰 제목</h1>`
+          * `<p>`: 문단. `<p>문단을 나눕니다.</p>`
+          * `<br>`: 강제 줄바꿈. **(단일 태그)**
+          * `<strong>`: **중요한 텍스트 (굵게)**
+          * `<em>`: *강조하는 텍스트 (기울임)*
+          * `<hr>`: 주제 변경을 위한 수평선. **(단일 태그)**
+          * `&nbsp;`: 특수문자(Entity) 공백.
+
+      * **이미지와 링크 (필수 속성)**
+
+          * `<img>`: 이미지 삽입. **(단일 태그)**
+            ```html
+            <img src="경로/이미지.jpg" alt="이미지 설명">
+            ```
+          * `<a>`: 하이퍼링크.
+            ```html
+            <a href="https://google.com" target="_blank">구글</a>
+            ```
+            > 📢 `target="_blank"`는 새 탭에서 링크를 연다.
+
       * **목록 (계층 구조)**
-        ```html
-        <!-- 순서 없는 목록 (•) -->
-        <ul>
-          <li>항목 1</li>
-          <li>항목 2</li>
-        </ul>
-        <!-- 순서 있는 목록 (1.) -->
-        <ol type="A" start="3">
-          <li>C. 항목</li>
-          <li>D. 항목</li>
-        </ol>
-        <!-- 정의 목록 -->
-        <dl>
-            <dt>용어</dt>
-            <dd>설명</dd>
-        </dl>
-        ```
-      * **멀티미디어**
-        ```html
-        <!-- controls 속성 필수 -->
-        <video src="v.mp4" controls width="300"></video>
-        <audio src="a.mp3" controls loop></audio>
-        <!-- 유튜브 삽입 -->
-        <iframe src="https://youtube.com/embed/영상ID"></iframe>
-        ```
+
+          * `<ul>` (Unordered List): 순서 없는 목록
+            ```html
+            <ul>
+              <li>사과</li>
+              <li>바나나</li>
+            </ul>
+            ```
+          * `<ol>` (Ordered List): 순서 있는 목록
+            ```html
+            <ol type="a"> <li>첫째</li>
+              <li>둘째</li>
+            </ol>
+            ```
+          * `<dl>` (Definition List): 용어-설명 목록
+            ```html
+            <dl>
+              <dt>HTML</dt>
+              <dd>웹 페이지의 구조를 정의한다.</dd>
+            </dl>
+            ```
 
 -----
 
@@ -109,115 +102,86 @@
 
 #### **3️⃣ 챕터 3: 문서 구조화와 웹폼**
 
-  * **구조 규칙: 블록 vs 인라인 (⭐가장 중요)**
-    | 구분 | 블록(Block) 🧱 | 인라인(Inline) ✨ |
+  * **영역 나누기: `div` vs `span`**
+    | 구분 | `<div>` (Block) | `<span>` (Inline) |
     | :--- | :--- | :--- |
-    | **특징** | 한 줄 전체 차지 | 자기 크기만 차지 |
-    | **역할** | 레이아웃, 다른 요소 담는 그릇 | 텍스트 일부, 콘텐츠 자체 |
-    | **포함** | **블록, 인라인 모두 포함 가능** | **인라인만 포함 가능** |
-    | **태그**| `<div>`, `<p>`, `<h1>`, `<ul>`... | `<span>`, `<a>`, `<img>`, `<strong>`... |
+    | **특징** | 한 줄 전체 차지, **블록/인라인 포함 가능** | 콘텐츠 크기만 차지, **인라인만 포함 가능** |
+    | **용도** | 레이아웃 분할, 여러 요소 묶기 | 텍스트 일부에 스타일 적용 |
 
-  * **영역과 식별**
+  * **시맨틱 태그 (Semantic Tags)**
 
-      * `<div>`: 블록 단위 범용 컨테이너 (레이아웃용)
-      * `<span>`: 인라인 단위 그룹 (글자 일부 스타일)
-      * `id="이름"`: 고유 ID (페이지에 **단 한 번** 사용), CSS에서 `#`으로 선택
-      * `class="이름"`: 그룹 이름 (**여러 번** 사용 가능), CSS에서 `.`으로 선택
+    > 📢 `div` 대신 **의미에 맞는 태그**를 사용해 검색 엔진 최적화(SEO) 및 코드 가독성을 높인다.
 
-  * **시맨틱 태그 (의미있는 구조)**
+      * `<header>`: 페이지나 섹션의 머리글 (로고, 제목, 메뉴)
+      * `<nav>`: 주 메뉴, 내비게이션 링크 영역.
+      * `<main>`: 문서의 핵심 콘텐츠. **(페이지당 1회만 사용)**
+      * `<section>`: 주제별로 연관 있는 콘텐츠 그룹.
+      * `<article>`: 독립적으로 배포 가능한 글 (뉴스 기사, 블로그 포스트).
+      * `<aside>`: 본문과 간접적으로 연관된 보조 콘텐츠 (사이드바, 광고).
+      * `<footer>`: 페이지나 섹션의 바닥글 (저작권, 연락처 정보).
 
-      * `<header>`: 머리말 (로고, 제목)
-      * `<nav>`: 내비게이션 메뉴
-      * `<main>`: 핵심 주요 내용 (**한 번만 사용**)
-      * `<section>`: 주제별 구획
-      * `<article>`: 독립된 글 (기사, 포스트)
-      * `<aside>`: 보조 내용 (사이드바, 광고)
-      * `<footer>`: 바닥글
+  * **테이블 `<table>` 구조**
 
-  * **테이블(Table) 심화**
-
-    > 📢 **`colspan`(열 병합), `rowspan`(행 병합) 암기 필수\!**
+    > 📢 \*\*`colspan`(열 병합), `rowspan`(행 병합)\*\*은 시험 단골\!
 
     ```html
     <table border="1">
-      <caption>표 제목</caption>
-      <thead>
-        <tr>
-          <th>제목1</th> <th>제목2</th> <th>제목3</th>
+      <caption>메뉴판</caption> <thead> <tr>
+          <th>메뉴</th> <th>가격</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody> <tr>
+          <td>아메리카노</td>
+          <td rowspan="2">4000원</td> </tr>
         <tr>
-          <td rowspan="2">A (2줄 합치기)</td>
-          <td>B</td>
-          <td>C</td>
+          <td>카페라떼</td>
         </tr>
         <tr>
-          <td colspan="2">D (2칸 합치기)</td>
-        </tr>
+          <td colspan="2">총액: 8000원</td> </tr>
       </tbody>
     </table>
     ```
 
-  * **웹폼(Form) 태그**
+  * **웹폼 `<form>` (사용자 입력)**
 
-      * **`GET` vs `POST`**: `GET`은 URL에 데이터 노출(가벼움), `POST`는 숨겨서 전송(보안, 대용량)
+      * **데이터 전송 방식: `GET` vs `POST` (서술형/O/X 대비)**
+        | 방식 | `GET` | `POST` |
+        | :--- | :--- | :--- |
+        | **전송** | URL에 데이터를 붙여서 전송 (노출됨). | HTTP Body에 데이터를 담아서 전송 (숨겨짐). |
+        | **용도** | 검색, 간단한 데이터 조회. | 로그인, 회원가입 등 민감 정보. |
+        | **보안** | 낮음 | 높음 |
 
-    <!-- end list -->
+      * **주요 입력 요소 `<input>`**
 
-    ```html
-    <form action="처리할페이지.jsp" method="post">
-      <label for="user-id">아이디:</label>
-      <input type="text" id="user-id" name="id">
+        > 📢 **`name` 속성**이 같아야 그룹으로 묶인다 (특히 라디오 버튼).
 
-      <p>성별:</p>
-      <input type="radio" id="male" name="gender" value="M">
-      <label for="male">남</label>
-      <input type="radio" id="female" name="gender" value="F">
-      <label for="female">여</label>
+        ```html
+        <form action="/login" method="post">
+          <label for="id">ID: </label>
+          <input type="text" id="id" name="userId">
 
-      <p>취미:</p>
-      <input type="checkbox" id="game" name="hobby" value="game">
-      <label for="game">게임</label>
-      <input type="checkbox" id="read" name="hobby" value="read">
-      <label for="read">독서</label>
+          <input type="password" name="userPw">
 
-      <label for="job">직업:</label>
-      <select id="job" name="job">
-        <option value="student">학생</option>
-        <option value="teacher">교사</option>
-      </select>
+          <input type="radio" name="gender" value="male"> 남자
+          <input type="radio" name="gender" value="female"> 여자
 
-      <textarea name="intro" rows="5"></textarea>
-      <button type="submit">제출</button>
-    </form>
-    ```
+          <input type="checkbox" name="hobby" value="game"> 게임
+          <input type="checkbox" name="hobby" value="music"> 음악
+
+          <select name="country">
+            <option value="ko">한국</option>
+            <option value="us">미국</option>
+          </select>
+
+          <textarea name="intro" rows="5"></textarea>
+
+          <button type="submit">제출</button>
+          <input type="reset" value="초기화">
+        </form>
+        ```
 
 -----
 
 ### **[3단] 웹 페이지 꾸미기 (CSS) - 미학습**
 
 #### **4️⃣ 챕터 4: CSS3로 웹 페이지 꾸미기**
-
-> 📖 이 부분은 4장 학습 후 채워주세요.
->
->   * **CSS 기본 문법**
->       * `선택자 { 속성: 값; }`
->   * **CSS 적용 방식 3가지**
->       * 인라인 스타일: `<p style="color: blue;">`
->       * 내부 스타일 시트: `<head>` 안에 `<style>` 태그 사용
->       * 외부 스타일 시트: `<link rel="stylesheet" href="style.css">`
->   * **핵심 선택자**
->       * `*`, `태그`, `.클래스`, `#아이디`
->   * **CSS 박스 모델 (⭐가장 중요)**
->       * (여기에 박스 모델 그림 그릴 공간 확보)
->       * `margin`: 테두리 바깥 여백
->       * `border`: 테두리
->       * `padding`: 테두리 안쪽 여백
->       * `content`: 실제 내용
->   * **주요 속성 (예정)**
->       * 글자: `color`, `font-size`, `font-weight`, `text-align`
->       * 배경: `background-color`, `background-image`
->       * 크기/위치: `width`, `height`, `display`, `position`
-
------
