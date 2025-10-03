@@ -31,11 +31,17 @@
     <h1>HTML 문제 결과 모음</h1>
 
     <h2>문제 39번: 프레임</h2>
-    <div class="frame-container">
-         <iframe src="https://mcdonalds.co.kr" width="300" height="200"></iframe>
-         <iframe src="https://www.burgerking.co.kr" width="300" height="200"></iframe>
+    
+    <div>
+        <a href="https://mcdonalds.co.kr" target="left_frame">맥도날드 홈페이지</a>
+        <a href="https://www.burgerking.co.kr" target="right_frame">버거킹 홈페이지</a>
     </div>
-    <p><strong>⚠️ 참고:</strong> 요즘 대부분의 웹사이트는 보안 정책상 프레임 안에 표시되는 것을 차단하므로, 위 영역이 비어 보이거나 오류가 나타날 수 있습니다.</p>
+    <hr>
+
+    <div class="frame-container">
+        <iframe name="left_frame" src="https://mcdonalds.co.kr" width="300" height="200"></iframe>
+        <iframe name="right_frame" src="https://www.burgerking.co.kr" width="300" height="200"></iframe>
+    </div>
 
     <hr>
 
