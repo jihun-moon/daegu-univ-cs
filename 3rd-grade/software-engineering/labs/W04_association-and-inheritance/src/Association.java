@@ -13,12 +13,12 @@ class Student extends Person{
 
 class Professor extends Person {
     public int pid;
-    public int getPaymetn() {
+    public int getPayment() {
         return pid + 10000;
     }
 }
 
-public class Assocation{
+public class Association{
 
     public static void main(String[] args) {
         Student s1 = new Student();
