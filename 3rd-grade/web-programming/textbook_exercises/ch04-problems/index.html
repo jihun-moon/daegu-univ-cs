@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 연습문제 최종 통합본</title>
+  <style>
+    /* 전체적인 가독성을 위한 기본 스타일 */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .problem-container {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    hr {
+      margin: 20px 0;
+      border: 0;
+      border-top: 1px solid #eee;
+    }
+
+    /* --- 문제 32번 스타일 --- */
+    #problem-32 h2 {
+      color: purple;
+    }
+    #problem-32 p {
+      color: #209134;
+      width: 300px;
+    }
+
+    /* --- 문제 33-36번 스타일 --- */
+    #problem-33-36 h2 {
+      color: green;
+      background-color: #def;
+    }
+    #problem-33-36 p {
+      color: #209134;
+      width: 300px;
+    }
+
+    /* --- 문제 37번 스타일 (아이디 선택자) --- */
+    #id1 { color: blue; }
+    #id2 { color: red; }
+
+    /* --- 문제 38번 스타일 (클래스 선택자) --- */
+    #problem-38 .blue { color: blue; }
+    #problem-38 .large { font-size: 150%; }
+    #problem-38 h2.blue { background-color: aqua; }
+
+    /* --- 문제 39번 스타일 (속성 선택자) --- */
+    #problem-39 a { text-decoration-line: none; }
+    #problem-39 a[download] { color: green; font-weight: bold; }
+    #problem-39 a[target="_blank"] { color: red; font-style: italic; }
+
+    /* --- 문제 40번 스타일 (가상 클래스 선택자) --- */
+    #problem-40 p:hover {
+      background-color: #ff8;
+      cursor: pointer;
+      display: inline-block;
+    }
+    #problem-40 li::first-letter { color: red; font-size: 1.2em; font-weight: bold; }
+    #problem-40 li:nth-child(2) { color: green; }
+    #problem-40 li:last-child { color: blue; }
+
+    /* --- 문제 42번 스타일 (박스 모델) --- */
+    #problem-42 div {
+      background-color: #ffffef;
+      width: 200px;
+      padding: 15px;
+      border: 5px solid #ffbf69;
+      margin: 5px;
+      box-sizing: border-box;
+    }
+    #problem-42 .description {
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS 연습문제 (32-43) 통합 결과</h1>
+
+  <!-- 문제 32번 -->
+  <div id="problem-32" class="problem-container">
+    <h2>문제 32번: 기본 선택자</h2>
+    <h2>바나나</h2>
+    <p><img src="https://placehold.co/120x100/F7C600/000000?text=Banana" width="120" alt="바나나 이미지"></p>
+    <p>노란색의 아열대 과일</p>
+    <p>지방이 없어 체중 조절에 좋음</p>
+    <p>식이섬유가 풍부해 주식 대용으로 적당</p>
+  </div>
+
+  <!-- 문제 37번 -->
+  <div id="problem-37" class="problem-container">
+    <h2>문제 37번: 아이디 선택자</h2>
+    <p id="id1">노란색의 아열대 과일 (id="id1")</p>
+    <p>지방이 없어 체중 조절에 좋음</p>
+    <p id="id2">식이섬유가 풍부해 주식 대용으로 적당 (id="id2")</p>
+  </div>
+
+  <!-- 문제 38번 -->
+  <div id="problem-38" class="problem-container">
+    <h2>문제 38번: 클래스 선택자</h2>
+    <h2 class="blue">바나나 (class="blue")</h2>
+    <p class="blue large">노란색의 아열대 과일 (class="blue large")</p>
+    <p class="blue">지방이 없어 체중 조절에 좋음 (class="blue")</p>
+    <p>식이섬유가 풍부해 주식 대용으로 적당</p>
+  </div>
+
+  <!-- 문제 39번 -->
+  <div id="problem-39" class="problem-container">
+    <h2>문제 39번: 속성 선택자</h2>
+    <p><a href="#">맥도날드 홈페이지</a></p>
+    <p><a href="#" target="_blank">구글 홈페이지(새창) [target="_blank"]</a></p>
+    <p><a href="#" download>ex4-8.html 다운로드 [download]</a></p>
+  </div>
+
+  <!-- 문제 40번 -->
+  <div id="problem-40" class="problem-container">
+    <h2>문제 40번: 가상 클래스 선택자</h2>
+    <p><img src="https://placehold.co/120x100/F7C600/000000?text=Hover+Me" width="120" alt="바나나 이미지"></p>
+    <ul>
+      <li>노란색의 아열대 과일</li>
+      <li>지방이 없어 체중 조절에 좋음</li>
+      <li>식이섬유가 풍부해 주식 대용으로 적당</li>
+    </ul>
+  </div>
+
+  <!-- 문제 41번 -->
+  <div id="problem-41" class="problem-container">
+    <h2>문제 41번: 인라인 스타일 (text 속성)</h2>
+    <p style="text-align: center">text-align: center</p>
+    <p style="text-align: right">text-align: right</p>
+    <hr>
+    <p><a href="#" style="text-decoration: none">text-decoration: none</a></p>
+    <p style="text-decoration: dashed overline blue">text-decoration: dashed overline blue</p>
+    <p style="text-decoration: wavy underline red">text-decoration: wavy underline red</p>
+    <hr>
+    <p style="text-indent: -5px">text-indent: -5px</p>
+    <p style="text-indent: 20px">text-indent: 20px</p>
+  </div>
+
+  <!-- 문제 42번 -->
+  <div id="problem-42" class="problem-container">
+    <h2>문제 42번: 박스 모델</h2>
+    <div>오렌지</div>
+    <div class="description">주황색의 귤속에 속하는 과일로 비타민C와 섬유질이 풍부</div>
+  </div>
+
+  <!-- 문제 43번 -->
+  <div id="problem-43" class="problem-container">
+    <h2>문제 43번: 인라인 스타일 (border)</h2>
+    <p style="border: 2px solid black; padding: 5px; margin: 10px;">solid</p>
+    <p style="border: 4px double black; padding: 5px; margin: 10px;">double</p>
+    <p style="border: 2px dotted black; padding: 5px; margin: 10px;">dotted</p>
+  </div>
+
+</body>
+</html>
