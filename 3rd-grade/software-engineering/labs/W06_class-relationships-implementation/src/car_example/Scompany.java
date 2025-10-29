@@ -1,6 +1,4 @@
 
-import java.io.*;
-import java.util.*;
 
 /**
  * 
@@ -16,15 +14,15 @@ public class Scompany extends Car {
     /**
      * 
      */
-    public Integer cc;
+    public int cc = 1300;
 
 
     /**
      * @return
      */
-    public Integer getSpeed() {
+    public int getSpeed() {
         // TODO implement here
-        return null;
+        return cc - 1300;
     }
 
 }
