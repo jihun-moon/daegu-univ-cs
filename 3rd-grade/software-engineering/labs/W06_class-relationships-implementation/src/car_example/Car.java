@@ -14,7 +14,7 @@ public class Car {
     /**
      * 
      */
-    public Integer year;
+    public int year = 2025;
 
     /**
      * 
@@ -24,9 +24,9 @@ public class Car {
     /**
      * @return
      */
-    public Integer getYear() {
+    public int getYear() {
         // TODO implement here
-        return null;
+        return year;
     }
 
 }

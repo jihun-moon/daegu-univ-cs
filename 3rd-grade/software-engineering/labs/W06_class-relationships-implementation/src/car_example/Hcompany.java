@@ -1,6 +1,4 @@
 
-import java.io.*;
-import java.util.*;
 
 /**
  * 
@@ -16,15 +14,15 @@ public class Hcompany extends Car {
     /**
      * 
      */
-    public Integer price;
+    public int price = 10000000;
 
 
     /**
      * @return
      */
-    public Integer getNavigate() {
+    public int getNavigate() {
         // TODO implement here
-        return null;
+        return price - 10000000;
     }
 
 }

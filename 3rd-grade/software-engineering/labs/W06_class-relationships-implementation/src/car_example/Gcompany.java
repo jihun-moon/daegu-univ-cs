@@ -1,7 +1,4 @@
 
-import java.io.*;
-import java.util.*;
-
 /**
  * 
  */
@@ -16,15 +13,15 @@ public class Gcompany extends Car {
     /**
      * 
      */
-    public Integer number;
+    public int number = 0;
 
 
     /**
      * @return
      */
-    public Integer getLocal_number() {
+    public int getLocal_number() {
         // TODO implement here
-        return null;
+        return number;
     }
 
 }
