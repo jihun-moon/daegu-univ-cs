@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 연습문제 (28~33)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            margin: 20px;
+        }
+        .problem-container {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .problem-container h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .output-box {
+            min-height: 20px;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap; /* 구구단 줄바꿈용 */
+        }
+        button {
+            font-size: 1em;
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>자바스크립트 연습문제 통합</h1>
+
+    <div class="problem-container">
+        <h2>28번: 7로 나눈 나머지</h2>
+        <button onclick="run28()">[실행]</button>
+        <div id="out28" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <h2>29번: "yes", "y", "1"</h2>
+        <button onclick="run29()">[실행]</button>
+        <div id="out29" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <h2>30번: 4, 7 제외 구구단</h2>
+        <button onclick="run30()">[실행]</button>
+        <div id="out30" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <h2>31번: 화살표 함수</h2>
+        <button onclick="run31()">[실행]</button>
+        <div id="out31" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <h2>32번: 배경색 변경</h2>
+        <h1 id="alter32" onclick="change32()" style="cursor: pointer; display: inline-block; padding: 5px;">
+            Change Colors
+        </h1>
+    </div>
+
+    <div class="problem-container">
+        <h2>33번: 글자색 변경</h2>
+        <h1 id="alter33">Change Colors</h1>
+        <button onclick="change33('red')">red</button>
+        <button onclick="change33('blue')">blue</button>
+        <button onclick="change33('yellow')">yellow</button>
+        <button onclick="change33('green')">green</button>
+    </div>
+
+
+    <script>
+        
+        // 28번 문제 스크립트
+        function run28() {
+            let num = parseInt(prompt("28번) 숫자를 입력하세요:"));
+            let result = num % 7;
+            let output = "입력한 " + num + "을 7로 나눈 나머지는 <strong>" + result + "</strong>입니다.";
+            document.getElementById("out28").innerHTML = output;
+        }
+
+        // 29번 문제 스크립트
+        function run29() {
+            let drink = prompt("29번) 이거 마시면 사귀는 거다!");
+            let output = "술마신대: " + drink + "<hr>";
+            
+            if (drink == "yes" || drink == "y" || drink == "1") {
+                output += "오늘부터 1일";
+            } else {
+                output += "헤어진다";
+            }
+            document.getElementById("out29").innerHTML = output;
+        }
+
+        // 30번 문제 스크립트
+        function run30() {
+            let htmlOutput = ""; // 결과를 저장할 문자열
+            let dan, num;
+            for (dan = 2; dan < 10; dan++) {
+                htmlOutput += "<strong>" + dan + "단: </strong>";
+                for (num = 1; num < 10; num++) {
+                    if (num == 4 || num == 7) {
+                        continue;
+                    }
+                    htmlOutput += dan + "x" + num + "=" + (dan * num) + " ";
+                }
+                htmlOutput += "\n"; // document.write("<br>") 대신 줄바꿈 문자로
+            }
+            // white-space: pre-wrap; 스타일 덕분에 \n이 줄바꿈으로 표시됨
+            document.getElementById("out30").textContent = htmlOutput; 
+        }
+
+        // 31번 문제 스크립트
+        function run31() {
+            const add = (num1, num2) => num1 + num2;
+            let a = 3, b = 4;
+            const sum = add(a, b);
+            document.getElementById("out31").innerHTML = a + " + " + b + " = <strong>" + sum + "</strong>";
+        }
+
+        // 32번 문제 스크립트
+        function change32() {
+            let h1 = document.getElementById("alter32");
+            h1.style.backgroundColor = "aqua";
+        }
+
+        // 33번 문제 스크립트
+        function change33(color) {
+            let h1 = document.getElementById("alter33");
+            h1.style.color = color;
+        }
+    </script>
+</body>
+</html>
