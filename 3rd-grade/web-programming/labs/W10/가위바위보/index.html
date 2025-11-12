@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>가위바위보 게임</title>
+    <link rel="stylesheet" href="style_js.css">
+</head>
+<body>
+    <h1>가위바위보 게임</h1>
+    <hr>
+
+    <script>
+        // 1. 사용자 입력 받기 (ex6-15.html 참고)
+        let user = parseInt(prompt("가위(0), 바위(1), 보(2) 중 하나를 입력하세요:"));
+
+        // 2. 이미지/텍스트 배열 준비
+        // (경로가 media/ 인 것은 과제 조건 ②, ex6-19.html, ex6-15.html 참고)
+        let images = [
+            "assets/rpc0.png", // 0 (가위)
+            "assets/rpc1.png", // 1 (바위)
+            "assets/rpc2.png"  // 2 (보)
+        ];
+        let text = ["가위", "바위", "보"];
+
+        // 3. 유효한 입력인지 확인 (ex6-15.html 참고)
+        if (user >= 0 && user <= 2) {
+            
+            // 4. 컴퓨터의 선택 (ex6-19.html의 Math.random 참고)
+            let com = Math.floor(Math.random() * 3);
+
+            // 5. 결과 판별 로직
+            let resultMessage = "";
+            if (user === com) {
+                resultMessage = "비겼습니다.";
+            } else if ((user === 0 && com === 2) || (user === 1 && com === 0) || (user === 2 && com === 1)) {
+                resultMessage = "User가 이겼습니다.";
+            } else {
+                resultMessage = "Com이 이겼습니다.";
+            }
+
+            // 6. 결과 출력 (ex6-11.html, ex6-15.html의 document.write 참고)
+            // User 결과 출력
+            document.write("<h3>User</h3>");
+            document.write("<img src='" + images[user] + "'>");
+            document.write("<h4>" + text[user] + "</h4>");
+            
+            // Com 결과 출력
+            document.write("<h3>Com</h3>");
+            document.write("<img src='" + images[com] + "'>");
+            document.write("<h4>" + text[com] + "</h4>");
+            
+            document.write("<hr>");
+            
+            // 최종 결과
+            document.write("<h2>" + resultMessage + "</h2>");
+
+        } else {
+            // 잘못된 값을 입력한 경우 (ex6-15.html 참고)
+            document.write("<h2>게임을 취소했거나 잘못된 값을 입력했습니다. (0, 1, 2 중 입력)</h2>");
+        }
+    </script>
+</body>
+</html>
