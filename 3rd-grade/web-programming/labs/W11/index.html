@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 연습문제 (6장 28·29·30·32·33 + 7장 35·38)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .problem-container {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .problem-container h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .chapter-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .output-box {
+            min-height: 20px;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap; /* 줄바꿈 보존 */
+        }
+        button {
+            font-size: 0.95em;
+            padding: 5px 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        /* 38번 문제용 스타일 */
+        .color-span {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 10px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>자바스크립트 연습문제 (6장 + 7장 통합)</h1>
+
+    <!-- ===================== 6장 ===================== -->
+
+    <div class="problem-container">
+        <div class="chapter-label">6장 28번</div>
+        <h2>28번: 7로 나눈 나머지</h2>
+        <button onclick="run28()">[실행]</button>
+        <div id="out28" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <div class="chapter-label">6장 29번</div>
+        <h2>29번: "yes", "y", "1"</h2>
+        <button onclick="run29()">[실행]</button>
+        <div id="out29" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <div class="chapter-label">6장 30번</div>
+        <h2>30번: 4, 7 제외 구구단</h2>
+        <button onclick="run30()">[실행]</button>
+        <div id="out30" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <div class="chapter-label">6장 32번</div>
+        <h2>32번: 배경색 변경</h2>
+        <h1 id="alter32" 
+            onclick="change32()" 
+            style="cursor: pointer; display: inline-block; padding: 5px;">
+            Change Colors
+        </h1>
+    </div>
+
+    <!-- 33번 수정된 부분 -->
+    <div class="problem-container">
+        <div class="chapter-label">6장 33번</div>
+        <h2>33번: 글자색 변경</h2>
+        <h1 id="alter33" style="transition: color 0.3s ease;">Change Colors</h1>
+        
+        <!-- 버튼 디자인 개선: 배경색을 적용하고 글자를 흰색/검은색으로 조정 -->
+        <button onclick="change33('red')" style="background-color: red; color: white; border: none; padding: 8px 16px;">red</button>
+        <button onclick="change33('blue')" style="background-color: blue; color: white; border: none; padding: 8px 16px;">blue</button>
+        <button onclick="change33('orange')" style="background-color: orange; color: white; border: none; padding: 8px 16px;">orange</button>
+        <button onclick="change33('green')" style="background-color: green; color: white; border: none; padding: 8px 16px;">green</button>
+    </div>
+
+    <!-- ===================== 7장 ===================== -->
+
+    <div class="problem-container">
+        <div class="chapter-label">7장 35번</div>
+        <h2>35번: String 객체 (문자열 거꾸로 출력)</h2>
+        <p>"거꾸로 타는 보일러"를 뒤집어서 출력합니다.</p>
+        <button onclick="run35()">[실행]</button>
+        <div id="out35" class="output-box"></div>
+    </div>
+
+    <div class="problem-container">
+        <div class="chapter-label">7장 38번</div>
+        <h2>38번: 1차원 배열과 for-of 반복문</h2>
+        <p>배열에 저장된 색상 이름들을 해당 색상으로 출력합니다.</p>
+        <button onclick="run38()">[실행]</button>
+        <div id="out38" class="output-box"></div>
+    </div>
+
+    <!-- ===================== 스크립트 ===================== -->
+
+    <script>
+        // ================= 6장 28번 =================
+        function run28() {
+            let num = parseInt(prompt("28번) 숫자를 입력하세요:"));
+            if (isNaN(num)) {
+                document.getElementById("out28").innerHTML = "숫자를 입력해야 합니다.";
+                return;
+            }
+            let result = num % 7;
+            let output = 
+                "입력한 " + num + 
+                "을(를) 7로 나눈 나머지는 <strong>" + result + "</strong>입니다.";
+            document.getElementById("out28").innerHTML = output;
+        }
+
+        // ================= 6장 29번 =================
+        function run29() {
+            let drink = prompt("29번) 이거 마시면 사귀는 거다! (yes / y / 1 입력)");
+            let output = "입력값: " + drink + "<hr>";
+            
+            if (drink === "yes" || drink === "y" || drink === "1") {
+                output += "👉 오늘부터 1일 ❤️";
+            } else {
+                output += "👉 헤어진다 💔";
+            }
+            document.getElementById("out29").innerHTML = output;
+        }
+
+        // ================= 6장 30번 =================
+        function run30() {
+            let htmlOutput = "";
+            let dan, num;
+            
+            for (dan = 2; dan < 10; dan++) {
+                htmlOutput += dan + "단: ";
+                for (num = 1; num < 10; num++) {
+                    if (num === 4 || num === 7) {
+                        continue;
+                    }
+                    htmlOutput += dan + "x" + num + "=" + (dan * num) + " ";
+                }
+                htmlOutput += "\n";  // pre-wrap 덕분에 줄바꿈 처리됨
+            }
+            
+            document.getElementById("out30").textContent = htmlOutput;
+        }
+
+        // ================= 6장 32번 =================
+        function change32() {
+            const h1 = document.getElementById("alter32");
+            h1.style.backgroundColor = "aqua";
+        }
+
+        // ================= 6장 33번 =================
+        function change33(color) {
+            const h1 = document.getElementById("alter33");
+            h1.style.color = color;
+        }
+
+        // ================= 7장 35번 (추가됨) =================
+        function run35() {
+            const out = document.getElementById("out35");
+            let str = "거꾸로 타는 보일러";
+            
+            // 1. 문자열 분리(split) -> 2. 배열 뒤집기(reverse) -> 3. 다시 합치기(join)
+            let reversedStr = str.split('').reverse().join('');
+            
+            out.innerHTML = `원본 문자열: "${str}"<br>`;
+            out.innerHTML += `거꾸로 출력: <strong>"${reversedStr}"</strong>`;
+        }
+
+        // ================= 7장 38번 (추가됨) =================
+        function run38() {
+            const out = document.getElementById("out38");
+            const colorArray = ["red", "aqua", "gray", "purple", "orange"];
+            let resultHtml = "";
+
+            // for-of 반복문을 사용하여 배열 순회
+            for (const color of colorArray) {
+                // 각 색상에 맞는 style 속성 적용
+                resultHtml += `<span class="color-span" style="color: ${color};">${color}</span>`;
+            }
+            
+            out.innerHTML = resultHtml;
+        }
+    </script>
+</body>
+</html>
