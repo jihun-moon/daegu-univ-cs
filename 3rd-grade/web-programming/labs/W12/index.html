@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM 실습 - 할 일 관리</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    .important-title {
+      font-weight: bold;
+      background-color: #fff3cd; /* 연한 노란색 */
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      font-size: 14px;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM 실습 - 할 일 관리</h1>
+
+  <section id="formSection">
+    <h2>할 일 입력</h2>
+    <label>
+      할 일 제목:
+      <input type="text" id="taskTitle" placeholder="예: 자바스크립트 과제하기">
+    </label>
+    <br><br>
+    <label>
+      상세 내용:
+      <br>
+      <textarea id="taskDesc" rows="3" cols="50"
+        placeholder="예: DOM 관련 예제 3개 완성하기"></textarea>
+    </label>
+    <br><br>
+    <label>
+      <input type="checkbox" id="isImportant">
+      긴급한 할 일인가요?
+    </label>
+    <br><br>
+    <label>
+      카테고리:
+      <select id="category">
+        <option value="공부">공부</option>
+        <option value="운동">운동</option>
+        <option value="기타">기타</option>
+      </select>
+    </label>
+    <br><br>
+    <button id="addBtn">등록</button>
+    <button id="clearBtn">전체 삭제</button>
+  </section>
+
+  <section id="listSection">
+    <h2>할 일 목록</h2>
+    <table id="taskTable">
+      <thead>
+        <tr>
+          <th>완료</th>
+          <th>제목</th>
+          <th>카테고리</th>
+          <th>긴급</th>
+          <th>상세 내용</th>
+        </tr>
+      </thead>
+      <tbody id="taskTbody">
+        <!-- 할 일 행이 여기에 추가됨 -->
+      </tbody>
+    </table>
+  </section>
+
+  <p id="summary">현재 등록된 할 일: 0개</p>
+
+  <script>
+    // ============================
+    // TODO: 아래 요구사항을 만족하도록 JS 코드를 작성하시오.
+    // ============================
+
+    const taskTitle = document.getElementById("taskTitle");
+    const taskDesc = document.getElementById("taskDesc");
+    const isImportant = document.getElementById("isImportant");
+    const category = document.getElementById("category");
+    const addBtn = document.getElementById("addBtn");
+    const clearBtn = document.getElementById("clearBtn");
+    const taskTbody = document.getElementById("taskTbody");
+    const summary = document.getElementById("summary");
+
+    // [요구사항 4] 요약 문구를 갱신하는 함수
+    function updateSummary() {
+      // taskTbody 안의 tr 개수를 세서 summary에 "현재 등록된 할 일: n개" 형식으로 출력
+      const count = taskTbody.querySelectorAll("tr").length;
+      summary.textContent = `현재 등록된 할 일: ${count}개`;
+    }
+
+    // [요구사항 3] 완료 체크박스 클릭 시 행 스타일 변경
+    function toggleDone(row, checkbox) {
+      // checkbox.checked 값에 따라 row의 스타일(글자색, 취소선)을 변경
+      if (checkbox.checked) {
+        row.style.color = "gray";
+        row.style.textDecoration = "line-through";
+      } else {
+        row.style.color = "";
+        row.style.textDecoration = "";
+      }
+    }
+
+    // [요구사항 1, 2, 3, 6] 등록 버튼 클릭 시 동작
+    addBtn.addEventListener("click", function () {
+      // 1) 제목이 비었는지 확인하고, 비었으면 alert 후 함수 종료
+      const titleValue = taskTitle.value.trim();
+      if (titleValue === "") {
+        alert("제목을 입력하세요.");
+        taskTitle.focus();
+        return;
+      }
+
+      const descValue = taskDesc.value.trim();
+      const categoryValue = category.value;
+      const importantChecked = isImportant.checked;
+
+      // 2) 콘솔에 "제목: ..., 카테고리: ..., 긴급: 예/아니오" 형식으로 출력
+      const importantText = importantChecked ? "예" : "아니오";
+      console.log(
+        `제목: ${titleValue}, 카테고리: ${categoryValue}, 긴급: ${importantText}`
+      );
+
+      // 3) 새로운 tr 생성 후, 각 열에 맞게 td와 내용/체크박스를 채워서 taskTbody에 추가
+      const tr = document.createElement("tr");
+
+      // 1열: 완료 체크박스 (class="doneCheck")
+      const tdDone = document.createElement("td");
+      const doneCheckbox = document.createElement("input");
+      doneCheckbox.type = "checkbox";
+      doneCheckbox.className = "doneCheck";
+      doneCheckbox.addEventListener("change", function () {
+        toggleDone(tr, doneCheckbox);
+      });
+      tdDone.appendChild(doneCheckbox);
+      tr.appendChild(tdDone);
+
+      // 2열: 제목 (긴급 할 일이라면 class="important-title" 추가)
+      const tdTitle = document.createElement("td");
+      tdTitle.textContent = titleValue;
+      if (importantChecked) {
+        tdTitle.classList.add("important-title");
+      }
+      tr.appendChild(tdTitle);
+
+      // 3열: 카테고리
+      const tdCategory = document.createElement("td");
+      tdCategory.textContent = categoryValue;
+      tr.appendChild(tdCategory);
+
+      // 4열: 긴급이면 "🔥", 아니면 빈 문자열
+      const tdImportant = document.createElement("td");
+      tdImportant.textContent = importantChecked ? "🔥" : "";
+      tr.appendChild(tdImportant);
+
+      // 5열: 상세 내용
+      const tdDesc = document.createElement("td");
+      tdDesc.textContent = descValue;
+      tr.appendChild(tdDesc);
+
+      // tbody에 추가
+      taskTbody.appendChild(tr);
+
+      // 5) 입력창 초기화 및 요약 문구 갱신
+      taskTitle.value = "";
+      taskDesc.value = "";
+      isImportant.checked = false;
+      category.selectedIndex = 0;
+
+      updateSummary();
+    });
+
+    // [요구사항 5] 전체 삭제 버튼 클릭 시 동작
+    clearBtn.addEventListener("click", function () {
+      // taskTbody 안의 모든 tr을 삭제하고, 요약 문구 갱신
+      taskTbody.innerHTML = "";
+      updateSummary();
+    });
+
+    // 초기 요약 문구 설정
+    updateSummary();
+  </script>
+</body>
+</html>
