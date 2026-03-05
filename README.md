@@ -77,12 +77,17 @@ my-learning-journey/
 │  ├─ discrete-mathematics/
 │  └─ java-programming/
 └─ 3rd-grade/
-   ├─ app-programming/
-   ├─ data-mining/
-   ├─ database/
-   ├─ game-programming/
-   ├─ server-system-administration/
-   ├─ software-engineering/
-   ├─ systems-software-practice/
-   └─ web-programming/
+│  ├─ app-programming/
+│  ├─ data-mining/
+│  ├─ database/
+│  ├─ game-programming/
+│  ├─ server-system-administration/
+│  ├─ software-engineering/
+│  ├─ systems-software-practice/
+│  └─ web-programming/
+└─ 4th-grade/
+   ├─ generative-ai/
+   ├─ machine-learning/
+   ├─ software-analysis-and-design/
+   └─ software-capstone-design/
 ```
