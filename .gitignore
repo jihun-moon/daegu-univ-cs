@@ -1,1 +1,57 @@
+# 개인 파일
 3rd-grade/web-programming/labs/W03_HTML-Structure-and-Forms/assets/이력서 사진.jpg
+
+# Visual Studio
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.log
+*.exe
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.aps
+
+# Java / Eclipse
+bin/
+*.class
+.classpath
+.project
+.settings/
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+captures/
+
+# Unreal Engine
+Intermediate/
+Saved/
+Binaries/
+DerivedDataCache/
+Build/
+*.sln
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
