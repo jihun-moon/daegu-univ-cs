@@ -55,3 +55,6 @@ venv/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# 학교 배포 강의자료로 이어지는 바로가기는 올리지 않는다
+*.url
