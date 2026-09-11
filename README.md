@@ -109,6 +109,8 @@ daegu-univ-cs/
 | [machine-learning](4th-grade/machine-learning/) | 18 | 1~14주차 실습 결과를 모은 노트북 1개와 데이터셋 |
 | [generative-ai](4th-grade/generative-ai/) | 7 | 오토인코더, VAE, GAN, DCGAN 노트북 |
 
+1학기 SW종합설계(RISE 연계) 팀 과제 CHRONO 는 이 폴더에 없고 [별도 저장소](#만든-프로젝트)에 있습니다.
+
 ## 학습 노트
 
 코드는 여기에 두고, 개념 정리와 수업 노트는 Notion 에 따로 씁니다.
@@ -118,11 +120,12 @@ daegu-univ-cs/
 
 ## 만든 프로젝트
 
-따로 저장소를 둔 프로젝트입니다. 수업 과제로 시작한 것(opengl-earthquake-simulation, mobile-doctor-app)도 있습니다.
+따로 저장소를 둔 프로젝트입니다. 수업 과제로 시작한 것(chrono-capstone, opengl-earthquake-simulation, mobile-doctor-app)도 있습니다.
 
 | 저장소 | 내용 |
 | --- | --- |
-| chrono (비공개) | 암호화폐 시세 분석 및 신호 서비스 |
+| chrono-capstone (비공개) | 졸업작품 CHRONO. 2026년 1학기 RISE 연계 SW종합설계 팀 과제(차트 정복단 3인). 국내주식 데이터 파이프라인과 신호 검증. 2026-09-11 AI·SW 캡스톤디자인 공모전 우수상 ([공지](https://aisw.daegu.ac.kr/article/notice25/detail/225770)), 화면은 [chrono-ai.mooo.com](https://chrono-ai.mooo.com) |
+| chrono (비공개) | 위 팀 과제에서 시작한 개인 연구 저장소. 2026-09-08 졸업작품 부분을 chrono-capstone 으로 분리. 국내주식·크립토 신호 검증 |
 | [im-bank-n8n-agent](https://github.com/jihun-moon/im-bank-n8n-agent) | n8n + Node.js + Upstage Solar 로 만든 보안 로그 개인정보 유출 탐지 워크플로 |
 | [PII-Guardian](https://github.com/jihun-moon/PII-Guardian) | 개인정보 탐지 NER 모델, 네이버 클라우드 배포와 재학습 루프 |
 | [battle-rogue](https://github.com/jihun-moon/battle-rogue) | 언리얼 엔진 5 데디케이티드 서버 기반 1대1 온라인 대전 게임 |
