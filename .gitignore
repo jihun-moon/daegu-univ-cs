@@ -21,12 +21,9 @@ x86/
 *.VC.db
 *.aps
 
-# Java / Eclipse
+# Java / Eclipse (프로젝트를 여는 .project·.classpath·.settings 는 올린다)
 bin/
 *.class
-.classpath
-.project
-.settings/
 
 # Android / Gradle
 .gradle/
@@ -42,7 +39,6 @@ Saved/
 Binaries/
 DerivedDataCache/
 Build/
-*.sln
 
 # Python
 __pycache__/
